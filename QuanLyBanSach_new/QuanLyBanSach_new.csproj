@@ -183,7 +183,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SupportClass\AuthorNameOnly.cs" />
+    <Compile Include="SupportClass\PublisherNameOnly.cs" />
     <Compile Include="SupportClass\SellBook.cs" />
+    <Compile Include="SupportClass\BookTitleOnly.cs" />
     <Compile Include="SupportClass\XemTatCaSach.cs" />
     <EmbeddedResource Include="Forms\Form_AddNewAuthor.resx">
       <DependentUpon>Form_AddNewAuthor.cs</DependentUpon>

@@ -8,6 +8,8 @@ using System.Windows.Forms;
 using QuanLyBanSach_new.Entities;
 
 
+using QuanLyBanSach_new.SupportClass;
+
 namespace QuanLyBanSach_new.DAO
 {
     public class NhaXuatBanDao
@@ -46,6 +48,13 @@ namespace QuanLyBanSach_new.DAO
             int res = db.Database.ExecuteSqlCommand("exec proc_themNhaXuatBanMoi @tennxb, @diachi, @dienthoai ", h, d, dt);
             return res;
         }
+
+        //public IList<PublisherNameOnly> getPublisherNameFromBookTitle(string booktitle)
+        //{
+        //    var bt = new SqlParameter("@bookTitle", booktitle);
+        //    var res = db.Database.SqlQuery<PublisherNameOnly>("proc_getPublisherNameFromBookTitle @bookTitle", bt).ToList() ;
+        //    return res;
+        //}
 
     }
 }

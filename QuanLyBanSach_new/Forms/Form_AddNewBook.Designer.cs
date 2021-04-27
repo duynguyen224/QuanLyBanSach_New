@@ -56,6 +56,8 @@ namespace QuanLyBanSach_new.Forms
             this.buttonAddNewPublisher = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.textBoxPublisherID = new System.Windows.Forms.TextBox();
+            this.textBoxBookID = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // richTextBox
@@ -95,7 +97,7 @@ namespace QuanLyBanSach_new.Forms
             this.buttonNewCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNewCategory.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonNewCategory.ForeColor = System.Drawing.Color.White;
-            this.buttonNewCategory.Location = new System.Drawing.Point(481, 177);
+            this.buttonNewCategory.Location = new System.Drawing.Point(481, 181);
             this.buttonNewCategory.Name = "buttonNewCategory";
             this.buttonNewCategory.Size = new System.Drawing.Size(33, 29);
             this.buttonNewCategory.TabIndex = 49;
@@ -156,7 +158,7 @@ namespace QuanLyBanSach_new.Forms
             this.textBoxBookTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxBookTitle.Location = new System.Drawing.Point(203, 66);
             this.textBoxBookTitle.Name = "textBoxBookTitle";
-            this.textBoxBookTitle.Size = new System.Drawing.Size(495, 26);
+            this.textBoxBookTitle.Size = new System.Drawing.Size(311, 26);
             this.textBoxBookTitle.TabIndex = 42;
             // 
             // label2
@@ -257,7 +259,7 @@ namespace QuanLyBanSach_new.Forms
             this.buttonAddNewAuthor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddNewAuthor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAddNewAuthor.ForeColor = System.Drawing.Color.White;
-            this.buttonAddNewAuthor.Location = new System.Drawing.Point(481, 96);
+            this.buttonAddNewAuthor.Location = new System.Drawing.Point(481, 100);
             this.buttonAddNewAuthor.Name = "buttonAddNewAuthor";
             this.buttonAddNewAuthor.Size = new System.Drawing.Size(33, 29);
             this.buttonAddNewAuthor.TabIndex = 55;
@@ -320,7 +322,7 @@ namespace QuanLyBanSach_new.Forms
             this.buttonAddNewPublisher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddNewPublisher.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAddNewPublisher.ForeColor = System.Drawing.Color.White;
-            this.buttonAddNewPublisher.Location = new System.Drawing.Point(481, 135);
+            this.buttonAddNewPublisher.Location = new System.Drawing.Point(481, 138);
             this.buttonAddNewPublisher.Name = "buttonAddNewPublisher";
             this.buttonAddNewPublisher.Size = new System.Drawing.Size(33, 29);
             this.buttonAddNewPublisher.TabIndex = 61;
@@ -347,11 +349,32 @@ namespace QuanLyBanSach_new.Forms
             this.textBoxPublisherID.Size = new System.Drawing.Size(63, 26);
             this.textBoxPublisherID.TabIndex = 63;
             // 
+            // textBoxBookID
+            // 
+            this.textBoxBookID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBookID.Location = new System.Drawing.Point(635, 66);
+            this.textBoxBookID.Name = "textBoxBookID";
+            this.textBoxBookID.ReadOnly = true;
+            this.textBoxBookID.Size = new System.Drawing.Size(63, 26);
+            this.textBoxBookID.TabIndex = 65;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(562, 68);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(66, 19);
+            this.label13.TabIndex = 64;
+            this.label13.Text = "BookID:";
+            // 
             // Form_AddNewBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(829, 456);
+            this.Controls.Add(this.textBoxBookID);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.textBoxPublisherID);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.buttonAddNewPublisher);
@@ -416,5 +439,7 @@ namespace QuanLyBanSach_new.Forms
         private System.Windows.Forms.Button buttonAddNewPublisher;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBoxPublisherID;
+        private System.Windows.Forms.TextBox textBoxBookID;
+        private System.Windows.Forms.Label label13;
     }
 }

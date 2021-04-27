@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyBanSach_new.Entities;
+using QuanLyBanSach_new.SupportClass;
 
 
 namespace QuanLyBanSach_new.DAO
@@ -46,5 +47,12 @@ namespace QuanLyBanSach_new.DAO
             int res = db.Database.ExecuteSqlCommand("exec proc_themTacGiaMoi @hoten, @tieusu, @diachi, @dienthoai ", h, d, t, dt);
             return res;
         }
+
+        //public IList<AuthorNameOnly> getAuthorNameFromBookTitle(string booktitle)
+        //{
+        //    var bt = new SqlParameter("@bookTitle", booktitle);
+        //    var res = db.Database.SqlQuery<AuthorNameOnly>("proc_getAuthorNamrFromBookTitle @bookTitle", bt).ToList();
+        //    return res;
+        //}
     }
 }

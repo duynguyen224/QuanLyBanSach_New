@@ -33,7 +33,6 @@ namespace QuanLyBanSach_new.MyUserControl
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBoxBookTitle = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -66,6 +65,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.textBoxStock = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.comboBoxBookTitle = new System.Windows.Forms.ComboBox();
             this.panelLeft.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -112,22 +112,12 @@ namespace QuanLyBanSach_new.MyUserControl
             this.panel3.Size = new System.Drawing.Size(10, 547);
             this.panel3.TabIndex = 4;
             // 
-            // textBoxBookTitle
-            // 
-            this.textBoxBookTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxBookTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBookTitle.Location = new System.Drawing.Point(273, 177);
-            this.textBoxBookTitle.Name = "textBoxBookTitle";
-            this.textBoxBookTitle.ReadOnly = true;
-            this.textBoxBookTitle.Size = new System.Drawing.Size(363, 29);
-            this.textBoxBookTitle.TabIndex = 12;
-            // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(173, 260);
+            this.label8.Location = new System.Drawing.Point(93, 287);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(82, 19);
             this.label8.TabIndex = 9;
@@ -138,7 +128,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(204, 343);
+            this.label9.Location = new System.Drawing.Point(124, 370);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 19);
             this.label9.TabIndex = 4;
@@ -149,7 +139,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(191, 219);
+            this.label7.Location = new System.Drawing.Point(111, 246);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 19);
             this.label7.TabIndex = 7;
@@ -160,7 +150,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(169, 185);
+            this.label6.Location = new System.Drawing.Point(93, 205);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 19);
             this.label6.TabIndex = 6;
@@ -311,7 +301,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(497, 470);
+            this.button1.Location = new System.Drawing.Point(418, 497);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(138, 38);
             this.button1.TabIndex = 19;
@@ -322,7 +312,7 @@ namespace QuanLyBanSach_new.MyUserControl
             // 
             this.textBoxSearchBook.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxSearchBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSearchBook.Location = new System.Drawing.Point(273, 138);
+            this.textBoxSearchBook.Location = new System.Drawing.Point(192, 135);
             this.textBoxSearchBook.Name = "textBoxSearchBook";
             this.textBoxSearchBook.Size = new System.Drawing.Size(314, 29);
             this.textBoxSearchBook.TabIndex = 17;
@@ -332,7 +322,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(145, 142);
+            this.label1.Location = new System.Drawing.Point(65, 141);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 19);
             this.label1.TabIndex = 8;
@@ -343,7 +333,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(176, 383);
+            this.label10.Location = new System.Drawing.Point(96, 410);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(78, 19);
             this.label10.TabIndex = 10;
@@ -353,7 +343,7 @@ namespace QuanLyBanSach_new.MyUserControl
             // 
             this.textBoxPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPrice.Location = new System.Drawing.Point(273, 339);
+            this.textBoxPrice.Location = new System.Drawing.Point(193, 366);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.ReadOnly = true;
             this.textBoxPrice.Size = new System.Drawing.Size(160, 29);
@@ -363,7 +353,7 @@ namespace QuanLyBanSach_new.MyUserControl
             // 
             this.textBoxPublisher.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxPublisher.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPublisher.Location = new System.Drawing.Point(273, 256);
+            this.textBoxPublisher.Location = new System.Drawing.Point(193, 283);
             this.textBoxPublisher.Name = "textBoxPublisher";
             this.textBoxPublisher.ReadOnly = true;
             this.textBoxPublisher.Size = new System.Drawing.Size(363, 29);
@@ -373,7 +363,7 @@ namespace QuanLyBanSach_new.MyUserControl
             // 
             this.textBoxAuthor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAuthor.Location = new System.Drawing.Point(273, 215);
+            this.textBoxAuthor.Location = new System.Drawing.Point(193, 242);
             this.textBoxAuthor.Name = "textBoxAuthor";
             this.textBoxAuthor.ReadOnly = true;
             this.textBoxAuthor.Size = new System.Drawing.Size(363, 29);
@@ -383,7 +373,7 @@ namespace QuanLyBanSach_new.MyUserControl
             // 
             this.textBoxDiscount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDiscount.Location = new System.Drawing.Point(273, 380);
+            this.textBoxDiscount.Location = new System.Drawing.Point(193, 407);
             this.textBoxDiscount.Name = "textBoxDiscount";
             this.textBoxDiscount.Size = new System.Drawing.Size(93, 29);
             this.textBoxDiscount.TabIndex = 24;
@@ -393,7 +383,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(439, 345);
+            this.label5.Location = new System.Drawing.Point(359, 372);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 19);
             this.label5.TabIndex = 25;
@@ -404,7 +394,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label1Quantity.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1Quantity.AutoSize = true;
             this.label1Quantity.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1Quantity.Location = new System.Drawing.Point(177, 421);
+            this.label1Quantity.Location = new System.Drawing.Point(97, 448);
             this.label1Quantity.Name = "label1Quantity";
             this.label1Quantity.Size = new System.Drawing.Size(78, 19);
             this.label1Quantity.TabIndex = 27;
@@ -414,7 +404,7 @@ namespace QuanLyBanSach_new.MyUserControl
             // 
             this.textBoxQuantity.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxQuantity.Location = new System.Drawing.Point(273, 417);
+            this.textBoxQuantity.Location = new System.Drawing.Point(193, 444);
             this.textBoxQuantity.Name = "textBoxQuantity";
             this.textBoxQuantity.Size = new System.Drawing.Size(93, 29);
             this.textBoxQuantity.TabIndex = 28;
@@ -424,7 +414,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(200, 303);
+            this.label11.Location = new System.Drawing.Point(120, 330);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(54, 19);
             this.label11.TabIndex = 29;
@@ -434,7 +424,7 @@ namespace QuanLyBanSach_new.MyUserControl
             // 
             this.textBoxStock.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxStock.Location = new System.Drawing.Point(273, 299);
+            this.textBoxStock.Location = new System.Drawing.Point(193, 326);
             this.textBoxStock.Name = "textBoxStock";
             this.textBoxStock.ReadOnly = true;
             this.textBoxStock.Size = new System.Drawing.Size(160, 29);
@@ -450,27 +440,39 @@ namespace QuanLyBanSach_new.MyUserControl
             this.buttonSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSearch.ForeColor = System.Drawing.Color.White;
             this.buttonSearch.Image = global::QuanLyBanSach_new.Properties.Resources.search_30px;
-            this.buttonSearch.Location = new System.Drawing.Point(591, 132);
+            this.buttonSearch.Location = new System.Drawing.Point(512, 131);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(44, 38);
             this.buttonSearch.TabIndex = 31;
             this.buttonSearch.UseVisualStyleBackColor = false;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(372, 383);
+            this.label3.Location = new System.Drawing.Point(292, 410);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 19);
             this.label3.TabIndex = 32;
             this.label3.Text = "%";
             // 
+            // comboBoxBookTitle
+            // 
+            this.comboBoxBookTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxBookTitle.FormattingEnabled = true;
+            this.comboBoxBookTitle.Location = new System.Drawing.Point(183, 199);
+            this.comboBoxBookTitle.Name = "comboBoxBookTitle";
+            this.comboBoxBookTitle.Size = new System.Drawing.Size(362, 32);
+            this.comboBoxBookTitle.TabIndex = 33;
+            this.comboBoxBookTitle.SelectedValueChanged += new System.EventHandler(this.comboBoxBookTitle_SelectedValueChanged);
+            // 
             // UC_Sale_Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.comboBoxBookTitle);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.textBoxStock);
@@ -482,7 +484,6 @@ namespace QuanLyBanSach_new.MyUserControl
             this.Controls.Add(this.textBoxAuthor);
             this.Controls.Add(this.textBoxPublisher);
             this.Controls.Add(this.textBoxPrice);
-            this.Controls.Add(this.textBoxBookTitle);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
@@ -510,7 +511,6 @@ namespace QuanLyBanSach_new.MyUserControl
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBoxBookTitle;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
@@ -543,5 +543,6 @@ namespace QuanLyBanSach_new.MyUserControl
         private System.Windows.Forms.TextBox textBoxStock;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBoxBookTitle;
     }
 }

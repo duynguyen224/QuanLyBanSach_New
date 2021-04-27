@@ -63,5 +63,19 @@ namespace QuanLyBanSach_new.DAO
             return res;
         }
 
+        public IList<BookTitleOnly> sellBookSearchToCombobox(string sometext)
+        {
+            var st = new SqlParameter("@text", sometext);
+            var res = db.Database.SqlQuery<BookTitleOnly>("proc_bookSearchToCombobox @text", st).ToList() ;
+            return res;
+        }
+
+        public IList<SellBook> bindDataFromTextBoxSearchToOthers(string booktitle)
+        {
+            var bt = new SqlParameter("@text", booktitle);
+            var res = db.Database.SqlQuery<SellBook>("proc_bookSearchToSell @text", bt).ToList();
+            return res;
+        }
+
     }
 }
