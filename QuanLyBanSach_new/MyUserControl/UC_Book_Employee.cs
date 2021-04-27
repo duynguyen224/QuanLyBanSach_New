@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyBanSach_new.DAO;
 using QuanLyBanSach_new.Forms;
+using QuanLyBanSach_new.SupportClass;
 
 namespace QuanLyBanSach_new.MyUserControl
 {
@@ -22,6 +23,11 @@ namespace QuanLyBanSach_new.MyUserControl
             dao.displayAllBook(dataGridViewBook);
         }
 
+        public void clearAll()
+        {
+            comboBoxSearchBy.SelectedIndex = -1;
+            textBoxSearch.Text = "";
+        }
         private void btnAddNewBooks_Click(object sender, EventArgs e)
         {
             using(Form_AddNewBook anb = new Form_AddNewBook())
@@ -41,27 +47,33 @@ namespace QuanLyBanSach_new.MyUserControl
             var bookTitle = "Book Title";
             var auth = "Author";
             var pub = "Publisher";
-            int res = 0;
+            var cat = "Category";
+
             if (comboBoxSearchBy.Text.Trim().ToLower() == bookTitle.Trim().ToLower())
             {
                 SachDao dao = new SachDao();
-                res = dao.searchByBookTitle(textBoxSearch.Text);
+                var res = dao.searchByBookTitle(textBoxSearch.Text);
+                dataGridViewBook.DataSource = res;
             }
             else if(comboBoxSearchBy.Text.Trim().ToLower() == auth.Trim().ToLower())
             {
                 SachDao dao = new SachDao();
-                res = dao.searchByAuthor(textBoxSearch.Text);
+                var res = dao.searchByAuthor(textBoxSearch.Text);
+                dataGridViewBook.DataSource = res;
             }
             else if (comboBoxSearchBy.Text.Trim().ToLower() == pub.Trim().ToLower())
             {
                 SachDao dao = new SachDao();
-                res = dao.searchByPublisher(textBoxSearch.Text);
+                var res = dao.searchByPublisher(textBoxSearch.Text);
+                dataGridViewBook.DataSource = res;
+            }
+            else if (comboBoxSearchBy.Text.Trim().ToLower() == cat.Trim().ToLower())
+            {
+                SachDao dao = new SachDao();
+                var res = dao.searchByCategory(textBoxSearch.Text);
+                dataGridViewBook.DataSource = res;
             }
 
-            if(res < 0)
-            {
-                MessageBox.Show("Không tìm được !");
-            }
         }
     }
 }

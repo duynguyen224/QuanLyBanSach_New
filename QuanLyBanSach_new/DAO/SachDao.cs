@@ -36,25 +36,31 @@ namespace QuanLyBanSach_new.DAO
             gridview.DataSource = db.Database.SqlQuery<XemTatCaSach>("exec proc_xemTatCaSach").ToList() ;
         }
 
-        public int searchByBookTitle(string someText)
+        public IList<XemTatCaSach> searchByBookTitle(string someText)
         {
             var st = new SqlParameter("@text", someText);
-            var res = db.Database.SqlQuery<XemTatCaSach>("proc_bookSearchByTitle @text", st);
-            return 1;
+            var res = db.Database.SqlQuery<XemTatCaSach>("proc_bookSearchByTitle @text", st).ToList();
+            return res;
         }
 
-        public int searchByAuthor(string someText)
+        public IList<XemTatCaSach> searchByAuthor(string someText)
         {
-
-
-            return 1;
+            var st = new SqlParameter("@text", someText);
+            var res = db.Database.SqlQuery<XemTatCaSach>("proc_bookSearchByAuthor @text", st).ToList();
+            return res;
         }
 
-        public int searchByPublisher(string someText)
+        public IList<XemTatCaSach> searchByPublisher(string someText)
         {
-
-
-            return 1;
+            var st = new SqlParameter("@text", someText);
+            var res = db.Database.SqlQuery<XemTatCaSach>("proc_bookSearchByPublisher @text", st).ToList();
+            return res;
+        }
+        public IList<XemTatCaSach> searchByCategory(string someText)
+        {
+            var st = new SqlParameter("@text", someText);
+            var res = db.Database.SqlQuery<XemTatCaSach>("proc_bookSearchByCategory @text", st).ToList();
+            return res;
         }
 
     }

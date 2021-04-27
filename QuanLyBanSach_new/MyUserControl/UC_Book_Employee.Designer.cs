@@ -67,7 +67,8 @@ namespace QuanLyBanSach_new.MyUserControl
             this.comboBoxSearchBy.Items.AddRange(new object[] {
             "Book Title",
             "Author",
-            "Publisher"});
+            "Publisher",
+            "Category"});
             this.comboBoxSearchBy.Location = new System.Drawing.Point(515, 26);
             this.comboBoxSearchBy.Name = "comboBoxSearchBy";
             this.comboBoxSearchBy.Size = new System.Drawing.Size(138, 28);
