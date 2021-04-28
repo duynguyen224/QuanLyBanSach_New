@@ -29,32 +29,32 @@ namespace QuanLyBanSach_new.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBoxAuthorAddress = new System.Windows.Forms.TextBox();
-            this.textBoxAuthorPhone = new System.Windows.Forms.TextBox();
+            this.textBoxCustomerAddress = new System.Windows.Forms.TextBox();
+            this.textBoxCustomerPhone = new System.Windows.Forms.TextBox();
             this.buttonClear = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
-            this.textBoxAuthorName = new System.Windows.Forms.TextBox();
+            this.textBoxCustomerName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBoxAuthorAddress
+            // textBoxCustomerAddress
             // 
-            this.textBoxAuthorAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAuthorAddress.Location = new System.Drawing.Point(213, 164);
-            this.textBoxAuthorAddress.Name = "textBoxAuthorAddress";
-            this.textBoxAuthorAddress.Size = new System.Drawing.Size(495, 26);
-            this.textBoxAuthorAddress.TabIndex = 90;
+            this.textBoxCustomerAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCustomerAddress.Location = new System.Drawing.Point(213, 164);
+            this.textBoxCustomerAddress.Name = "textBoxCustomerAddress";
+            this.textBoxCustomerAddress.Size = new System.Drawing.Size(495, 26);
+            this.textBoxCustomerAddress.TabIndex = 90;
             // 
-            // textBoxAuthorPhone
+            // textBoxCustomerPhone
             // 
-            this.textBoxAuthorPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAuthorPhone.Location = new System.Drawing.Point(213, 210);
-            this.textBoxAuthorPhone.Name = "textBoxAuthorPhone";
-            this.textBoxAuthorPhone.Size = new System.Drawing.Size(495, 26);
-            this.textBoxAuthorPhone.TabIndex = 88;
+            this.textBoxCustomerPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCustomerPhone.Location = new System.Drawing.Point(213, 210);
+            this.textBoxCustomerPhone.Name = "textBoxCustomerPhone";
+            this.textBoxCustomerPhone.Size = new System.Drawing.Size(495, 26);
+            this.textBoxCustomerPhone.TabIndex = 88;
             // 
             // buttonClear
             // 
@@ -70,6 +70,7 @@ namespace QuanLyBanSach_new.Forms
             this.buttonClear.TabIndex = 87;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // buttonSave
             // 
@@ -85,14 +86,15 @@ namespace QuanLyBanSach_new.Forms
             this.buttonSave.TabIndex = 86;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = false;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
-            // textBoxAuthorName
+            // textBoxCustomerName
             // 
-            this.textBoxAuthorName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAuthorName.Location = new System.Drawing.Point(213, 118);
-            this.textBoxAuthorName.Name = "textBoxAuthorName";
-            this.textBoxAuthorName.Size = new System.Drawing.Size(495, 26);
-            this.textBoxAuthorName.TabIndex = 85;
+            this.textBoxCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCustomerName.Location = new System.Drawing.Point(213, 118);
+            this.textBoxCustomerName.Name = "textBoxCustomerName";
+            this.textBoxCustomerName.Size = new System.Drawing.Size(495, 26);
+            this.textBoxCustomerName.TabIndex = 85;
             // 
             // label3
             // 
@@ -140,11 +142,11 @@ namespace QuanLyBanSach_new.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBoxAuthorAddress);
-            this.Controls.Add(this.textBoxAuthorPhone);
+            this.Controls.Add(this.textBoxCustomerAddress);
+            this.Controls.Add(this.textBoxCustomerPhone);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonSave);
-            this.Controls.Add(this.textBoxAuthorName);
+            this.Controls.Add(this.textBoxCustomerName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -159,11 +161,11 @@ namespace QuanLyBanSach_new.Forms
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBoxAuthorAddress;
-        private System.Windows.Forms.TextBox textBoxAuthorPhone;
+        private System.Windows.Forms.TextBox textBoxCustomerAddress;
+        private System.Windows.Forms.TextBox textBoxCustomerPhone;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Button buttonSave;
-        private System.Windows.Forms.TextBox textBoxAuthorName;
+        private System.Windows.Forms.TextBox textBoxCustomerName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;

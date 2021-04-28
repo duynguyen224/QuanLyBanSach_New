@@ -49,8 +49,26 @@ namespace QuanLyBanSach_new.DAO
             db.SaveChanges();
         }
 
-        // Tính tổng tiền bằng Foreach() từ bảng GioHang
+        public void addIdCustomerToAllRecord(int id)
+        {
+            foreach(var item in db.GioHangs)
+            {
+                item.CustomerID = id;
+            }
+            db.SaveChanges();
+        }
 
+        public double netAmount()
+        {
+            var myTable = db.GioHangs.ToList();
+            var netAmount_ = 0;
+            foreach(var myRow in myTable)
+            {
+                netAmount_ += myRow.Amount;
+            }
+            return netAmount_;
+        }
+        
 
     }
 }

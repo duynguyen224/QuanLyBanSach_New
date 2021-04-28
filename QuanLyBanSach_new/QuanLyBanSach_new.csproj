@@ -72,6 +72,7 @@
     <Compile Include="DAO\ChuDeDao.cs" />
     <Compile Include="DAO\DonHangDao.cs" />
     <Compile Include="DAO\GioHangDao.cs" />
+    <Compile Include="DAO\KhachHangDao.cs" />
     <Compile Include="DAO\NhaXuatBanDao.cs" />
     <Compile Include="DAO\SachDao.cs" />
     <Compile Include="DAO\TacGiaDao.cs" />
@@ -195,6 +196,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SupportClass\AuthorNameOnly.cs" />
     <Compile Include="SupportClass\Cart.cs" />
+    <Compile Include="SupportClass\CustomerNameOnly.cs" />
     <Compile Include="SupportClass\PublisherNameOnly.cs" />
     <Compile Include="SupportClass\SellBook.cs" />
     <Compile Include="SupportClass\BookTitleOnly.cs" />
