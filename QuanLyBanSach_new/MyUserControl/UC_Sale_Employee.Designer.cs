@@ -39,10 +39,10 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panelLeft = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dataGridViewCart = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.buttonFinish = new System.Windows.Forms.Button();
@@ -67,6 +67,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxBookTitle = new System.Windows.Forms.ComboBox();
             this.panelLeft.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCart)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
@@ -170,7 +171,7 @@ namespace QuanLyBanSach_new.MyUserControl
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.LightGray;
-            this.panelLeft.Controls.Add(this.listView1);
+            this.panelLeft.Controls.Add(this.dataGridViewCart);
             this.panelLeft.Controls.Add(this.panel5);
             this.panelLeft.Controls.Add(this.panel4);
             this.panelLeft.Controls.Add(this.panel3);
@@ -180,36 +181,33 @@ namespace QuanLyBanSach_new.MyUserControl
             this.panelLeft.Size = new System.Drawing.Size(259, 547);
             this.panelLeft.TabIndex = 20;
             // 
-            // listView1
+            // dataGridViewCart
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(10, 0);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(239, 353);
-            this.listView1.TabIndex = 5;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.dataGridViewCart.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dataGridViewCart.Location = new System.Drawing.Point(9, 0);
+            this.dataGridViewCart.Name = "dataGridViewCart";
+            this.dataGridViewCart.Size = new System.Drawing.Size(240, 354);
+            this.dataGridViewCart.TabIndex = 5;
             // 
-            // columnHeader1
+            // Column1
             // 
-            this.columnHeader1.Text = "Book Title";
-            this.columnHeader1.Width = 200;
+            this.Column1.HeaderText = "BookTitle";
+            this.Column1.Name = "Column1";
             // 
-            // columnHeader2
+            // Column2
             // 
-            this.columnHeader2.Text = "Qty";
-            this.columnHeader2.Width = 40;
+            this.Column2.HeaderText = "Qty";
+            this.Column2.Name = "Column2";
             // 
-            // columnHeader3
+            // Column3
             // 
-            this.columnHeader3.Text = "Amount";
-            this.columnHeader3.Width = 90;
+            this.Column3.HeaderText = "Amount";
+            this.Column3.Name = "Column3";
             // 
             // panel5
             // 
@@ -307,6 +305,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.button1.TabIndex = 19;
             this.button1.Text = "Add to Cart";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBoxSearchBook
             // 
@@ -497,6 +496,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.Name = "UC_Sale_Employee";
             this.Size = new System.Drawing.Size(1009, 547);
             this.panelLeft.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCart)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -517,9 +517,6 @@ namespace QuanLyBanSach_new.MyUserControl
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panelLeft;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button buttonFinish;
@@ -531,7 +528,6 @@ namespace QuanLyBanSach_new.MyUserControl
         private System.Windows.Forms.TextBox textBoxSearchBook;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.TextBox textBoxPrice;
         private System.Windows.Forms.TextBox textBoxPublisher;
         private System.Windows.Forms.TextBox textBoxAuthor;
@@ -544,5 +540,9 @@ namespace QuanLyBanSach_new.MyUserControl
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBoxBookTitle;
+        private System.Windows.Forms.DataGridView dataGridViewCart;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

@@ -17,5 +17,16 @@ namespace QuanLyBanSach_new.DAO
             db = new BookShopDbContext();
         }
 
+        public int insertThamGia(int bookID, int authorID)
+        {
+            ThamGia thamgia = new ThamGia()
+            {
+                MaSach = bookID,
+                MaTG = authorID
+            };
+            db.ThamGias.Add(thamgia);
+            db.SaveChanges();
+            return thamgia.MaTG;
+        }
     }
 }

@@ -46,6 +46,7 @@ namespace QuanLyBanSach_new.Forms
             textBoxPrice.Text = "";
             textBoxQuantity.Text = "";
             richTextBox.Text = "";
+            textBoxBookID.Text = "";
         }
         
         // them sach moi
@@ -61,7 +62,14 @@ namespace QuanLyBanSach_new.Forms
                 MaCD = int.Parse(textBoxCategoryID.Text)
             };
             var res = dao.insertBook(book.TenSach, book.GiaBan, book.SoLuongTon, book.MaNXB, book.MaCD);
-            if(res > 0)
+
+            textBoxBookID.Text = dao.getIdBookByName(book.TenSach).ToString();
+            // return về cái BookID and AuthorID de tao ThamGia
+            ThamGiaDao tgd = new ThamGiaDao();
+            var ress = tgd.insertThamGia(int.Parse(textBoxBookID.Text), int.Parse(textBoxAuthorID.Text));
+
+
+            if (res > 0 && ress > 0)
             {
                 MessageBox.Show("Thêm thành công !");
                 clearAll();
@@ -70,6 +78,7 @@ namespace QuanLyBanSach_new.Forms
             {
                 MessageBox.Show("Chưa thêm được !");
             }
+
         }
 
         private void Form_AddNewBook_Load(object sender, EventArgs e)

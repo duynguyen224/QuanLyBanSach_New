@@ -30,6 +30,18 @@ namespace QuanLyBanSach_new.MyUserControl
             }
         }
 
+
+        private void clearAll()
+        {
+            textBoxSearchBook.Text = "";
+            comboBoxBookTitle.SelectedIndex = -1;
+            textBoxAuthor.Text = "";
+            textBoxPublisher.Text = "";
+            textBoxStock.Text = "";
+            textBoxPrice.Text = "";
+            textBoxDiscount.Text = "";
+            textBoxQuantity.Text = "";
+        }
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             SachDao dao = new SachDao();
@@ -53,17 +65,32 @@ namespace QuanLyBanSach_new.MyUserControl
 
             SachDao dao = new SachDao();
             var res = dao.bindDataFromTextBoxSearchToOthers(comboBoxBookTitle.Text);
-            int i = 0;
             foreach(var item in res)
             {
                 textBoxAuthor.Text = item.HoTenTG;
                 textBoxPublisher.Text = item.TenNXB;
                 textBoxStock.Text = item.SoLuongTon.ToString();
                 textBoxPrice.Text = item.GiaBan.ToString();
-                i++;
             }
-            textBoxSearchBook.Text = i.ToString();
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(int.Parse(textBoxStock.Text) < int.Parse(textBoxQuantity.Text))
+            {
+                MessageBox.Show("Không đủ sách, chọn số lượng ít hơn !");
+            }
+            else
+            {
+                // bind data to GridView
+                
+                {
+                    
+                }
+
+            }
+            //clearAll();
         }
     }
 }

@@ -77,5 +77,11 @@ namespace QuanLyBanSach_new.DAO
             return res;
         }
 
+        public int getIdBookByName(string booktitle)
+        {
+            var res = db.Saches.Where(x => x.TenSach.Trim().ToLower() == booktitle.Trim().ToLower()).FirstOrDefault() ;
+            return res.ID;
+        }
+
     }
 }

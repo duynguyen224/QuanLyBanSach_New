@@ -21,5 +21,14 @@ namespace QuanLyBanSach_new.Forms
         {
 
         }
+
+        private void buttonAddNewCustomer_Click(object sender, EventArgs e)
+        {
+            using(Form_AddNewCustomer f = new Form_AddNewCustomer())
+            {
+                f.ShowDialog();
+
+            }
+        }
     }
 }
