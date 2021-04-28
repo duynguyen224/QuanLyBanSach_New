@@ -40,9 +40,6 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label4 = new System.Windows.Forms.Label();
             this.panelLeft = new System.Windows.Forms.Panel();
             this.dataGridViewCart = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.buttonFinish = new System.Windows.Forms.Button();
@@ -53,18 +50,15 @@ namespace QuanLyBanSach_new.MyUserControl
             this.button1 = new System.Windows.Forms.Button();
             this.textBoxSearchBook = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.textBoxPublisher = new System.Windows.Forms.TextBox();
             this.textBoxAuthor = new System.Windows.Forms.TextBox();
-            this.textBoxDiscount = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label1Quantity = new System.Windows.Forms.Label();
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textBoxStock = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.comboBoxBookTitle = new System.Windows.Forms.ComboBox();
             this.panelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCart)).BeginInit();
@@ -85,6 +79,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.buttonDelete.TabIndex = 2;
             this.buttonDelete.Text = "Delete";
             this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // panel6
             // 
@@ -185,29 +180,11 @@ namespace QuanLyBanSach_new.MyUserControl
             // 
             this.dataGridViewCart.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
             this.dataGridViewCart.Location = new System.Drawing.Point(9, 0);
             this.dataGridViewCart.Name = "dataGridViewCart";
             this.dataGridViewCart.Size = new System.Drawing.Size(240, 354);
             this.dataGridViewCart.TabIndex = 5;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "BookTitle";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Qty";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Amount";
-            this.Column3.Name = "Column3";
+            this.dataGridViewCart.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCart_CellContentClick);
             // 
             // panel5
             // 
@@ -261,6 +238,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.buttonClear.TabIndex = 2;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // labelTotalAmount
             // 
@@ -327,17 +305,6 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label1.TabIndex = 8;
             this.label1.Text = "Search Book:";
             // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(96, 410);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 19);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Discount:";
-            // 
             // textBoxPrice
             // 
             this.textBoxPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -368,15 +335,6 @@ namespace QuanLyBanSach_new.MyUserControl
             this.textBoxAuthor.Size = new System.Drawing.Size(363, 29);
             this.textBoxAuthor.TabIndex = 23;
             // 
-            // textBoxDiscount
-            // 
-            this.textBoxDiscount.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDiscount.Location = new System.Drawing.Point(193, 407);
-            this.textBoxDiscount.Name = "textBoxDiscount";
-            this.textBoxDiscount.Size = new System.Drawing.Size(93, 29);
-            this.textBoxDiscount.TabIndex = 24;
-            // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -393,7 +351,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label1Quantity.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1Quantity.AutoSize = true;
             this.label1Quantity.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1Quantity.Location = new System.Drawing.Point(97, 448);
+            this.label1Quantity.Location = new System.Drawing.Point(99, 416);
             this.label1Quantity.Name = "label1Quantity";
             this.label1Quantity.Size = new System.Drawing.Size(78, 19);
             this.label1Quantity.TabIndex = 27;
@@ -403,7 +361,7 @@ namespace QuanLyBanSach_new.MyUserControl
             // 
             this.textBoxQuantity.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxQuantity.Location = new System.Drawing.Point(193, 444);
+            this.textBoxQuantity.Location = new System.Drawing.Point(193, 410);
             this.textBoxQuantity.Name = "textBoxQuantity";
             this.textBoxQuantity.Size = new System.Drawing.Size(93, 29);
             this.textBoxQuantity.TabIndex = 28;
@@ -446,17 +404,6 @@ namespace QuanLyBanSach_new.MyUserControl
             this.buttonSearch.UseVisualStyleBackColor = false;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(292, 410);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(23, 19);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "%";
-            // 
             // comboBoxBookTitle
             // 
             this.comboBoxBookTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -472,14 +419,12 @@ namespace QuanLyBanSach_new.MyUserControl
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.comboBoxBookTitle);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.textBoxStock);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.textBoxQuantity);
             this.Controls.Add(this.label1Quantity);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBoxDiscount);
             this.Controls.Add(this.textBoxAuthor);
             this.Controls.Add(this.textBoxPublisher);
             this.Controls.Add(this.textBoxPrice);
@@ -492,7 +437,6 @@ namespace QuanLyBanSach_new.MyUserControl
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxSearchBook);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label10);
             this.Name = "UC_Sale_Employee";
             this.Size = new System.Drawing.Size(1009, 547);
             this.panelLeft.ResumeLayout(false);
@@ -527,22 +471,16 @@ namespace QuanLyBanSach_new.MyUserControl
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBoxSearchBook;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBoxPrice;
         private System.Windows.Forms.TextBox textBoxPublisher;
         private System.Windows.Forms.TextBox textBoxAuthor;
-        private System.Windows.Forms.TextBox textBoxDiscount;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1Quantity;
         private System.Windows.Forms.TextBox textBoxQuantity;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBoxStock;
         private System.Windows.Forms.Button buttonSearch;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBoxBookTitle;
         private System.Windows.Forms.DataGridView dataGridViewCart;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

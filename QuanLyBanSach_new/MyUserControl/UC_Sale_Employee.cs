@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using QuanLyBanSach_new.DAO;
 using QuanLyBanSach_new.Entities;
 using QuanLyBanSach_new.Forms;
+using QuanLyBanSach_new.SupportClass;
 
 namespace QuanLyBanSach_new.MyUserControl
 {
@@ -24,7 +25,8 @@ namespace QuanLyBanSach_new.MyUserControl
 
         private void button7_Click(object sender, EventArgs e)
         {
-            using(Form_Finish_Order f = new Form_Finish_Order())
+
+            using (Form_Finish_Order f = new Form_Finish_Order())
             {
                 f.ShowDialog();
             }
@@ -39,8 +41,8 @@ namespace QuanLyBanSach_new.MyUserControl
             textBoxPublisher.Text = "";
             textBoxStock.Text = "";
             textBoxPrice.Text = "";
-            textBoxDiscount.Text = "";
             textBoxQuantity.Text = "";
+
         }
         private void buttonSearch_Click(object sender, EventArgs e)
         {
@@ -65,7 +67,7 @@ namespace QuanLyBanSach_new.MyUserControl
 
             SachDao dao = new SachDao();
             var res = dao.bindDataFromTextBoxSearchToOthers(comboBoxBookTitle.Text);
-            foreach(var item in res)
+            foreach (var item in res)
             {
                 textBoxAuthor.Text = item.HoTenTG;
                 textBoxPublisher.Text = item.TenNXB;
@@ -77,20 +79,67 @@ namespace QuanLyBanSach_new.MyUserControl
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(int.Parse(textBoxStock.Text) < int.Parse(textBoxQuantity.Text))
+            if (int.Parse(textBoxStock.Text) < int.Parse(textBoxQuantity.Text))
             {
                 MessageBox.Show("Không đủ sách, chọn số lượng ít hơn !");
             }
             else
             {
                 // bind data to GridView
+                // 1. insert to cart
+                GioHangDao dao = new GioHangDao();
+                var booktitle = comboBoxBookTitle.Text;
+                var qty = int.Parse(textBoxQuantity.Text);
+                var price = int.Parse(textBoxPrice.Text);
+                var amount = qty * price;
+                var stock = int.Parse(textBoxStock.Text);
+                dao.insertToCart(booktitle, qty, amount, price, stock);
+
+                dataGridViewCart.DataSource = dao.bindDataToGridCart();
                 
-                {
-                    
-                }
 
             }
-            //clearAll();
+            clearAll();
         }
+
+        // Bấm Clear : xóa hết dữ liệu trong bảng GioHang đi
+        // Xóa hết Textbox, xóa hết Record của bảng GioHang
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            clearAll();
+            GioHangDao dao = new GioHangDao();
+            dao.deleteAllCartRecord();
+            dataGridViewCart.DataSource = dao.bindDataToGridCart();
+        }
+
+        Cart c = new Cart();
+
+
+
+        private void dataGridViewCart_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            c.BookTitle = dataGridViewCart.SelectedRows[0].Cells[0].Value.ToString();
+            c.Qty = int.Parse(dataGridViewCart.SelectedRows[0].Cells[1].Value.ToString());
+            c.Amount = int.Parse(dataGridViewCart.SelectedRows[0].Cells[2].Value.ToString());
+
+        }
+
+
+        // Bấm Delete : delete 1 record trong GioHang đi (dựa vào BookTitle)
+        // rồi gọi DataSource lại là oke
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            GioHangDao dao = new GioHangDao();
+            dao.deleteOneRecord(c.BookTitle);
+            dao.bindDataToGridCart();
+        }
+
+
+
+
+
+        // Bấm Finish : hiện ra Form Finish Order 
+
     }
 }

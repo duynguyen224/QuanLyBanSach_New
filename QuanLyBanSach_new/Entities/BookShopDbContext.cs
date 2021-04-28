@@ -23,6 +23,7 @@ namespace QuanLyBanSach_new.Entities
         public virtual DbSet<TacGia> TacGias { get; set; }
         public virtual DbSet<ThamGia> ThamGias { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<GioHang> GioHangs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

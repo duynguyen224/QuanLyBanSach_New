@@ -71,6 +71,7 @@
     <Compile Include="DAO\ChiTietDonHangDao.cs" />
     <Compile Include="DAO\ChuDeDao.cs" />
     <Compile Include="DAO\DonHangDao.cs" />
+    <Compile Include="DAO\GioHangDao.cs" />
     <Compile Include="DAO\NhaXuatBanDao.cs" />
     <Compile Include="DAO\SachDao.cs" />
     <Compile Include="DAO\TacGiaDao.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Entities\ChiTietPhieuNhap.cs" />
     <Compile Include="Entities\ChuDe.cs" />
     <Compile Include="Entities\DonHang.cs" />
+    <Compile Include="Entities\GioHang.cs" />
     <Compile Include="Entities\KhachHang.cs" />
     <Compile Include="Entities\NhaXuatBan.cs" />
     <Compile Include="Entities\PhieuNhap.cs" />
@@ -192,6 +194,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SupportClass\AuthorNameOnly.cs" />
+    <Compile Include="SupportClass\Cart.cs" />
     <Compile Include="SupportClass\PublisherNameOnly.cs" />
     <Compile Include="SupportClass\SellBook.cs" />
     <Compile Include="SupportClass\BookTitleOnly.cs" />

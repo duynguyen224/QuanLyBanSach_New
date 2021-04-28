@@ -140,7 +140,7 @@ namespace QuanLyBanSach_new.Forms
             this.btnSale.Name = "btnSale";
             this.btnSale.Size = new System.Drawing.Size(203, 60);
             this.btnSale.TabIndex = 2;
-            this.btnSale.Text = "     Sale";
+            this.btnSale.Text = "     Sell";
             this.btnSale.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSale.UseVisualStyleBackColor = true;
             this.btnSale.Click += new System.EventHandler(this.btnHome_Click);
