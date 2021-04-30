@@ -17,5 +17,16 @@ namespace QuanLyBanSach_new.DAO
             db = new BookShopDbContext();
         }
 
+        public string insertDonHang(DonHang dh)
+        {
+            dh.DaThanhToan = true;
+            dh.TinhTrangGiaoHang = true;
+            dh.NgayDat = DateTime.Now;
+            dh.NgayGiao = DateTime.Now;
+            db.DonHangs.Add(dh);
+            db.SaveChanges();
+            return dh.ID.ToString();
+        }
+        
     }
 }

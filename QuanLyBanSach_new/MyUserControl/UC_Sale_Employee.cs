@@ -82,24 +82,27 @@ namespace QuanLyBanSach_new.MyUserControl
             if (int.Parse(textBoxStock.Text) < int.Parse(textBoxQuantity.Text))
             {
                 MessageBox.Show("Không đủ sách, chọn số lượng ít hơn !");
+                textBoxQuantity.Text = "";
             }
             else
             {
-                // bind data to GridView
+                
                 // 1. insert to cart
                 GioHangDao dao = new GioHangDao();
                 var booktitle = comboBoxBookTitle.Text;
-                var qty = int.Parse(textBoxQuantity.Text);
-                var price = int.Parse(textBoxPrice.Text);
+                var qty = Int32.Parse(textBoxQuantity.Text);
+                var price = Int32.Parse(textBoxPrice.Text);
                 var amount = qty * price;
-                var stock = int.Parse(textBoxStock.Text);
+                var stock = Int32.Parse(textBoxStock.Text);
                 dao.insertToCart(booktitle, qty, amount, price, stock);
 
+                // bind data to GridView
                 dataGridViewCart.DataSource = dao.bindDataToGridCart();
-                
+
+                //
+                clearAll();
 
             }
-            clearAll();
         }
 
         // Bấm Clear : xóa hết dữ liệu trong bảng GioHang đi

@@ -17,6 +17,11 @@ namespace QuanLyBanSach_new.DAO
             db = new BookShopDbContext();
         }
 
+        public void insertChiTietDonHang(ChiTietDonHang ctdh)
+        {
+            db.ChiTietDonHangs.Add(ctdh);
+            db.SaveChanges();
+        }
 
     }
 }

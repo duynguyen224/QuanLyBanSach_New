@@ -58,17 +58,28 @@ namespace QuanLyBanSach_new.DAO
             db.SaveChanges();
         }
 
-        public double netAmount()
+        public int netAmount()
         {
             var myTable = db.GioHangs.ToList();
-            var netAmount_ = 0;
+            int netAmount_ = 0;
             foreach(var myRow in myTable)
             {
-                netAmount_ += myRow.Amount;
+                netAmount_ += (int)myRow.Amount;
             }
             return netAmount_;
         }
         
+        public string getIdCustomer()
+        {
+            var res = db.GioHangs.Select(x => x.CustomerID).FirstOrDefault();
+            return res.ToString();
+        }
 
+        public IList<GioHang> listGioHang()
+        {
+            var res = db.GioHangs.ToList();
+            return res;
+        }
+        
     }
 }

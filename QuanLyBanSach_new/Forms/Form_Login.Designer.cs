@@ -76,7 +76,7 @@ namespace QuanLyBanSach_new.Forms
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(84, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 32);
+            this.label2.Size = new System.Drawing.Size(226, 47);
             this.label2.TabIndex = 1;
             this.label2.Text = "Book Shop";
             // 
@@ -91,7 +91,7 @@ namespace QuanLyBanSach_new.Forms
             this.button1.Location = new System.Drawing.Point(331, 503);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(547, 62);
-            this.button1.TabIndex = 15;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -103,8 +103,8 @@ namespace QuanLyBanSach_new.Forms
             this.textBoxPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.textBoxPassword.Location = new System.Drawing.Point(331, 431);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(547, 31);
-            this.textBoxPassword.TabIndex = 12;
+            this.textBoxPassword.Size = new System.Drawing.Size(547, 42);
+            this.textBoxPassword.TabIndex = 2;
             this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // textBoxUsername
@@ -114,8 +114,8 @@ namespace QuanLyBanSach_new.Forms
             this.textBoxUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.textBoxUsername.Location = new System.Drawing.Point(331, 343);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(547, 31);
-            this.textBoxUsername.TabIndex = 13;
+            this.textBoxUsername.Size = new System.Drawing.Size(547, 42);
+            this.textBoxUsername.TabIndex = 1;
             // 
             // label4
             // 
@@ -125,7 +125,7 @@ namespace QuanLyBanSach_new.Forms
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.label4.Location = new System.Drawing.Point(327, 404);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 24);
+            this.label4.Size = new System.Drawing.Size(143, 33);
             this.label4.TabIndex = 7;
             this.label4.Text = "Password";
             // 
@@ -137,7 +137,7 @@ namespace QuanLyBanSach_new.Forms
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.label6.Location = new System.Drawing.Point(-192, 776);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(372, 17);
+            this.label6.Size = new System.Drawing.Size(569, 23);
             this.label6.TabIndex = 9;
             this.label6.Text = "Copyrights © 2018. All rights Reserved By C# Ui Academy.";
             // 
@@ -149,7 +149,7 @@ namespace QuanLyBanSach_new.Forms
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.label1.Location = new System.Drawing.Point(327, 316);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 24);
+            this.label1.Size = new System.Drawing.Size(150, 33);
             this.label1.TabIndex = 10;
             this.label1.Text = "Username";
             // 
