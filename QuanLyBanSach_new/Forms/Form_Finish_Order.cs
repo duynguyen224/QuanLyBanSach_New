@@ -91,6 +91,8 @@ namespace QuanLyBanSach_new.Forms
                 ChiTietDonHangDao ctdhDao = new ChiTietDonHangDao();
                 ctdhDao.insertChiTietDonHang(ctdh);
 
+                // Update lại số lượng tồn của Sach
+                sachDao.updateStock(ctdh.MaSach, (int)ctdh.SoLuong);
             }
             // Clear all
             clearAll();

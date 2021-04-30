@@ -83,5 +83,11 @@ namespace QuanLyBanSach_new.DAO
             return res.ID;
         }
 
+        public void updateStock(int idBook, int soluong)
+        {
+            var bt = new SqlParameter("@id", idBook);
+            var sl = new SqlParameter("@soluong", soluong);
+            var res = db.Database.ExecuteSqlCommand("proc_updateSoLuongTon @id, @soluong", bt, sl);
+        }
     }
 }

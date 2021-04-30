@@ -25,7 +25,7 @@ namespace QuanLyBanSach_new.MyUserControl
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            dataGridViewCart.DataSource = null;
             using (Form_Finish_Order f = new Form_Finish_Order())
             {
                 f.ShowDialog();

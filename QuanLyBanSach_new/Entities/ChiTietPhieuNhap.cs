@@ -9,11 +9,14 @@ namespace QuanLyBanSach_new.Entities
     [Table("ChiTietPhieuNhap")]
     public partial class ChiTietPhieuNhap
     {
+        [Key]
+        [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int ID { get; set; }
-
         public int MaPhieuNhap { get; set; }
 
+        [Key]
+        [Column(Order = 1)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaSach { get; set; }
 
         public int? SoLuong { get; set; }

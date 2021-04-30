@@ -68,7 +68,7 @@ namespace QuanLyBanSach_new.Forms
             this.buttonDone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonDone.Name = "buttonDone";
             this.buttonDone.Size = new System.Drawing.Size(196, 58);
-            this.buttonDone.TabIndex = 38;
+            this.buttonDone.TabIndex = 2;
             this.buttonDone.Text = "Done";
             this.buttonDone.UseVisualStyleBackColor = false;
             this.buttonDone.Click += new System.EventHandler(this.button1_Click);
@@ -214,7 +214,7 @@ namespace QuanLyBanSach_new.Forms
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(18, 603);
-            this.button2.TabIndex = 39;
+            this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
