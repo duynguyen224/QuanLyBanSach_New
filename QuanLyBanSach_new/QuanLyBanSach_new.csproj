@@ -69,11 +69,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\ChiTietDonHangDao.cs" />
+    <Compile Include="DAO\ChiTietPhieuNhapDao.cs" />
     <Compile Include="DAO\ChuDeDao.cs" />
     <Compile Include="DAO\DonHangDao.cs" />
     <Compile Include="DAO\GioHangDao.cs" />
     <Compile Include="DAO\KhachHangDao.cs" />
     <Compile Include="DAO\NhaXuatBanDao.cs" />
+    <Compile Include="DAO\PhieuNhapDao.cs" />
     <Compile Include="DAO\SachDao.cs" />
     <Compile Include="DAO\TacGiaDao.cs" />
     <Compile Include="DAO\ThamGiaDao.cs" />
@@ -151,11 +153,29 @@
     <Compile Include="Forms\Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Form_UpdateQuantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_UpdateQuantity.Designer.cs">
+      <DependentUpon>Form_UpdateQuantity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202104150737122_InitialModel.cs" />
     <Compile Include="Migrations\202104150737122_InitialModel.designer.cs">
       <DependentUpon>202104150737122_InitialModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="MyUserControl\UC_Author_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControl\UC_Author_Admin.Designer.cs">
+      <DependentUpon>UC_Author_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControl\UC_Book_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControl\UC_Book_Admin.Designer.cs">
+      <DependentUpon>UC_Book_Admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyUserControl\UC_Expense_Employee.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -231,8 +251,17 @@
     <EmbeddedResource Include="Forms\Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_UpdateQuantity.resx">
+      <DependentUpon>Form_UpdateQuantity.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104150737122_InitialModel.resx">
       <DependentUpon>202104150737122_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl\UC_Author_Admin.resx">
+      <DependentUpon>UC_Author_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl\UC_Book_Admin.resx">
+      <DependentUpon>UC_Book_Admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyUserControl\UC_Expense_Employee.resx">
       <DependentUpon>UC_Expense_Employee.cs</DependentUpon>
@@ -317,6 +346,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search_in_list_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\administrator_male_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookk_30px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

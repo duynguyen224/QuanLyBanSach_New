@@ -100,5 +100,9 @@ namespace QuanLyBanSach_new.MyUserControl
             }
         }
 
+        private void label4_Click(object sender, EventArgs e)
+        {
+            clearAll();
+        }
     }
 }

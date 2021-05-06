@@ -42,11 +42,11 @@ namespace QuanLyBanSach_new.Forms
             this.buttonClear.BackColor = System.Drawing.Color.Red;
             this.buttonClear.FlatAppearance.BorderSize = 0;
             this.buttonClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClear.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClear.ForeColor = System.Drawing.Color.White;
-            this.buttonClear.Location = new System.Drawing.Point(419, 230);
+            this.buttonClear.Location = new System.Drawing.Point(485, 175);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(119, 38);
+            this.buttonClear.Size = new System.Drawing.Size(91, 38);
             this.buttonClear.TabIndex = 87;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = false;
@@ -58,11 +58,11 @@ namespace QuanLyBanSach_new.Forms
             this.buttonSave.BackColor = System.Drawing.Color.SeaGreen;
             this.buttonSave.FlatAppearance.BorderSize = 0;
             this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSave.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSave.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSave.ForeColor = System.Drawing.Color.White;
-            this.buttonSave.Location = new System.Drawing.Point(555, 230);
+            this.buttonSave.Location = new System.Drawing.Point(582, 175);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(123, 38);
+            this.buttonSave.Size = new System.Drawing.Size(96, 38);
             this.buttonSave.TabIndex = 86;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = false;
@@ -70,7 +70,7 @@ namespace QuanLyBanSach_new.Forms
             // 
             // textBoxCategoryName
             // 
-            this.textBoxCategoryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCategoryName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCategoryName.Location = new System.Drawing.Point(234, 118);
             this.textBoxCategoryName.Name = "textBoxCategoryName";
             this.textBoxCategoryName.Size = new System.Drawing.Size(444, 26);
@@ -79,10 +79,10 @@ namespace QuanLyBanSach_new.Forms
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(92, 121);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 19);
+            this.label6.Size = new System.Drawing.Size(131, 19);
             this.label6.TabIndex = 83;
             this.label6.Text = "Category name:";
             // 
@@ -90,10 +90,11 @@ namespace QuanLyBanSach_new.Forms
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(342, 51);
+            this.label4.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.label4.Location = new System.Drawing.Point(283, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(159, 25);
+            this.label4.Size = new System.Drawing.Size(198, 32);
             this.label4.TabIndex = 84;
             this.label4.Text = "New Category";
             // 
@@ -101,13 +102,14 @@ namespace QuanLyBanSach_new.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(798, 411);
+            this.ClientSize = new System.Drawing.Size(740, 246);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.textBoxCategoryName);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Name = "Form_AddNewCategory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_AddNewCategory";
             this.ResumeLayout(false);
             this.PerformLayout();

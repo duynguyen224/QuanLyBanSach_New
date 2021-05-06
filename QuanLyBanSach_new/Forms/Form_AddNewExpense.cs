@@ -16,5 +16,21 @@ namespace QuanLyBanSach_new.Forms
         {
             InitializeComponent();
         }
+
+        private void clearAll()
+        {
+            textBoxTitle.Text = "";
+            textBoxAmount.Text = "";
+            richTextBoxDes.Text = "";
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            clearAll();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

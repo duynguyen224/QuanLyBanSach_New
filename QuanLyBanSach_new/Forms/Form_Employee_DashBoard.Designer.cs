@@ -82,7 +82,7 @@ namespace QuanLyBanSach_new.Forms
             this.btnSettings.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnSettings.FlatAppearance.BorderSize = 0;
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSettings.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.White;
             this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
             this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -98,7 +98,7 @@ namespace QuanLyBanSach_new.Forms
             // 
             this.btnExpense.FlatAppearance.BorderSize = 0;
             this.btnExpense.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExpense.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExpense.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExpense.ForeColor = System.Drawing.Color.White;
             this.btnExpense.Image = global::QuanLyBanSach_new.Properties.Resources.cost_30px;
             this.btnExpense.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -115,7 +115,7 @@ namespace QuanLyBanSach_new.Forms
             // 
             this.btnBook.FlatAppearance.BorderSize = 0;
             this.btnBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBook.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBook.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBook.ForeColor = System.Drawing.Color.White;
             this.btnBook.Image = global::QuanLyBanSach_new.Properties.Resources.book_30px;
             this.btnBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -132,7 +132,7 @@ namespace QuanLyBanSach_new.Forms
             // 
             this.btnSale.FlatAppearance.BorderSize = 0;
             this.btnSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSale.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSale.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSale.ForeColor = System.Drawing.Color.White;
             this.btnSale.Image = global::QuanLyBanSach_new.Properties.Resources.sale_30px;
             this.btnSale.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -207,44 +207,44 @@ namespace QuanLyBanSach_new.Forms
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(121, 65);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 19);
+            this.label7.Size = new System.Drawing.Size(85, 19);
             this.label7.TabIndex = 1;
             this.label7.Text = "Employee";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(65, 65);
+            this.label6.Location = new System.Drawing.Point(59, 65);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 19);
+            this.label6.Size = new System.Drawing.Size(50, 19);
             this.label6.TabIndex = 2;
             this.label6.Text = "Role:";
             // 
             // labelEmployeename
             // 
             this.labelEmployeename.AutoSize = true;
-            this.labelEmployeename.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmployeename.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEmployeename.ForeColor = System.Drawing.Color.White;
             this.labelEmployeename.Location = new System.Drawing.Point(120, 34);
             this.labelEmployeename.Name = "labelEmployeename";
-            this.labelEmployeename.Size = new System.Drawing.Size(113, 19);
+            this.labelEmployeename.Size = new System.Drawing.Size(104, 19);
             this.labelEmployeename.TabIndex = 3;
             this.labelEmployeename.Text = "Admin name";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(24, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 19);
+            this.label1.Size = new System.Drawing.Size(85, 19);
             this.label1.TabIndex = 4;
             this.label1.Text = "Welcome:";
             // 

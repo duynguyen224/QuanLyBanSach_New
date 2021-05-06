@@ -56,3 +56,6 @@ D:\2 Coding-Projects\QuanLyBanSach_new\QuanLyBanSach_new\QuanLyBanSach_new\obj\D
 D:\2 Coding-Projects\QuanLyBanSach_new\QuanLyBanSach_new\QuanLyBanSach_new\obj\Debug\QuanLyBanSach_new.Forms.Form_AddNewPublisher.resources
 D:\2 Coding-Projects\QuanLyBanSach_new\QuanLyBanSach_new\QuanLyBanSach_new\obj\Debug\QuanLyBanSach_new.Forms.Form_AddNewCategory.resources
 D:\2 Coding-Projects\QuanLyBanSach_new\QuanLyBanSach_new\QuanLyBanSach_new\obj\Debug\QuanLyBanSach_new.Forms.Form_AddNewCustomer.resources
+D:\2 Coding-Projects\QuanLyBanSach_new\QuanLyBanSach_new\QuanLyBanSach_new\obj\Debug\QuanLyBanSach_new.Forms.Form_UpdateQuantity.resources
+D:\2 Coding-Projects\QuanLyBanSach_new\QuanLyBanSach_new\QuanLyBanSach_new\obj\Debug\QuanLyBanSach_new.MyUserControl.UC_Author_Admin.resources
+D:\2 Coding-Projects\QuanLyBanSach_new\QuanLyBanSach_new\QuanLyBanSach_new\obj\Debug\QuanLyBanSach_new.MyUserControl.UC_Book_Admin.resources

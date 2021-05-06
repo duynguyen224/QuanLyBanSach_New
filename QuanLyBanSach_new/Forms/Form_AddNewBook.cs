@@ -48,7 +48,22 @@ namespace QuanLyBanSach_new.Forms
             richTextBox.Text = "";
             textBoxBookID.Text = "";
         }
-        
+
+        public void clearAllExceptTitle()
+        {
+            comboBoxAuthor.SelectedIndex = -1;
+            textBoxAuthorID.Text = "";
+            comboBoxPublisher.SelectedIndex = -1;
+            textBoxPublisherID.Text = "";
+            comboBoxCategory.SelectedIndex = -1;
+            textBoxCategoryID.Text = "";
+            textBoxPrice.Text = "";
+            textBoxQuantity.Text = "";
+            richTextBox.Text = "";
+            textBoxBookID.Text = "";
+
+        }
+
         // them sach moi
         private void buttonSave_Click(object sender, EventArgs e)
         {
@@ -129,7 +144,8 @@ namespace QuanLyBanSach_new.Forms
             {
                 f.ShowDialog();
                 fillCombobox();
-                clearAll();
+                clearAllExceptTitle();
+
             }
         }
 
@@ -139,7 +155,8 @@ namespace QuanLyBanSach_new.Forms
             {
                 f.ShowDialog();
                 fillCombobox();
-                clearAll();
+                clearAllExceptTitle();
+
             }
         }
 
@@ -149,7 +166,8 @@ namespace QuanLyBanSach_new.Forms
             {
                 f.ShowDialog();
                 fillCombobox();
-                clearAll();
+                clearAllExceptTitle();
+
             }
         }
     }

@@ -63,9 +63,29 @@ namespace QuanLyBanSach_new.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap administrator_male_30px {
+            get {
+                object obj = ResourceManager.GetObject("administrator_male_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap book_30px {
             get {
                 object obj = ResourceManager.GetObject("book_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bookk_30px {
+            get {
+                object obj = ResourceManager.GetObject("bookk_30px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
