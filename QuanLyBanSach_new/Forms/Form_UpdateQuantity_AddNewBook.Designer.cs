@@ -1,7 +1,7 @@
 ﻿
 namespace QuanLyBanSach_new.Forms
 {
-    partial class Form_UpdateQuantity
+    partial class Form_UpdateQuantity_AddNewBook
     {
         /// <summary>
         /// Required designer variable.
@@ -47,6 +47,9 @@ namespace QuanLyBanSach_new.Forms
             this.button1 = new System.Windows.Forms.Button();
             this.textBoxSearchBook = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label4
@@ -69,8 +72,10 @@ namespace QuanLyBanSach_new.Forms
             this.comboBoxBookTitle.Location = new System.Drawing.Point(155, 160);
             this.comboBoxBookTitle.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.comboBoxBookTitle.Name = "comboBoxBookTitle";
-            this.comboBoxBookTitle.Size = new System.Drawing.Size(521, 26);
+            this.comboBoxBookTitle.Size = new System.Drawing.Size(448, 26);
             this.comboBoxBookTitle.TabIndex = 56;
+            this.comboBoxBookTitle.SelectedIndexChanged += new System.EventHandler(this.comboBoxBookTitle_SelectedIndexChanged);
+            this.comboBoxBookTitle.SelectedValueChanged += new System.EventHandler(this.comboBoxBookTitle_SelectedValueChanged);
             // 
             // buttonSearch
             // 
@@ -88,6 +93,7 @@ namespace QuanLyBanSach_new.Forms
             this.buttonSearch.Size = new System.Drawing.Size(41, 39);
             this.buttonSearch.TabIndex = 55;
             this.buttonSearch.UseVisualStyleBackColor = false;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // textBoxStock
             // 
@@ -242,6 +248,7 @@ namespace QuanLyBanSach_new.Forms
             this.button1.TabIndex = 46;
             this.button1.Text = "Update";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBoxSearchBook
             // 
@@ -265,11 +272,46 @@ namespace QuanLyBanSach_new.Forms
             this.label1.TabIndex = 43;
             this.label1.Text = "Search Book:";
             // 
-            // Form_UpdateQuantity
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(613, 163);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 19);
+            this.label2.TabIndex = 57;
+            this.label2.Text = "ID:";
+            // 
+            // textBoxID
+            // 
+            this.textBoxID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxID.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxID.Location = new System.Drawing.Point(641, 160);
+            this.textBoxID.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.ReadOnly = true;
+            this.textBoxID.Size = new System.Drawing.Size(35, 26);
+            this.textBoxID.TabIndex = 58;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(544, 341);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 19);
+            this.label3.TabIndex = 59;
+            this.label3.Text = "label3";
+            // 
+            // Form_UpdateQuantity_AddNewBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 525);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBoxID);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBoxBookTitle);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.textBoxStock);
@@ -289,7 +331,7 @@ namespace QuanLyBanSach_new.Forms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "Form_UpdateQuantity";
+            this.Name = "Form_UpdateQuantity_AddNewBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_UpdateQuantity";
             this.ResumeLayout(false);
@@ -317,5 +359,8 @@ namespace QuanLyBanSach_new.Forms
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBoxSearchBook;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxID;
+        private System.Windows.Forms.Label label3;
     }
 }

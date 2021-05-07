@@ -23,10 +23,17 @@ namespace QuanLyBanSach_new.DAO
 
         public void insertPhieuNhap(PhieuNhap pn)
         {
-            db.PhieuNhaps.Add(pn);
-            db.SaveChanges();
+            var tongtien = new SqlParameter("@tongtien", pn.TongTien);
+            var tieude = new SqlParameter("@tieude", pn.TieuDe);
+            var mota = new SqlParameter("@mota", pn.MoTa);
+            db.Database.ExecuteSqlCommand("proc_insertPhieuNhap @tongtien, @tieude, @mota", tongtien, tieude, mota);
         }
 
+        public int getIdPhieuNhap_fromName(string name)
+        {
+            var res = db.PhieuNhaps.Where(x => x.TieuDe.Trim().ToLower() == name.Trim().ToLower()).FirstOrDefault();
+            return res.ID;
 
+        }
     }
 }

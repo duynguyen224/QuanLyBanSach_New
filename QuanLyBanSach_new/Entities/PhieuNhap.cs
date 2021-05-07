@@ -22,6 +22,12 @@ namespace QuanLyBanSach_new.Entities
 
         public int? TongTien { get; set; }
 
+        [StringLength(50)]
+        public string TieuDe { get; set; }
+
+        [StringLength(50)]
+        public string MoTa { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietPhieuNhap> ChiTietPhieuNhaps { get; set; }
     }

@@ -413,6 +413,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.comboBoxBookTitle.Name = "comboBoxBookTitle";
             this.comboBoxBookTitle.Size = new System.Drawing.Size(362, 26);
             this.comboBoxBookTitle.TabIndex = 33;
+            this.comboBoxBookTitle.SelectedIndexChanged += new System.EventHandler(this.comboBoxBookTitle_SelectedIndexChanged);
             this.comboBoxBookTitle.SelectedValueChanged += new System.EventHandler(this.comboBoxBookTitle_SelectedValueChanged);
             // 
             // UC_Sale_Employee

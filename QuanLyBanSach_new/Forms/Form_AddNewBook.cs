@@ -72,7 +72,8 @@ namespace QuanLyBanSach_new.Forms
             {
                 TenSach = textBoxBookTitle.Text,
                 GiaBan = int.Parse(textBoxPrice.Text),
-                SoLuongTon = int.Parse(textBoxQuantity.Text),
+                //SoLuongTon = int.Parse(textBoxQuantity.Text),
+                SoLuongTon = 0,
                 MaNXB = int.Parse(textBoxPublisherID.Text),
                 MaCD = int.Parse(textBoxCategoryID.Text)
             };

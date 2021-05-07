@@ -142,8 +142,10 @@ namespace QuanLyBanSach_new.Forms
             this.textBoxQuantity.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxQuantity.Location = new System.Drawing.Point(206, 280);
             this.textBoxQuantity.Name = "textBoxQuantity";
+            this.textBoxQuantity.ReadOnly = true;
             this.textBoxQuantity.Size = new System.Drawing.Size(268, 26);
             this.textBoxQuantity.TabIndex = 40;
+            this.textBoxQuantity.Text = "0";
             // 
             // textBoxPrice
             // 

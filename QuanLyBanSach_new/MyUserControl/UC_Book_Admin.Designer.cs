@@ -120,11 +120,11 @@ namespace QuanLyBanSach_new.MyUserControl
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(523, 316);
+            this.button2.Location = new System.Drawing.Point(509, 316);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 38);
+            this.button2.Size = new System.Drawing.Size(96, 38);
             this.button2.TabIndex = 77;
-            this.button2.Text = "Create";
+            this.button2.Text = "Add new";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // button1

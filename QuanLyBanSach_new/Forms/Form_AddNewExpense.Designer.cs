@@ -54,6 +54,7 @@ namespace QuanLyBanSach_new.Forms
             // 
             // richTextBoxDes
             // 
+            this.richTextBoxDes.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBoxDes.Location = new System.Drawing.Point(162, 197);
             this.richTextBoxDes.Name = "richTextBoxDes";
             this.richTextBoxDes.Size = new System.Drawing.Size(403, 96);
