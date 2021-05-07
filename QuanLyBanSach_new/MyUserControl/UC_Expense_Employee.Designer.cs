@@ -34,10 +34,10 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label5 = new System.Windows.Forms.Label();
             this.btnAddNewBooks = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewExpense = new System.Windows.Forms.DataGridView();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExpense)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
@@ -82,23 +82,24 @@ namespace QuanLyBanSach_new.MyUserControl
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.dataGridView1);
+            this.panel6.Controls.Add(this.dataGridViewExpense);
             this.panel6.Controls.Add(this.panel5);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1009, 547);
             this.panel6.TabIndex = 16;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
-            // dataGridView1
+            // dataGridViewExpense
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(42, 123);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(926, 421);
-            this.dataGridView1.TabIndex = 16;
+            this.dataGridViewExpense.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewExpense.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewExpense.Location = new System.Drawing.Point(42, 123);
+            this.dataGridViewExpense.Name = "dataGridViewExpense";
+            this.dataGridViewExpense.RowHeadersWidth = 62;
+            this.dataGridViewExpense.Size = new System.Drawing.Size(926, 421);
+            this.dataGridViewExpense.TabIndex = 16;
             // 
             // UC_Expense_Employee
             // 
@@ -110,7 +111,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExpense)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -120,6 +121,6 @@ namespace QuanLyBanSach_new.MyUserControl
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnAddNewBooks;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewExpense;
     }
 }

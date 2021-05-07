@@ -48,6 +48,7 @@ namespace QuanLyBanSach_new.MyUserControl
             var auth = "Author";
             var pub = "Publisher";
             var cat = "Category";
+            var st = "Qty = 0";
 
             if (comboBoxSearchBy.Text.Trim().ToLower() == bookTitle.Trim().ToLower())
             {
@@ -73,7 +74,12 @@ namespace QuanLyBanSach_new.MyUserControl
                 var res = dao.searchByCategory(textBoxSearch.Text);
                 dataGridViewBook.DataSource = res;
             }
-
+            else if (comboBoxSearchBy.Text.Trim().ToLower() == st.Trim().ToLower())
+            {
+                SachDao dao = new SachDao();
+                var res = dao.searchByStock();
+                dataGridViewBook.DataSource = res;
+            }
         }
     }
 }

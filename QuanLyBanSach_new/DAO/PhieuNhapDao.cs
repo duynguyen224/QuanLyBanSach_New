@@ -35,5 +35,12 @@ namespace QuanLyBanSach_new.DAO
             return res.ID;
 
         }
+
+        public int getNewestId()
+        {
+            var list = db.Database.SqlQuery<IdOnly>("proc_listID_PhieuNhap").ToList();
+            var res = list.Max(x => x.ID);
+            return res;
+        }
     }
 }

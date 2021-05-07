@@ -56,15 +56,6 @@ namespace QuanLyBanSach_new.MyUserControl
         {
             textBoxSearchBook.Text = "";
 
-            //NhaXuatBanDao dao = new NhaXuatBanDao();
-            //var res = dao.getPublisherNameFromBookTitle(comboBoxBookTitle.Text);
-            //foreach (var item in res)
-            //{
-            //    textBoxPublisher.Text = item.TenNXB;
-            //}
-            // không hiểu sao như dưới kia lại đéo được. Đm
-            //textBoxPublisher.Text = res[0].TenNXB.ToString() ;
-
             SachDao dao = new SachDao();
             var res = dao.bindDataFromTextBoxSearchToOthers(comboBoxBookTitle.Text);
             foreach (var item in res)

@@ -68,7 +68,8 @@ namespace QuanLyBanSach_new.MyUserControl
             "Book Title",
             "Author",
             "Publisher",
-            "Category"});
+            "Category",
+            "Qty = 0"});
             this.comboBoxSearchBy.Location = new System.Drawing.Point(515, 26);
             this.comboBoxSearchBy.Name = "comboBoxSearchBy";
             this.comboBoxSearchBy.Size = new System.Drawing.Size(138, 26);

@@ -18,6 +18,11 @@ namespace QuanLyBanSach_new.DAO
             db = new BookShopDbContext();
         }
 
+        public void populateBook(ComboBox c)
+        {
+            c.DataSource = db.Saches.Select(x => x.TenSach).ToList();
+        }
+
         public int insertBook(string tensach, int? giaban, int? soluongton, int? manxb, int? machude)
         {
 
@@ -63,6 +68,12 @@ namespace QuanLyBanSach_new.DAO
             return res;
         }
 
+        public IList<XemTatCaSach> searchByStock()
+        {
+            var res = db.Database.SqlQuery<XemTatCaSach>("proc_bookSearchByStock").ToList();
+            return res;
+        }
+
         public IList<BookTitleOnly> sellBookSearchToCombobox(string sometext)
         {
             var st = new SqlParameter("@text", sometext);
@@ -80,7 +91,14 @@ namespace QuanLyBanSach_new.DAO
         public int getIdBookByName(string booktitle)
         {
             var res = db.Saches.Where(x => x.TenSach.Trim().ToLower() == booktitle.Trim().ToLower()).FirstOrDefault() ;
-            return res.ID;
+            if(res == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return res.ID;
+            }
         }
 
         public void updateStock(int idBook, int soluong)
@@ -90,12 +108,14 @@ namespace QuanLyBanSach_new.DAO
             var res = db.Database.ExecuteSqlCommand("proc_updateSoLuongTon @id, @soluong", bt, sl);
         }
 
-        public void updateQuantity(int idBook, int soluong)
+        public void updateQuantity(int idBook, int? soluong)
         {
             var bid = new SqlParameter("@id", idBook);
             var sl = new SqlParameter("@soluong", soluong);
             db.Database.ExecuteSqlCommand("proc_updateSoLuongTon_nhapHang @id, @soluong", bid, sl);
             
         }
+
+        
     }
 }

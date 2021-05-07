@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using QuanLyBanSach_new.Forms;
+using QuanLyBanSach_new.SupportClass;
+using QuanLyBanSach_new.Entities;
+using QuanLyBanSach_new.DAO;
 
 namespace QuanLyBanSach_new.MyUserControl
 {
@@ -17,6 +20,16 @@ namespace QuanLyBanSach_new.MyUserControl
         public UC_Expense_Employee()
         {
             InitializeComponent();
+
+            // bind data to gridview
+            populateGridView();
+        }
+
+        public void populateGridView()
+        {
+            ChiTietPhieuNhapDao dao = new ChiTietPhieuNhapDao();
+            var res = dao.PhieuNhap_ChiTiet();
+            dataGridViewExpense.DataSource = res;
         }
 
         private void btnAddNewBooks_Click(object sender, EventArgs e)
@@ -25,6 +38,11 @@ namespace QuanLyBanSach_new.MyUserControl
             {
                 ane.ShowDialog();
             }
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

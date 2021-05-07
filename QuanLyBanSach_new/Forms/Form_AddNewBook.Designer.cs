@@ -77,6 +77,7 @@ namespace QuanLyBanSach_new.Forms
             this.comboBoxPublisher.Name = "comboBoxPublisher";
             this.comboBoxPublisher.Size = new System.Drawing.Size(268, 26);
             this.comboBoxPublisher.TabIndex = 52;
+            this.comboBoxPublisher.SelectedIndexChanged += new System.EventHandler(this.comboBoxPublisher_SelectedIndexChanged);
             this.comboBoxPublisher.SelectedValueChanged += new System.EventHandler(this.comboBoxPublisher_SelectedValueChanged);
             // 
             // comboBoxAuthor

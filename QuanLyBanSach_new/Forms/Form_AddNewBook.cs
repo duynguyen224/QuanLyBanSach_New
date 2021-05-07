@@ -146,7 +146,6 @@ namespace QuanLyBanSach_new.Forms
                 f.ShowDialog();
                 fillCombobox();
                 clearAllExceptTitle();
-
             }
         }
 
@@ -170,6 +169,11 @@ namespace QuanLyBanSach_new.Forms
                 clearAllExceptTitle();
 
             }
+        }
+
+        private void comboBoxPublisher_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -40,14 +40,12 @@ namespace QuanLyBanSach_new.Forms
             tenPhieuNhap = pn.TieuDe;
             pn.MoTa = richTextBoxDes.Text;
             dao.insertPhieuNhap(pn);
-            var idPhieuNhap = dao.getIdPhieuNhap_fromName(tenPhieuNhap);
+            //var idPhieuNhap = dao.getIdPhieuNhap_fromName(tenPhieuNhap);
+            var idPhieuNhap = dao.getNewestId();
             this.Hide();
-            Form_UpdateQuantity_AddNewBook f_uq = new Form_UpdateQuantity_AddNewBook(idPhieuNhap);
-
+            Form_UpdateQty_AddNewBook f_uq = new Form_UpdateQty_AddNewBook(idPhieuNhap);
             f_uq.ShowDialog();
             f_uq.Closed += (s, args) => this.Close();
-            
-
         }
     }
 }
