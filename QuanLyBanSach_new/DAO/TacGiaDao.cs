@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using QuanLyBanSach_new.Entities;
 using QuanLyBanSach_new.SupportClass;
 
@@ -48,11 +49,45 @@ namespace QuanLyBanSach_new.DAO
             return res;
         }
 
+        public int updateAuthor(string hoten, string diachi, string tieusu, string dienthoai, int id)
+        {
+            var u = db.TacGias.Where(x => x.ID == id).FirstOrDefault();
+            u.HoTenTG = hoten;
+            u.DiaChi = diachi;
+            u.TieuSu = tieusu;
+            u.DienThoai = dienthoai;
+            db.SaveChanges();
+            return u.ID;
+        }
+
+        public int deleteAuthor(int id)
+        {
+            var u = db.TacGias.Where(x => x.ID == id).FirstOrDefault();
+            db.TacGias.Remove(u);
+            db.SaveChanges();
+            return u.ID;
+
+        }
+
+
         //public IList<AuthorNameOnly> getAuthorNameFromBookTitle(string booktitle)
         //{
         //    var bt = new SqlParameter("@bookTitle", booktitle);
         //    var res = db.Database.SqlQuery<AuthorNameOnly>("proc_getAuthorNamrFromBookTitle @bookTitle", bt).ToList();
         //    return res;
         //}
+
+        public List<Author> listAuthor()
+        {
+            var res = db.Database.SqlQuery<Author>("proc_listAuthor").ToList();
+            return res;
+        }
+
+        public void updateAuthorName(int id, string newName)
+        {
+            var res = db.TacGias.Where(x => x.ID == id).FirstOrDefault();
+            res.HoTenTG = newName;
+            db.SaveChanges();
+        }
     }
 }

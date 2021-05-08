@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using QuanLyBanSach_new.Entities;
-
+using QuanLyBanSach_new.SupportClass;
 
 namespace QuanLyBanSach_new.DAO
 {
@@ -23,5 +23,15 @@ namespace QuanLyBanSach_new.DAO
             db.SaveChanges();
         }
 
+        public int allBookSold()
+        {
+            int sl = 0;
+            var res = db.Database.SqlQuery<SoLuong>("proc_soldBooks").ToList();
+            foreach(var item in res)
+            {
+                sl = item.soluong;
+            }
+            return sl;
+        }
     }
 }

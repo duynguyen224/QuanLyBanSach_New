@@ -34,5 +34,18 @@ namespace QuanLyBanSach_new.DAO
             var res = db.Database.SqlQuery<PhieuNhap_ChiTiet>("proc_gridExpense").ToList();
             return res;
         }
+
+        public int purchasedBook()
+        {
+            //proc_purchasedBooks
+            int sl = 0;
+            var res = db.Database.SqlQuery<SoLuong>("proc_purchasedBooks").ToList();
+            foreach (var item in res)
+            {
+                sl = item.soluong;
+            }
+            return sl;
+
+        }
     }
 }

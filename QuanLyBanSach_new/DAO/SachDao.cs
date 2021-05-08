@@ -116,6 +116,26 @@ namespace QuanLyBanSach_new.DAO
             
         }
 
-        
+        public void updateBooktitle(int id, string newName)
+        {
+            var res = db.Saches.Where(x => x.ID == id).FirstOrDefault();
+            res.TenSach = newName;
+            db.SaveChanges();
+        }
+
+        public void updatePrice(int id, int price)
+        {
+            var res = db.Saches.Where(x => x.ID == id).FirstOrDefault();
+            res.GiaBan = price;
+            db.SaveChanges();
+
+        }
+
+        public void deleteBook(int id)
+        {
+            var i = new SqlParameter("@id", id);
+            db.Database.ExecuteSqlCommand("proc_deleteSach @id", i);
+        }
+
     }
 }

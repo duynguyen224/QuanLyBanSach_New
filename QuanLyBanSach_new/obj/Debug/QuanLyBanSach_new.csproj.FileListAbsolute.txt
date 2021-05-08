@@ -59,3 +59,4 @@ D:\2 Coding-Projects\QuanLyBanSach_new\QuanLyBanSach_new\QuanLyBanSach_new\obj\D
 D:\2 Coding-Projects\QuanLyBanSach_new\QuanLyBanSach_new\QuanLyBanSach_new\obj\Debug\QuanLyBanSach_new.MyUserControl.UC_Author_Admin.resources
 D:\2 Coding-Projects\QuanLyBanSach_new\QuanLyBanSach_new\QuanLyBanSach_new\obj\Debug\QuanLyBanSach_new.MyUserControl.UC_Book_Admin.resources
 D:\2 Coding-Projects\QuanLyBanSach_new\QuanLyBanSach_new\QuanLyBanSach_new\obj\Debug\QuanLyBanSach_new.Forms.Form_UpdateQty_AddNewBook.resources
+D:\2 Coding-Projects\QuanLyBanSach_new\QuanLyBanSach_new\QuanLyBanSach_new\obj\Debug\QuanLyBanSach_new.Forms.Form_EditBook_Admin.resources

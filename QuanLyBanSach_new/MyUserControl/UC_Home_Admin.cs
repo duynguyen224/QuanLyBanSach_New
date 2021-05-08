@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyBanSach_new.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,6 +42,15 @@ namespace QuanLyBanSach_new.MyUserControl
             cnv.addData(dataPoint);
             bunifuDataViz1.colorSet.Add(Color.Red);
             bunifuDataViz1.Render(cnv);
+        }
+
+        private void UC_Home_Admin_Load(object sender, EventArgs e)
+        {
+            ChiTietDonHangDao dao = new ChiTietDonHangDao();
+            labelSoldBooks.Text = dao.allBookSold().ToString();
+
+            ChiTietPhieuNhapDao cDao = new ChiTietPhieuNhapDao();
+            labelPurchasedBook.Text = cDao.purchasedBook().ToString();
         }
     }
 }

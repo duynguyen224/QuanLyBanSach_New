@@ -35,9 +35,9 @@ namespace QuanLyBanSach_new.DAO
             return u.ID;
         }
 
-        public int deleteUser(string username)
+        public int deleteUser(int id)
         {
-            var u = db.Users.Where(x => x.Username == username).FirstOrDefault();
+            var u = db.Users.Where(x => x.ID == id).FirstOrDefault();
             db.Users.Remove(u);
             db.SaveChanges();
             return u.ID;

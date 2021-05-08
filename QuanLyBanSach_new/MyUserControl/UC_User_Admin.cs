@@ -20,7 +20,9 @@ namespace QuanLyBanSach_new.MyUserControl
             InitializeComponent();
 
             // READONLY textbox ID
-            
+            UserDao dao = new UserDao();
+            dao.populateUser(dataGridViewUser);
+
         }
 
         private void clearAll()
@@ -35,25 +37,36 @@ namespace QuanLyBanSach_new.MyUserControl
         private void button2_Click(object sender, EventArgs e)
         {
             UserDao dao = new UserDao();
-            var u = new User()
+            var fullname = textBoxFullname.Text;
+            var username = textBoxUsername.Text;
+            var pass = textBoxPassword.Text;
+
+            if (fullname == "" || username == "" || pass == "" )
             {
-                Fullname = textBoxFullname.Text,
-                Username = textBoxUsername.Text,
-                Password = textBoxPassword.Text,
-                Role = comboBoxRole.SelectedItem.ToString().Trim().ToLower()
-            };
-            var check = dao.insertUser(u);
-            if(check > 0)
-            {
-                MessageBox.Show("Thêm thành công !");
+                MessageBox.Show("Hãy nhập đủ thông tin !");
             }
-            dao.populateUser(dataGridViewUser);
+            else
+            {
+                var u = new User()
+                {
+                    Fullname = fullname,
+                    Username = username,
+                    Password = pass,
+                    Role = comboBoxRole.SelectedItem.ToString().Trim().ToLower()
+                };
+
+                var check = dao.insertUser(u);
+                if (check > 0)
+                {
+                    MessageBox.Show("Thêm thành công !");
+                }
+                dao.populateUser(dataGridViewUser);
+
+            }
         }
 
         private void UC_User_Admin_Load(object sender, EventArgs e)
         {
-            UserDao dao = new UserDao();
-            dao.populateUser(dataGridViewUser);
 
         }
 
@@ -76,9 +89,9 @@ namespace QuanLyBanSach_new.MyUserControl
             if (MessageBox.Show("Xóa User ??", "Xóa User", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 UserDao dao = new UserDao();
-                string u = textBoxUsername.Text.Trim().ToLower();
-                var check = dao.deleteUser(u);
-                if(check > 0)
+                int id = int.Parse(textBoxID.Text);
+                var check = dao.deleteUser(id);
+                if (check > 0)
                 {
                     MessageBox.Show("Xóa thành công !");
                     dao.populateUser(dataGridViewUser);
@@ -92,7 +105,7 @@ namespace QuanLyBanSach_new.MyUserControl
         {
             UserDao dao = new UserDao();
             var check = dao.updateUser(int.Parse(textBoxID.Text), textBoxFullname.Text, textBoxUsername.Text, textBoxPassword.Text, comboBoxRole.SelectedItem.ToString().Trim().ToLower());
-            if(check > 0)
+            if (check > 0)
             {
                 MessageBox.Show("Sửa thành công !");
                 dao.populateUser(dataGridViewUser);

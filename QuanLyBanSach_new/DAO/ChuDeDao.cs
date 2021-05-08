@@ -46,5 +46,12 @@ namespace QuanLyBanSach_new.DAO
 
             return res;
         }
+
+        public void updateCategoryName(int id, string newname)
+        {
+            var res = db.ChuDes.Where(x => x.ID == id).FirstOrDefault();
+            res.TenCD = newname;
+            db.SaveChanges();
+        }
     }
 }

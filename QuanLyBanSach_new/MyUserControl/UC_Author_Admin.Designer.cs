@@ -29,6 +29,8 @@ namespace QuanLyBanSach_new.MyUserControl
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxID = new System.Windows.Forms.TextBox();
@@ -58,6 +60,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label4.Size = new System.Drawing.Size(66, 18);
             this.label4.TabIndex = 65;
             this.label4.Text = "Clear All";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -82,17 +85,33 @@ namespace QuanLyBanSach_new.MyUserControl
             // 
             // dataGridViewAuthor
             // 
-            this.dataGridViewAuthor.AllowUserToResizeColumns = false;
-            this.dataGridViewAuthor.AllowUserToResizeRows = false;
             this.dataGridViewAuthor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewAuthor.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewAuthor.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewAuthor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewAuthor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewAuthor.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewAuthor.Location = new System.Drawing.Point(206, 362);
             this.dataGridViewAuthor.Name = "dataGridViewAuthor";
             this.dataGridViewAuthor.RowHeadersWidth = 62;
             this.dataGridViewAuthor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewAuthor.Size = new System.Drawing.Size(607, 171);
             this.dataGridViewAuthor.TabIndex = 62;
+            this.dataGridViewAuthor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAuthor_CellContentClick);
             // 
             // button3
             // 
@@ -108,6 +127,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.button3.TabIndex = 58;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -123,6 +143,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.button2.TabIndex = 60;
             this.button2.Text = "Add new";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -138,6 +159,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.button1.TabIndex = 59;
             this.button1.Text = "Edit";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBoxAddress
             // 

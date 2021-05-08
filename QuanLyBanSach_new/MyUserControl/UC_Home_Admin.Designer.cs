@@ -33,16 +33,16 @@ namespace QuanLyBanSach_new.MyUserControl
             this.bunifuCircleProgressbar2 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
             this.bunifuCircleProgressbar1 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
             this.button1 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
+            this.labelCustomer = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelPurchasedBook = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelSoldBooks = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -117,16 +117,16 @@ namespace QuanLyBanSach_new.MyUserControl
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label7
+            // labelCustomer
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(41, 50);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(36, 19);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "512";
+            this.labelCustomer.AutoSize = true;
+            this.labelCustomer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCustomer.ForeColor = System.Drawing.Color.White;
+            this.labelCustomer.Location = new System.Drawing.Point(41, 50);
+            this.labelCustomer.Name = "labelCustomer";
+            this.labelCustomer.Size = new System.Drawing.Size(36, 19);
+            this.labelCustomer.TabIndex = 0;
+            this.labelCustomer.Text = "512";
             // 
             // label8
             // 
@@ -144,7 +144,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.Crimson;
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.labelPurchasedBook);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Location = new System.Drawing.Point(344, 97);
             this.panel2.Name = "panel2";
@@ -161,16 +161,16 @@ namespace QuanLyBanSach_new.MyUserControl
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
-            // label5
+            // labelPurchasedBook
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(43, 50);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 19);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "1234";
+            this.labelPurchasedBook.AutoSize = true;
+            this.labelPurchasedBook.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPurchasedBook.ForeColor = System.Drawing.Color.White;
+            this.labelPurchasedBook.Location = new System.Drawing.Point(43, 50);
+            this.labelPurchasedBook.Name = "labelPurchasedBook";
+            this.labelPurchasedBook.Size = new System.Drawing.Size(45, 19);
+            this.labelPurchasedBook.TabIndex = 0;
+            this.labelPurchasedBook.Text = "1234";
             // 
             // label6
             // 
@@ -198,7 +198,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.labelCustomer);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Location = new System.Drawing.Point(649, 97);
             this.panel3.Name = "panel3";
@@ -217,16 +217,16 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label10.TabIndex = 5;
             this.label10.Text = "Recived";
             // 
-            // label4
+            // labelSoldBooks
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(40, 50);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 19);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "1000";
+            this.labelSoldBooks.AutoSize = true;
+            this.labelSoldBooks.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSoldBooks.ForeColor = System.Drawing.Color.White;
+            this.labelSoldBooks.Location = new System.Drawing.Point(40, 50);
+            this.labelSoldBooks.Name = "labelSoldBooks";
+            this.labelSoldBooks.Size = new System.Drawing.Size(45, 19);
+            this.labelSoldBooks.TabIndex = 0;
+            this.labelSoldBooks.Text = "1000";
             // 
             // label3
             // 
@@ -266,7 +266,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.SeaGreen;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.labelSoldBooks);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(67, 97);
             this.panel1.Name = "panel1";
@@ -355,6 +355,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "UC_Home_Admin";
             this.Size = new System.Drawing.Size(1009, 547);
+            this.Load += new System.EventHandler(this.UC_Home_Admin_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -374,16 +375,16 @@ namespace QuanLyBanSach_new.MyUserControl
         private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar2;
         private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelCustomer;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelPurchasedBook;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelSoldBooks;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;

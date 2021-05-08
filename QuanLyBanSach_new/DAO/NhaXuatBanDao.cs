@@ -56,5 +56,11 @@ namespace QuanLyBanSach_new.DAO
         //    return res;
         //}
 
+        public void updatePublisherName(int id, string newname)
+        {
+            var res = db.NhaXuatBans.Where(x => x.ID == id).FirstOrDefault();
+            res.TenNXB = newname;
+            db.SaveChanges();
+        }
     }
 }
