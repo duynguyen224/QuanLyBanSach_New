@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,11 +28,18 @@ namespace QuanLyBanSach_new.DAO
         {
             int sl = 0;
             var res = db.Database.SqlQuery<SoLuong>("proc_soldBooks").ToList();
-            foreach(var item in res)
+            foreach (var item in res)
             {
                 sl = item.soluong;
             }
             return sl;
+        }
+
+        public IList<Sach_ChiTietDH> getDetails(int idDonHang)
+        {
+            var mdh = new SqlParameter("@madh", idDonHang);
+            var res = db.Database.SqlQuery<Sach_ChiTietDH>("proc_info_details @madh", mdh);
+            return res.ToList();
         }
     }
 }

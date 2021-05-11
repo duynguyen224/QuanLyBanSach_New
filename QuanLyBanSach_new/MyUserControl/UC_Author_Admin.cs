@@ -108,7 +108,6 @@ namespace QuanLyBanSach_new.MyUserControl
                     clearAll();
                 }
             }
-
         }
     }
 }

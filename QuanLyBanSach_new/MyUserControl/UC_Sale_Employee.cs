@@ -125,8 +125,9 @@ namespace QuanLyBanSach_new.MyUserControl
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             GioHangDao dao = new GioHangDao();
-            dao.deleteOneRecord(c.BookTitle);
-            dao.bindDataToGridCart();
+            dao.deleteOneRecord(c.BookTitle, c.Qty);
+            dataGridViewCart.DataSource = dao.bindDataToGridCart();
+
         }
 
         private void comboBoxBookTitle_SelectedIndexChanged(object sender, EventArgs e)

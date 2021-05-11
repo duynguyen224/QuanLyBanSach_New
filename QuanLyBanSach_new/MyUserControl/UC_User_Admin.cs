@@ -43,7 +43,7 @@ namespace QuanLyBanSach_new.MyUserControl
 
             if (fullname == "" || username == "" || pass == "" )
             {
-                MessageBox.Show("Hãy nhập đủ thông tin !");
+                MessageBox.Show("Hãy nhập đủ thông tin !"); 
             }
             else
             {

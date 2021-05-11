@@ -41,9 +41,9 @@ namespace QuanLyBanSach_new.DAO
             return res;
         }
 
-        public void deleteOneRecord(string booktitle)
+        public void deleteOneRecord(string booktitle, int qty)
         {
-            var g = db.GioHangs.Where(x => x.BookTitle.Trim().ToLower() == booktitle.Trim().ToLower()).FirstOrDefault() ;
+            var g = db.GioHangs.Where(x => x.BookTitle.Trim().ToLower() == booktitle.Trim().ToLower() && x.Qty == qty).FirstOrDefault() ;
 
             db.GioHangs.Remove(g);
             db.SaveChanges();

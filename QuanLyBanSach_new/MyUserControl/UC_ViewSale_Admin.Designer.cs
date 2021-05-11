@@ -31,13 +31,15 @@ namespace QuanLyBanSach_new.MyUserControl
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_ViewSale_Admin));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridViewViewSale = new System.Windows.Forms.DataGridView();
+            this.dataGridViewDonHang = new System.Windows.Forms.DataGridView();
+            this.dataGridViewChiTietDH = new System.Windows.Forms.DataGridView();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViewSale)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDonHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChiTietDH)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
@@ -49,28 +51,6 @@ namespace QuanLyBanSach_new.MyUserControl
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(970, 51);
             this.panel5.TabIndex = 19;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(416, 12);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(142, 25);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Sales Record";
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.dataGridViewViewSale);
-            this.panel6.Controls.Add(this.panel5);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1009, 547);
-            this.panel6.TabIndex = 20;
             // 
             // button1
             // 
@@ -88,15 +68,50 @@ namespace QuanLyBanSach_new.MyUserControl
             this.button1.Text = "   Refresh";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dataGridViewViewSale
+            // label5
             // 
-            this.dataGridViewViewSale.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewViewSale.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewViewSale.Location = new System.Drawing.Point(3, 99);
-            this.dataGridViewViewSale.Name = "dataGridViewViewSale";
-            this.dataGridViewViewSale.Size = new System.Drawing.Size(970, 445);
-            this.dataGridViewViewSale.TabIndex = 20;
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(416, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(142, 25);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Sales Record";
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.dataGridViewChiTietDH);
+            this.panel6.Controls.Add(this.dataGridViewDonHang);
+            this.panel6.Controls.Add(this.panel5);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1009, 547);
+            this.panel6.TabIndex = 20;
+            // 
+            // dataGridViewDonHang
+            // 
+            this.dataGridViewDonHang.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDonHang.Location = new System.Drawing.Point(3, 99);
+            this.dataGridViewDonHang.Name = "dataGridViewDonHang";
+            this.dataGridViewDonHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewDonHang.Size = new System.Drawing.Size(601, 445);
+            this.dataGridViewDonHang.TabIndex = 20;
+            this.dataGridViewDonHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDonHang_CellContentClick);
+            // 
+            // dataGridViewChiTietDH
+            // 
+            this.dataGridViewChiTietDH.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewChiTietDH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewChiTietDH.Location = new System.Drawing.Point(605, 99);
+            this.dataGridViewChiTietDH.Name = "dataGridViewChiTietDH";
+            this.dataGridViewChiTietDH.Size = new System.Drawing.Size(368, 445);
+            this.dataGridViewChiTietDH.TabIndex = 21;
             // 
             // UC_ViewSale_Admin
             // 
@@ -108,7 +123,8 @@ namespace QuanLyBanSach_new.MyUserControl
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViewSale)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDonHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChiTietDH)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -118,6 +134,7 @@ namespace QuanLyBanSach_new.MyUserControl
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.DataGridView dataGridViewViewSale;
+        private System.Windows.Forms.DataGridView dataGridViewDonHang;
+        private System.Windows.Forms.DataGridView dataGridViewChiTietDH;
     }
 }

@@ -183,6 +183,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.dataGridViewCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCart.Location = new System.Drawing.Point(9, 0);
             this.dataGridViewCart.Name = "dataGridViewCart";
+            this.dataGridViewCart.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewCart.Size = new System.Drawing.Size(240, 354);
             this.dataGridViewCart.TabIndex = 5;
             this.dataGridViewCart.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCart_CellContentClick);

@@ -225,9 +225,11 @@
     <Compile Include="SupportClass\Book.cs" />
     <Compile Include="SupportClass\Cart.cs" />
     <Compile Include="SupportClass\CustomerNameOnly.cs" />
+    <Compile Include="SupportClass\DonHang_KhachHang.cs" />
     <Compile Include="SupportClass\IdOnly.cs" />
     <Compile Include="SupportClass\PhieuNhap_ChiTiet.cs" />
     <Compile Include="SupportClass\PublisherNameOnly.cs" />
+    <Compile Include="SupportClass\Sach_ChiTietDH.cs" />
     <Compile Include="SupportClass\SellBook.cs" />
     <Compile Include="SupportClass\BookTitleOnly.cs" />
     <Compile Include="SupportClass\SoLuong.cs" />

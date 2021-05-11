@@ -46,5 +46,17 @@ namespace QuanLyBanSach_new.DAO
             db.SaveChanges();
             return kh.ID ;
         }
+
+        public int countCustomer()
+        {
+            int sl = 0;
+            var res = db.Database.SqlQuery<SoLuong>("demKH").ToList();
+            foreach (var item in res)
+            {
+                sl = item.soluong;
+            }
+            return sl;
+
+        }
     }
 }
