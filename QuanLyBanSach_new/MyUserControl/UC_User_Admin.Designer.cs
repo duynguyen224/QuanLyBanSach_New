@@ -50,7 +50,6 @@ namespace QuanLyBanSach_new.MyUserControl
             // 
             // dataGridViewUser
             // 
-            this.dataGridViewUser.AllowUserToResizeColumns = false;
             this.dataGridViewUser.AllowUserToResizeRows = false;
             this.dataGridViewUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridViewUser.BackgroundColor = System.Drawing.Color.White;

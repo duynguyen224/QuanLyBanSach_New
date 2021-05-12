@@ -41,7 +41,6 @@ namespace QuanLyBanSach_new.Forms
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.buttonAddNewCustomer = new System.Windows.Forms.Button();
@@ -49,7 +48,6 @@ namespace QuanLyBanSach_new.Forms
             this.label10 = new System.Windows.Forms.Label();
             this.textBoxCustomerID = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.buttonSearchCustomer = new System.Windows.Forms.Button();
             this.textBoxSearchCustomer = new System.Windows.Forms.TextBox();
             this.label1SearchCustomerName = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -57,6 +55,10 @@ namespace QuanLyBanSach_new.Forms
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonSearchCustomer = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,8 +70,8 @@ namespace QuanLyBanSach_new.Forms
             this.buttonDone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDone.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDone.ForeColor = System.Drawing.Color.White;
-            this.buttonDone.Location = new System.Drawing.Point(505, 510);
-            this.buttonDone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonDone.Location = new System.Drawing.Point(536, 512);
+            this.buttonDone.Margin = new System.Windows.Forms.Padding(4);
             this.buttonDone.Name = "buttonDone";
             this.buttonDone.Size = new System.Drawing.Size(140, 53);
             this.buttonDone.TabIndex = 2;
@@ -81,7 +83,7 @@ namespace QuanLyBanSach_new.Forms
             // 
             this.textBoxPaidAmount.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPaidAmount.Location = new System.Drawing.Point(238, 369);
-            this.textBoxPaidAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPaidAmount.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPaidAmount.Name = "textBoxPaidAmount";
             this.textBoxPaidAmount.Size = new System.Drawing.Size(248, 26);
             this.textBoxPaidAmount.TabIndex = 36;
@@ -91,7 +93,7 @@ namespace QuanLyBanSach_new.Forms
             // 
             this.textBoxTotalAmount.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTotalAmount.Location = new System.Drawing.Point(238, 322);
-            this.textBoxTotalAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxTotalAmount.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxTotalAmount.Name = "textBoxTotalAmount";
             this.textBoxTotalAmount.ReadOnly = true;
             this.textBoxTotalAmount.Size = new System.Drawing.Size(248, 26);
@@ -134,7 +136,7 @@ namespace QuanLyBanSach_new.Forms
             // 
             this.textBoxDiscount.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDiscount.Location = new System.Drawing.Point(240, 273);
-            this.textBoxDiscount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxDiscount.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDiscount.Name = "textBoxDiscount";
             this.textBoxDiscount.Size = new System.Drawing.Size(118, 26);
             this.textBoxDiscount.TabIndex = 37;
@@ -155,7 +157,7 @@ namespace QuanLyBanSach_new.Forms
             // 
             this.textBoxNetAmount.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNetAmount.Location = new System.Drawing.Point(240, 228);
-            this.textBoxNetAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNetAmount.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNetAmount.Name = "textBoxNetAmount";
             this.textBoxNetAmount.ReadOnly = true;
             this.textBoxNetAmount.Size = new System.Drawing.Size(246, 26);
@@ -194,18 +196,6 @@ namespace QuanLyBanSach_new.Forms
             this.label1.TabIndex = 26;
             this.label1.Text = "Finalize Your Order";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.Image = global::QuanLyBanSach_new.Properties.Resources.books_emoji_80px;
-            this.pictureBox2.Location = new System.Drawing.Point(29, 25);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(112, 114);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 33;
-            this.pictureBox2.TabStop = false;
-            // 
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -214,10 +204,10 @@ namespace QuanLyBanSach_new.Forms
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(568, 25);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(602, 25);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(14, 449);
+            this.button2.Size = new System.Drawing.Size(10, 407);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -241,7 +231,7 @@ namespace QuanLyBanSach_new.Forms
             this.buttonAddNewCustomer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAddNewCustomer.ForeColor = System.Drawing.Color.White;
             this.buttonAddNewCustomer.Location = new System.Drawing.Point(998, 268);
-            this.buttonAddNewCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonAddNewCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAddNewCustomer.Name = "buttonAddNewCustomer";
             this.buttonAddNewCustomer.Size = new System.Drawing.Size(42, 36);
             this.buttonAddNewCustomer.TabIndex = 58;
@@ -253,10 +243,10 @@ namespace QuanLyBanSach_new.Forms
             // 
             this.comboBoxCustomerName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCustomerName.FormattingEnabled = true;
-            this.comboBoxCustomerName.Location = new System.Drawing.Point(684, 273);
-            this.comboBoxCustomerName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxCustomerName.Location = new System.Drawing.Point(701, 273);
+            this.comboBoxCustomerName.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxCustomerName.Name = "comboBoxCustomerName";
-            this.comboBoxCustomerName.Size = new System.Drawing.Size(306, 26);
+            this.comboBoxCustomerName.Size = new System.Drawing.Size(289, 26);
             this.comboBoxCustomerName.TabIndex = 57;
             this.comboBoxCustomerName.SelectedValueChanged += new System.EventHandler(this.comboBoxCustomerName_SelectedValueChanged);
             // 
@@ -264,7 +254,7 @@ namespace QuanLyBanSach_new.Forms
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(617, 276);
+            this.label10.Location = new System.Drawing.Point(634, 276);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(59, 19);
@@ -274,50 +264,32 @@ namespace QuanLyBanSach_new.Forms
             // textBoxCustomerID
             // 
             this.textBoxCustomerID.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustomerID.Location = new System.Drawing.Point(684, 322);
-            this.textBoxCustomerID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxCustomerID.Location = new System.Drawing.Point(701, 322);
+            this.textBoxCustomerID.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxCustomerID.Name = "textBoxCustomerID";
             this.textBoxCustomerID.ReadOnly = true;
-            this.textBoxCustomerID.Size = new System.Drawing.Size(42, 26);
+            this.textBoxCustomerID.Size = new System.Drawing.Size(38, 26);
             this.textBoxCustomerID.TabIndex = 59;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(645, 325);
+            this.label9.Location = new System.Drawing.Point(662, 325);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(31, 19);
             this.label9.TabIndex = 60;
             this.label9.Text = "ID:";
             // 
-            // buttonSearchCustomer
-            // 
-            this.buttonSearchCustomer.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonSearchCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.buttonSearchCustomer.Cursor = System.Windows.Forms.Cursors.Default;
-            this.buttonSearchCustomer.FlatAppearance.BorderSize = 0;
-            this.buttonSearchCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSearchCustomer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSearchCustomer.ForeColor = System.Drawing.Color.White;
-            this.buttonSearchCustomer.Image = global::QuanLyBanSach_new.Properties.Resources.search_30px;
-            this.buttonSearchCustomer.Location = new System.Drawing.Point(998, 222);
-            this.buttonSearchCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.buttonSearchCustomer.Name = "buttonSearchCustomer";
-            this.buttonSearchCustomer.Size = new System.Drawing.Size(42, 38);
-            this.buttonSearchCustomer.TabIndex = 63;
-            this.buttonSearchCustomer.UseVisualStyleBackColor = false;
-            this.buttonSearchCustomer.Click += new System.EventHandler(this.buttonSearchCustomer_Click);
-            // 
             // textBoxSearchCustomer
             // 
             this.textBoxSearchCustomer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxSearchCustomer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSearchCustomer.Location = new System.Drawing.Point(684, 228);
-            this.textBoxSearchCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxSearchCustomer.Location = new System.Drawing.Point(701, 228);
+            this.textBoxSearchCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSearchCustomer.Name = "textBoxSearchCustomer";
-            this.textBoxSearchCustomer.Size = new System.Drawing.Size(306, 26);
+            this.textBoxSearchCustomer.Size = new System.Drawing.Size(289, 26);
             this.textBoxSearchCustomer.TabIndex = 62;
             // 
             // label1SearchCustomerName
@@ -325,7 +297,7 @@ namespace QuanLyBanSach_new.Forms
             this.label1SearchCustomerName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1SearchCustomerName.AutoSize = true;
             this.label1SearchCustomerName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1SearchCustomerName.Location = new System.Drawing.Point(603, 231);
+            this.label1SearchCustomerName.Location = new System.Drawing.Point(620, 231);
             this.label1SearchCustomerName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1SearchCustomerName.Name = "label1SearchCustomerName";
             this.label1SearchCustomerName.Size = new System.Drawing.Size(73, 19);
@@ -384,18 +356,60 @@ namespace QuanLyBanSach_new.Forms
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(408, 413);
+            this.label14.Location = new System.Drawing.Point(366, 413);
             this.label14.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(44, 19);
             this.label14.TabIndex = 68;
             this.label14.Text = "VND";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QuanLyBanSach_new.Properties.Resources.calculator_50px;
+            this.pictureBox1.Location = new System.Drawing.Point(536, 357);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(59, 52);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 69;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // buttonSearchCustomer
+            // 
+            this.buttonSearchCustomer.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonSearchCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.buttonSearchCustomer.Cursor = System.Windows.Forms.Cursors.Default;
+            this.buttonSearchCustomer.FlatAppearance.BorderSize = 0;
+            this.buttonSearchCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearchCustomer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSearchCustomer.ForeColor = System.Drawing.Color.White;
+            this.buttonSearchCustomer.Image = global::QuanLyBanSach_new.Properties.Resources.search_30px;
+            this.buttonSearchCustomer.Location = new System.Drawing.Point(998, 222);
+            this.buttonSearchCustomer.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSearchCustomer.Name = "buttonSearchCustomer";
+            this.buttonSearchCustomer.Size = new System.Drawing.Size(42, 38);
+            this.buttonSearchCustomer.TabIndex = 63;
+            this.buttonSearchCustomer.UseVisualStyleBackColor = false;
+            this.buttonSearchCustomer.Click += new System.EventHandler(this.buttonSearchCustomer_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Image = global::QuanLyBanSach_new.Properties.Resources.books_emoji_80px;
+            this.pictureBox2.Location = new System.Drawing.Point(29, 25);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(112, 114);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 33;
+            this.pictureBox2.TabStop = false;
+            // 
             // Form_Finish_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1063, 589);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -425,11 +439,12 @@ namespace QuanLyBanSach_new.Forms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_Finish_Order";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Finish_Order";
             this.Load += new System.EventHandler(this.Form_Finish_Order_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -465,5 +480,6 @@ namespace QuanLyBanSach_new.Forms
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

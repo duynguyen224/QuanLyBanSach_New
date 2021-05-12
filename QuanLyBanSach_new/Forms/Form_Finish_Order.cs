@@ -135,5 +135,18 @@ namespace QuanLyBanSach_new.Forms
             labelRefundAmount.Text = refund.ToString();
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            var netAmount = int.Parse(textBoxNetAmount.Text);
+            var discount = int.Parse(textBoxDiscount.Text);
+            var total = netAmount - netAmount * discount / 100;
+            textBoxTotalAmount.Text = total.ToString();
+
+            var total1 = int.Parse(textBoxTotalAmount.Text);
+            var refund = int.Parse(textBoxPaidAmount.Text) - total1;
+            labelRefundAmount.Text = refund.ToString();
+
+        }
     }
 }

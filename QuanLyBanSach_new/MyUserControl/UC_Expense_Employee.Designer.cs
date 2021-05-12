@@ -30,6 +30,8 @@ namespace QuanLyBanSach_new.MyUserControl
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Expense_Employee));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAddNewBooks = new System.Windows.Forms.Button();
@@ -45,9 +47,10 @@ namespace QuanLyBanSach_new.MyUserControl
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.btnAddNewBooks);
-            this.panel5.Location = new System.Drawing.Point(42, 16);
+            this.panel5.Location = new System.Drawing.Point(63, 25);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(926, 82);
+            this.panel5.Size = new System.Drawing.Size(1389, 126);
             this.panel5.TabIndex = 15;
             // 
             // label5
@@ -56,9 +59,10 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(624, 32);
+            this.label5.Location = new System.Drawing.Point(936, 49);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(149, 19);
+            this.label5.Size = new System.Drawing.Size(221, 29);
             this.label5.TabIndex = 4;
             this.label5.Text = "Manage Expenses";
             // 
@@ -72,8 +76,9 @@ namespace QuanLyBanSach_new.MyUserControl
             this.btnAddNewBooks.ForeColor = System.Drawing.Color.White;
             this.btnAddNewBooks.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNewBooks.Image")));
             this.btnAddNewBooks.Location = new System.Drawing.Point(0, 0);
+            this.btnAddNewBooks.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAddNewBooks.Name = "btnAddNewBooks";
-            this.btnAddNewBooks.Size = new System.Drawing.Size(233, 82);
+            this.btnAddNewBooks.Size = new System.Drawing.Size(350, 126);
             this.btnAddNewBooks.TabIndex = 0;
             this.btnAddNewBooks.Text = "   Add New Expense";
             this.btnAddNewBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -86,28 +91,47 @@ namespace QuanLyBanSach_new.MyUserControl
             this.panel6.Controls.Add(this.panel5);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1009, 547);
+            this.panel6.Size = new System.Drawing.Size(1514, 842);
             this.panel6.TabIndex = 16;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // dataGridViewExpense
             // 
             this.dataGridViewExpense.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewExpense.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewExpense.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewExpense.Location = new System.Drawing.Point(42, 123);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewExpense.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewExpense.Location = new System.Drawing.Point(63, 189);
+            this.dataGridViewExpense.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridViewExpense.Name = "dataGridViewExpense";
             this.dataGridViewExpense.RowHeadersWidth = 62;
-            this.dataGridViewExpense.Size = new System.Drawing.Size(926, 421);
+            this.dataGridViewExpense.Size = new System.Drawing.Size(1389, 648);
             this.dataGridViewExpense.TabIndex = 16;
             // 
             // UC_Expense_Employee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel6);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UC_Expense_Employee";
-            this.Size = new System.Drawing.Size(1009, 547);
+            this.Size = new System.Drawing.Size(1514, 842);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);

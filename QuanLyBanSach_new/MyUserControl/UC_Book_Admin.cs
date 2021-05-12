@@ -138,5 +138,9 @@ namespace QuanLyBanSach_new.MyUserControl
            
         }
 
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
