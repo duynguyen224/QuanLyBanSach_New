@@ -17,7 +17,7 @@ namespace QuanLyBanSach_new
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_Login());
+            Application.Run(new Form_Admin_DashBoard("àd"));
         }
     }
 }

@@ -225,6 +225,7 @@
     <Compile Include="SupportClass\Book.cs" />
     <Compile Include="SupportClass\Cart.cs" />
     <Compile Include="SupportClass\CustomerNameOnly.cs" />
+    <Compile Include="SupportClass\DGVPrinter.cs" />
     <Compile Include="SupportClass\DonHang_KhachHang.cs" />
     <Compile Include="SupportClass\IdOnly.cs" />
     <Compile Include="SupportClass\PhieuNhap_ChiTiet.cs" />
@@ -368,6 +369,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bookk_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_50px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_white_50px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using QuanLyBanSach_new.DAO;
 using QuanLyBanSach_new.Forms;
 
+using QuanLyBanSach_new.SupportClass;
+using DGVPrinterHelper;
+
 namespace QuanLyBanSach_new.MyUserControl
 {
     public partial class UC_Book_Admin : UserControl
@@ -119,5 +122,21 @@ namespace QuanLyBanSach_new.MyUserControl
             SachDao dao = new SachDao();
             idSachSelected = dao.getIdBookByName(tensach);
         }
+
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            DGVPrinter printer = new DGVPrinter();
+            printer.Title = comboBoxSearchBy.Text + ": " + textBoxSearch.Text;
+            printer.SubTitle = string.Format($"Date: {0}", DateTime.Now.Date);
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.PrintDataGridView(dataGridViewBook);
+           
+        }
+
     }
 }
