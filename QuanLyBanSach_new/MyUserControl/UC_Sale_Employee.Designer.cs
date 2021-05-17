@@ -179,6 +179,7 @@ namespace QuanLyBanSach_new.MyUserControl
             // 
             // dataGridViewCart
             // 
+            this.dataGridViewCart.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewCart.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCart.Location = new System.Drawing.Point(9, 0);

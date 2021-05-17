@@ -58,6 +58,7 @@ namespace QuanLyBanSach_new.MyUserControl
 
         private void button1_Click(object sender, EventArgs e)
         {
+            populateGridInfo();
             idDonHang = 0;
             populateGridDetails(idDonHang);
 

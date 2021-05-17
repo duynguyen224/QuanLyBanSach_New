@@ -29,14 +29,15 @@ namespace QuanLyBanSach_new.MyUserControl
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Expense_Employee));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Expense_Employee));
             this.panel5 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAddNewBooks = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dataGridViewExpense = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExpense)).BeginInit();
@@ -45,6 +46,7 @@ namespace QuanLyBanSach_new.MyUserControl
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel5.Controls.Add(this.button1);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.btnAddNewBooks);
             this.panel5.Location = new System.Drawing.Point(63, 25);
@@ -59,7 +61,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(936, 49);
+            this.label5.Location = new System.Drawing.Point(1099, 49);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(221, 29);
@@ -99,6 +101,7 @@ namespace QuanLyBanSach_new.MyUserControl
             // 
             // dataGridViewExpense
             // 
+            this.dataGridViewExpense.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewExpense.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -120,9 +123,29 @@ namespace QuanLyBanSach_new.MyUserControl
             this.dataGridViewExpense.Location = new System.Drawing.Point(63, 189);
             this.dataGridViewExpense.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridViewExpense.Name = "dataGridViewExpense";
+            this.dataGridViewExpense.RowHeadersVisible = false;
             this.dataGridViewExpense.RowHeadersWidth = 62;
             this.dataGridViewExpense.Size = new System.Drawing.Size(1389, 648);
             this.dataGridViewExpense.TabIndex = 16;
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(350, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(170, 126);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "   Refresh";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // UC_Expense_Employee
             // 
@@ -146,5 +169,6 @@ namespace QuanLyBanSach_new.MyUserControl
         private System.Windows.Forms.Button btnAddNewBooks;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.DataGridView dataGridViewExpense;
+        private System.Windows.Forms.Button button1;
     }
 }

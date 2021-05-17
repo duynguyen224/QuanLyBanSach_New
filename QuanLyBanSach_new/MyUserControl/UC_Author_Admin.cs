@@ -60,21 +60,30 @@ namespace QuanLyBanSach_new.MyUserControl
 
         private void button2_Click(object sender, EventArgs e)
         {
-            TacGia tg = new TacGia()
+            var fullname = textBoxFullname.Text;
+            if(fullname == "")
             {
-                HoTenTG = textBoxFullname.Text,
-                DiaChi = textBoxAddress.Text,
-                TieuSu = textBoxBackground.Text,
-                DienThoai = textBoxPhone.Text,
-            };
-            TacGiaDao tgDao = new TacGiaDao();
-            var res = tgDao.insertAuthor(tg.HoTenTG, tg.DiaChi, tg.TieuSu, tg.DienThoai);
-            if(res > 0)
-            {
-                MessageBox.Show("Thêm tác giả thành công !");
+                MessageBox.Show("Hãy nhập họ tên để thêm !");
             }
-            bindDataToGrid();
-            clearAll();
+            else
+            {
+                TacGia tg = new TacGia()
+                {
+                    HoTenTG = textBoxFullname.Text,
+                    DiaChi = textBoxAddress.Text,
+                    TieuSu = textBoxBackground.Text,
+                    DienThoai = textBoxPhone.Text,
+                };
+                TacGiaDao tgDao = new TacGiaDao();
+                var res = tgDao.insertAuthor(tg.HoTenTG, tg.DiaChi, tg.TieuSu, tg.DienThoai);
+                if (res > 0)
+                {
+                    MessageBox.Show("Thêm tác giả thành công !");
+                }
+                bindDataToGrid();
+                clearAll();
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -83,30 +92,49 @@ namespace QuanLyBanSach_new.MyUserControl
             var dc = textBoxAddress.Text;
             var ts = textBoxBackground.Text;
             var dt = textBoxPhone.Text;
-            var id = int.Parse(textBoxID.Text);
-            TacGiaDao dao = new TacGiaDao();
-            var res = dao.updateAuthor(ht, dc, ts, dt, id);
-            if(res > 0)
+            if(ht == "")
             {
-                MessageBox.Show("Sửa thông tin thành công !");
+                MessageBox.Show("Hãy chọn 1 tác giả để sửa !");
             }
-            bindDataToGrid();
-            clearAll();
+            else
+            {
+                var id = int.Parse(textBoxID.Text);
+
+                TacGiaDao dao = new TacGiaDao();
+                var res = dao.updateAuthor(ht, dc, ts, dt, id);
+                if (res > 0)
+                {
+                    MessageBox.Show("Sửa thông tin thành công !");
+                }
+                bindDataToGrid();
+                clearAll();
+
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Xóa Author ??", "Xóa Author", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            var ht = textBoxFullname.Text;
+
+            if (ht == "")
             {
-                TacGiaDao dao = new TacGiaDao();
-                int id = int.Parse(textBoxID.Text);
-                var check = dao.deleteAuthor(id);
-                if (check > 0)
+                MessageBox.Show("Hãy chọn 1 tác giả để XÓA !");
+            }
+            else
+            {
+                if (MessageBox.Show("Xóa Author ??", "Xóa Author", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    MessageBox.Show("Xóa thành công !");
-                    bindDataToGrid();
-                    clearAll();
+                    TacGiaDao dao = new TacGiaDao();
+                    int id = int.Parse(textBoxID.Text);
+                    var check = dao.deleteAuthor(id);
+                    if (check > 0)
+                    {
+                        MessageBox.Show("Xóa thành công !");
+                        bindDataToGrid();
+                        clearAll();
+                    }
                 }
+
             }
         }
     }

@@ -34,23 +34,31 @@ namespace QuanLyBanSach_new.Forms
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            var publisher = new NhaXuatBan()
+            if (textBoxPublisherName.Text == "")
             {
-                TenNXB = textBoxPublisherName.Text,
-                DiaChi = textBoxPublisherAddress.Text,
-                DienThoai = textBoxPublisherPhone.Text,
-            };
-
-            NhaXuatBanDao dao = new NhaXuatBanDao();
-            var res = dao.insertPublisher(publisher.TenNXB, publisher.DiaChi, publisher.DienThoai);
-            if (res > 0)
-            {
-                MessageBox.Show("Thêm thành công !");
-                clearAll();
+                MessageBox.Show("Hãy nhập tên nhà xuất bản !");
             }
             else
             {
-                MessageBox.Show("Chưa thêm được !");
+                var publisher = new NhaXuatBan()
+                {
+                    TenNXB = textBoxPublisherName.Text,
+                    DiaChi = textBoxPublisherAddress.Text,
+                    DienThoai = textBoxPublisherPhone.Text,
+                };
+
+                NhaXuatBanDao dao = new NhaXuatBanDao();
+                var res = dao.insertPublisher(publisher.TenNXB, publisher.DiaChi, publisher.DienThoai);
+                if (res > 0)
+                {
+                    MessageBox.Show("Thêm thành công !");
+                    clearAll();
+                }
+                else
+                {
+                    MessageBox.Show("Chưa thêm được !");
+                }
+
             }
         }
     }

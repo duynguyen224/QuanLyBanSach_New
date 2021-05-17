@@ -41,12 +41,19 @@ namespace QuanLyBanSach_new.DAO
             return res;
         }
 
-        public void deleteOneRecord(string booktitle, int qty)
+        public int deleteOneRecord(string booktitle, int qty)
         {
             var g = db.GioHangs.Where(x => x.BookTitle.Trim().ToLower() == booktitle.Trim().ToLower() && x.Qty == qty).FirstOrDefault() ;
-
-            db.GioHangs.Remove(g);
-            db.SaveChanges();
+            if(g == null)
+            {
+                return 0;
+            }
+            else
+            {
+                db.GioHangs.Remove(g);
+                db.SaveChanges();
+                return 1;
+            }
         }
 
         public void addIdCustomerToAllRecord(int id)

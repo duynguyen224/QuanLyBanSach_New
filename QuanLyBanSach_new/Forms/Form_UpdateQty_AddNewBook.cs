@@ -219,35 +219,43 @@ namespace QuanLyBanSach_new.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Bây giờ tạo thêm ChiTietPhieuNhap
-            ChiTietPhieuNhapDao ctpnDao = new ChiTietPhieuNhapDao();
-            ChiTietPhieuNhap ctpn = new ChiTietPhieuNhap()
+            if(comboBoxBookTitleuq.Text == "" || textBoxQuantityuq.Text == "")
             {
-                MaPhieuNhap = idPhieuNhap,
-                MaSach = int.Parse(textBoxIDuq.Text),
-                SoLuong = int.Parse(textBoxQuantityuq.Text)
-            };
-            var resss = ctpnDao.insertChiTietPhieuNhap(ctpn.MaPhieuNhap, ctpn.MaSach, ctpn.SoLuong);
-
-
-            // update lại số lượng tồn
-            SachDao sDao = new SachDao();
-            sDao.updateQuantity(ctpn.MaSach, ctpn.SoLuong);
-
-
-
-
-
-            if ( resss > 0)
-            {
-                MessageBox.Show("Update số lượng thành công !");
-                clearAllUpdateQuantity();
+                MessageBox.Show("Hãy nhập đủ thông tin !");
             }
             else
             {
-                MessageBox.Show("Chưa update được !");
-            }
+                // Bây giờ tạo thêm ChiTietPhieuNhap
+                ChiTietPhieuNhapDao ctpnDao = new ChiTietPhieuNhapDao();
+                ChiTietPhieuNhap ctpn = new ChiTietPhieuNhap()
+                {
+                    MaPhieuNhap = idPhieuNhap,
+                    MaSach = int.Parse(textBoxIDuq.Text),
+                    SoLuong = int.Parse(textBoxQuantityuq.Text)
+                };
+                var resss = ctpnDao.insertChiTietPhieuNhap(ctpn.MaPhieuNhap, ctpn.MaSach, ctpn.SoLuong);
 
+
+                // update lại số lượng tồn
+                SachDao sDao = new SachDao();
+                sDao.updateQuantity(ctpn.MaSach, ctpn.SoLuong);
+
+
+
+
+
+                if (resss > 0)
+                {
+                    MessageBox.Show("Update số lượng thành công !");
+                    clearAllUpdateQuantity();
+                }
+                else
+                {
+                    MessageBox.Show("Chưa update được !");
+                }
+
+
+            }
         }
     }
 }

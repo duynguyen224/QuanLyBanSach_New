@@ -34,24 +34,32 @@ namespace QuanLyBanSach_new.Forms
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            var author = new TacGia()
+            if(textBoxAuthorName.Text == "")
             {
-                HoTenTG = textBoxAuthorName.Text,
-                DiaChi = textBoxAuthorAddress.Text,
-                DienThoai = textBoxAuthorPhone.Text,
-                TieuSu = textBoxAuthorBackground.Text
-            };
-
-            TacGiaDao dao = new TacGiaDao();
-            var res = dao.insertAuthor(author.HoTenTG, author.DiaChi, author.TieuSu, author.DienThoai);
-            if (res > 0)
-            {
-                MessageBox.Show("Thêm thành công !");
-                clearAll();
+                MessageBox.Show("Hãy nhập tên tác giả !");
             }
             else
             {
-                MessageBox.Show("Chưa thêm được !");
+                var author = new TacGia()
+                {
+                    HoTenTG = textBoxAuthorName.Text,
+                    DiaChi = textBoxAuthorAddress.Text,
+                    DienThoai = textBoxAuthorPhone.Text,
+                    TieuSu = textBoxAuthorBackground.Text
+                };
+
+                TacGiaDao dao = new TacGiaDao();
+                var res = dao.insertAuthor(author.HoTenTG, author.DiaChi, author.TieuSu, author.DienThoai);
+                if (res > 0)
+                {
+                    MessageBox.Show("Thêm thành công !");
+                    clearAll();
+                }
+                else
+                {
+                    MessageBox.Show("Chưa thêm được !");
+                }
+
             }
         }
     }

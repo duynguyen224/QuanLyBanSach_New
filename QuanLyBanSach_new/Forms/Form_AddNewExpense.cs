@@ -32,20 +32,29 @@ namespace QuanLyBanSach_new.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var tenPhieuNhap = "";
-            PhieuNhapDao dao = new PhieuNhapDao();
-            PhieuNhap pn = new PhieuNhap();
-            pn.TongTien = int.Parse(textBoxAmount.Text);
-            pn.TieuDe = textBoxTitle.Text;
-            tenPhieuNhap = pn.TieuDe;
-            pn.MoTa = richTextBoxDes.Text;
-            dao.insertPhieuNhap(pn);
-            //var idPhieuNhap = dao.getIdPhieuNhap_fromName(tenPhieuNhap);
-            var idPhieuNhap = dao.getNewestId();
-            this.Hide();
-            Form_UpdateQty_AddNewBook f_uq = new Form_UpdateQty_AddNewBook(idPhieuNhap);
-            f_uq.ShowDialog();
-            f_uq.Closed += (s, args) => this.Close();
+            if(textBoxTitle.Text == "" || textBoxAmount.Text == "")
+            {
+                MessageBox.Show("Hãy điền đầy đủ thông tin !");
+            }
+            else
+            {
+                var tenPhieuNhap = "";
+                var time = DateTime.Now.ToString();
+                PhieuNhapDao dao = new PhieuNhapDao();
+                PhieuNhap pn = new PhieuNhap();
+                pn.TongTien = int.Parse(textBoxAmount.Text);
+                pn.TieuDe = textBoxTitle.Text + " " + time;
+                tenPhieuNhap = pn.TieuDe;
+                pn.MoTa = richTextBoxDes.Text;
+                dao.insertPhieuNhap(pn);
+                //var idPhieuNhap = dao.getIdPhieuNhap_fromName(tenPhieuNhap);
+                var idPhieuNhap = dao.getNewestId();
+                this.Hide();
+                Form_UpdateQty_AddNewBook f_uq = new Form_UpdateQty_AddNewBook(idPhieuNhap);
+                f_uq.ShowDialog();
+                f_uq.Closed += (s, args) => this.Close();
+
+            }
         }
     }
 }

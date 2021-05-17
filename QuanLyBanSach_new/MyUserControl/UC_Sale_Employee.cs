@@ -70,28 +70,36 @@ namespace QuanLyBanSach_new.MyUserControl
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (int.Parse(textBoxStock.Text) < int.Parse(textBoxQuantity.Text))
+            if (comboBoxBookTitle.Text == "" || comboBoxBookTitle.Text == null)
             {
-                MessageBox.Show("Không đủ sách, chọn số lượng ít hơn !");
-                textBoxQuantity.Text = "";
+                MessageBox.Show("Hãy chọn sách trước khi Add to cart !");
             }
             else
             {
-                
-                // 1. insert to cart
-                GioHangDao dao = new GioHangDao();
-                var booktitle = comboBoxBookTitle.Text;
-                var qty = Int32.Parse(textBoxQuantity.Text);
-                var price = Int32.Parse(textBoxPrice.Text);
-                var amount = qty * price;
-                var stock = Int32.Parse(textBoxStock.Text);
-                dao.insertToCart(booktitle, qty, amount, price, stock);
+                if (int.Parse(textBoxStock.Text) < int.Parse(textBoxQuantity.Text))
+                {
+                    MessageBox.Show("Không đủ sách, chọn số lượng ít hơn !");
+                    textBoxQuantity.Text = "";
+                }
+                else
+                {
 
-                // bind data to GridView
-                dataGridViewCart.DataSource = dao.bindDataToGridCart();
+                    // 1. insert to cart
+                    GioHangDao dao = new GioHangDao();
+                    var booktitle = comboBoxBookTitle.Text;
+                    var qty = Int32.Parse(textBoxQuantity.Text);
+                    var price = Int32.Parse(textBoxPrice.Text);
+                    var amount = qty * price;
+                    var stock = Int32.Parse(textBoxStock.Text);
+                    dao.insertToCart(booktitle, qty, amount, price, stock);
 
-                //
-                clearAll();
+                    // bind data to GridView
+                    dataGridViewCart.DataSource = dao.bindDataToGridCart();
+
+                    //
+                    clearAll();
+
+                }
 
             }
         }
@@ -124,10 +132,23 @@ namespace QuanLyBanSach_new.MyUserControl
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            GioHangDao dao = new GioHangDao();
-            dao.deleteOneRecord(c.BookTitle, c.Qty);
-            dataGridViewCart.DataSource = dao.bindDataToGridCart();
+            if (c.BookTitle == null || c.BookTitle == "" || c == null)
+            {
+                MessageBox.Show("Hãy chọn 1 sản phẩm cần xóa !");
+            }
+            else
+            {
+                GioHangDao dao = new GioHangDao();
+                var res = dao.deleteOneRecord(c.BookTitle, c.Qty);
+                if(res == 0)
+                {
+                    MessageBox.Show("Hãy chọn 1 sản phẩm cần xóa !");
 
+                }
+                dataGridViewCart.DataSource = dao.bindDataToGridCart();
+
+
+            }
         }
 
         private void comboBoxBookTitle_SelectedIndexChanged(object sender, EventArgs e)

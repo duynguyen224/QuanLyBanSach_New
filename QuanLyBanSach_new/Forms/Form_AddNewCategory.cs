@@ -30,23 +30,31 @@ namespace QuanLyBanSach_new.Forms
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            var category = new ChuDe()
+            if (textBoxCategoryName.Text == "")
             {
-                TenCD = textBoxCategoryName.Text
-            };
-
-            ChuDeDao dao = new ChuDeDao();
-            var res = dao.insertCategory(category.TenCD);
-            if (res > 0)
-            {
-                MessageBox.Show("Thêm thành công !");
-                clearAll();
+                MessageBox.Show("Hãy nhập tên chủ đề !");
             }
             else
             {
-                MessageBox.Show("Chưa thêm được !");
-            }
+                var category = new ChuDe()
+                {
+                    TenCD = textBoxCategoryName.Text
+                };
 
+                ChuDeDao dao = new ChuDeDao();
+                var res = dao.insertCategory(category.TenCD);
+                if (res > 0)
+                {
+                    MessageBox.Show("Thêm thành công !");
+                    clearAll();
+                }
+                else
+                {
+                    MessageBox.Show("Chưa thêm được !");
+                }
+
+
+            }
         }
     }
 }

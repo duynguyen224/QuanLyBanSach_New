@@ -62,45 +62,53 @@ namespace QuanLyBanSach_new.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            GioHangDao dao = new GioHangDao();
-            // thêm id khách hàng vào trong bảng GioHang
-            dao.addIdCustomerToAllRecord(int.Parse(textBoxCustomerID.Text));
-
-            // Tạo Record trong bảng DonHang
-            DonHang d = new DonHang();
-            d.MaKH = int.Parse(dao.getIdCustomer());
-            d.TongTien = dao.netAmount();
-            DonHangDao donhangDao = new DonHangDao();
-            var idDonHang = donhangDao.insertDonHang(d);
-
-            // Tạo Record trong bảng ChiTietDonHang
-            foreach(var item in dao.listGioHang())
+            if(textBoxCustomerID.Text == "" || textBoxCustomerID.Text == null)
             {
-                var tensach = item.BookTitle;
-                var soluong = item.Qty;
-                var dongia = item.Price;
-                SachDao sachDao = new SachDao();
-                // Tạo 1 ChiTietDonHang và thêm các thuộc tính vào
-                ChiTietDonHang ctdh = new ChiTietDonHang();
-                ctdh.MaDH = int.Parse(idDonHang);
-                ctdh.MaSach = sachDao.getIdBookByName(tensach);
-                ctdh.SoLuong = soluong;
-                ctdh.DonGia = dongia;
-
-                // Insert record vào ChiTietDonHang
-                ChiTietDonHangDao ctdhDao = new ChiTietDonHangDao();
-                ctdhDao.insertChiTietDonHang(ctdh);
-
-                // Update lại số lượng tồn của Sach
-                sachDao.updateStock(ctdh.MaSach, (int)ctdh.SoLuong);
+                MessageBox.Show("Hãy nhập thông tin khách hàng !");
             }
-            // Clear all
-            clearAll();
+            else
+            {
+                GioHangDao dao = new GioHangDao();
+                // thêm id khách hàng vào trong bảng GioHang
+                dao.addIdCustomerToAllRecord(int.Parse(textBoxCustomerID.Text));
+
+                // Tạo Record trong bảng DonHang
+                DonHang d = new DonHang();
+                d.MaKH = int.Parse(dao.getIdCustomer());
+                d.TongTien = dao.netAmount();
+                DonHangDao donhangDao = new DonHangDao();
+                var idDonHang = donhangDao.insertDonHang(d);
+
+                // Tạo Record trong bảng ChiTietDonHang
+                foreach (var item in dao.listGioHang())
+                {
+                    var tensach = item.BookTitle;
+                    var soluong = item.Qty;
+                    var dongia = item.Price;
+                    SachDao sachDao = new SachDao();
+                    // Tạo 1 ChiTietDonHang và thêm các thuộc tính vào
+                    ChiTietDonHang ctdh = new ChiTietDonHang();
+                    ctdh.MaDH = int.Parse(idDonHang);
+                    ctdh.MaSach = sachDao.getIdBookByName(tensach);
+                    ctdh.SoLuong = soluong;
+                    ctdh.DonGia = dongia;
+
+                    // Insert record vào ChiTietDonHang
+                    ChiTietDonHangDao ctdhDao = new ChiTietDonHangDao();
+                    ctdhDao.insertChiTietDonHang(ctdh);
+
+                    // Update lại số lượng tồn của Sach
+                    sachDao.updateStock(ctdh.MaSach, (int)ctdh.SoLuong);
+                }
+                // Clear all
+                clearAll();
 
 
-            // Xóa hết bảng GioHang
-            dao.deleteAllCartRecord();
-            MessageBox.Show("Thành công !");
+                // Xóa hết bảng GioHang
+                dao.deleteAllCartRecord();
+                MessageBox.Show("Thành công !");
+
+            }
         }
 
         private void textBoxDiscount_TextChanged(object sender, EventArgs e)
@@ -125,27 +133,53 @@ namespace QuanLyBanSach_new.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var netAmount = int.Parse(textBoxNetAmount.Text);
-            var discount = int.Parse(textBoxDiscount.Text);
-            var total = netAmount - netAmount * discount / 100;
-            textBoxTotalAmount.Text = total.ToString();
+            //var netAmount = int.Parse(textBoxNetAmount.Text);
+            //var discount = int.Parse(textBoxDiscount.Text);
+            //var total = netAmount - netAmount * discount / 100;
+            //textBoxTotalAmount.Text = total.ToString();
 
-            var total1 = int.Parse(textBoxTotalAmount.Text);
-            var refund = int.Parse(textBoxPaidAmount.Text) - total1;
-            labelRefundAmount.Text = refund.ToString();
+            //var total1 = int.Parse(textBoxTotalAmount.Text);
+            //var refund = int.Parse(textBoxPaidAmount.Text) - total1;
+            //labelRefundAmount.Text = refund.ToString();
 
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            var netAmount = int.Parse(textBoxNetAmount.Text);
-            var discount = int.Parse(textBoxDiscount.Text);
-            var total = netAmount - netAmount * discount / 100;
-            textBoxTotalAmount.Text = total.ToString();
+            var isNumericDiscount = int.TryParse(textBoxDiscount.Text, out _);
+            var isNumericPaid = int.TryParse(textBoxPaidAmount.Text, out _);
+            var total = 0;
+            if (isNumericDiscount == true && isNumericPaid == true) // kiem tra alphabet 
+            {
+                var netAmount = int.Parse(textBoxNetAmount.Text);
+                var discount = int.Parse(textBoxDiscount.Text);
+                if (discount >= 0 && discount <= 100) // discount (0,100)
+                {
+                    total = netAmount - netAmount * discount / 100;
+                    textBoxTotalAmount.Text = total.ToString();
 
-            var total1 = int.Parse(textBoxTotalAmount.Text);
-            var refund = int.Parse(textBoxPaidAmount.Text) - total1;
-            labelRefundAmount.Text = refund.ToString();
+                    var total1 = int.Parse(textBoxTotalAmount.Text);
+                    var refund = int.Parse(textBoxPaidAmount.Text) - total1;
+                    if(refund < 0)
+                    {
+                        MessageBox.Show("Số tiền trả chưa đủ !");
+                    }
+                    else
+                    {
+                        labelRefundAmount.Text = refund.ToString();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Discount nằm trong khoảng 0-100%");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Hãy kiểm tra lại Discount hoặc Paid amount !");
+            }
 
         }
     }

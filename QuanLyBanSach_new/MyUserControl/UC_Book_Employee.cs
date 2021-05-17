@@ -81,5 +81,12 @@ namespace QuanLyBanSach_new.MyUserControl
                 dataGridViewBook.DataSource = res;
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SachDao dao = new SachDao();
+            dao.displayAllBook(dataGridViewBook);
+
+        }
     }
 }

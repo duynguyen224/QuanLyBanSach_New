@@ -29,8 +29,8 @@ namespace QuanLyBanSach_new.MyUserControl
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxID = new System.Windows.Forms.TextBox();
@@ -55,9 +55,10 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label4.Location = new System.Drawing.Point(698, 268);
+            this.label4.Location = new System.Drawing.Point(1047, 412);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 18);
+            this.label4.Size = new System.Drawing.Size(102, 27);
             this.label4.TabIndex = 65;
             this.label4.Text = "Clear All";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -67,9 +68,10 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(697, 95);
+            this.label3.Location = new System.Drawing.Point(1046, 146);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 19);
+            this.label3.Size = new System.Drawing.Size(44, 29);
             this.label3.TabIndex = 64;
             this.label3.Text = "ID:";
             // 
@@ -77,40 +79,45 @@ namespace QuanLyBanSach_new.MyUserControl
             // 
             this.textBoxID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxID.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxID.Location = new System.Drawing.Point(729, 92);
+            this.textBoxID.Location = new System.Drawing.Point(1094, 142);
+            this.textBoxID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.ReadOnly = true;
-            this.textBoxID.Size = new System.Drawing.Size(35, 26);
+            this.textBoxID.Size = new System.Drawing.Size(50, 35);
             this.textBoxID.TabIndex = 63;
             // 
             // dataGridViewAuthor
             // 
             this.dataGridViewAuthor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewAuthor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewAuthor.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewAuthor.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewAuthor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewAuthor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewAuthor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewAuthor.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridViewAuthor.Location = new System.Drawing.Point(206, 362);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewAuthor.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewAuthor.Location = new System.Drawing.Point(309, 557);
+            this.dataGridViewAuthor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridViewAuthor.Name = "dataGridViewAuthor";
+            this.dataGridViewAuthor.RowHeadersVisible = false;
             this.dataGridViewAuthor.RowHeadersWidth = 62;
             this.dataGridViewAuthor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewAuthor.Size = new System.Drawing.Size(607, 171);
+            this.dataGridViewAuthor.Size = new System.Drawing.Size(910, 263);
             this.dataGridViewAuthor.TabIndex = 62;
+            this.dataGridViewAuthor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAuthor_CellContentClick);
             this.dataGridViewAuthor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAuthor_CellContentClick);
             // 
             // button3
@@ -121,9 +128,10 @@ namespace QuanLyBanSach_new.MyUserControl
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(689, 318);
+            this.button3.Location = new System.Drawing.Point(1034, 489);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 38);
+            this.button3.Size = new System.Drawing.Size(112, 58);
             this.button3.TabIndex = 58;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = false;
@@ -137,9 +145,10 @@ namespace QuanLyBanSach_new.MyUserControl
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(500, 318);
+            this.button2.Location = new System.Drawing.Point(750, 489);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 38);
+            this.button2.Size = new System.Drawing.Size(141, 58);
             this.button2.TabIndex = 60;
             this.button2.Text = "Add new";
             this.button2.UseVisualStyleBackColor = false;
@@ -153,9 +162,10 @@ namespace QuanLyBanSach_new.MyUserControl
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(600, 318);
+            this.button1.Location = new System.Drawing.Point(900, 489);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 38);
+            this.button1.Size = new System.Drawing.Size(124, 58);
             this.button1.TabIndex = 59;
             this.button1.Text = "Edit";
             this.button1.UseVisualStyleBackColor = false;
@@ -165,27 +175,30 @@ namespace QuanLyBanSach_new.MyUserControl
             // 
             this.textBoxAddress.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxAddress.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAddress.Location = new System.Drawing.Point(299, 136);
+            this.textBoxAddress.Location = new System.Drawing.Point(448, 209);
+            this.textBoxAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(465, 26);
+            this.textBoxAddress.Size = new System.Drawing.Size(696, 35);
             this.textBoxAddress.TabIndex = 56;
             // 
             // textBoxBackground
             // 
             this.textBoxBackground.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxBackground.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBackground.Location = new System.Drawing.Point(299, 179);
+            this.textBoxBackground.Location = new System.Drawing.Point(448, 275);
+            this.textBoxBackground.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxBackground.Name = "textBoxBackground";
-            this.textBoxBackground.Size = new System.Drawing.Size(465, 26);
+            this.textBoxBackground.Size = new System.Drawing.Size(696, 35);
             this.textBoxBackground.TabIndex = 57;
             // 
             // textBoxFullname
             // 
             this.textBoxFullname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxFullname.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFullname.Location = new System.Drawing.Point(299, 92);
+            this.textBoxFullname.Location = new System.Drawing.Point(448, 142);
+            this.textBoxFullname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxFullname.Name = "textBoxFullname";
-            this.textBoxFullname.Size = new System.Drawing.Size(392, 26);
+            this.textBoxFullname.Size = new System.Drawing.Size(586, 35);
             this.textBoxFullname.TabIndex = 55;
             // 
             // label9
@@ -193,9 +206,10 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(222, 229);
+            this.label9.Location = new System.Drawing.Point(333, 352);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 19);
+            this.label9.Size = new System.Drawing.Size(94, 29);
             this.label9.TabIndex = 53;
             this.label9.Text = "Phone:";
             // 
@@ -204,9 +218,10 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(208, 136);
+            this.label7.Location = new System.Drawing.Point(312, 209);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 19);
+            this.label7.Size = new System.Drawing.Size(115, 29);
             this.label7.TabIndex = 52;
             this.label7.Text = "Address:";
             // 
@@ -215,9 +230,10 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(177, 182);
+            this.label8.Location = new System.Drawing.Point(266, 280);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(110, 19);
+            this.label8.Size = new System.Drawing.Size(160, 29);
             this.label8.TabIndex = 51;
             this.label8.Text = "Background:";
             // 
@@ -227,9 +243,10 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label2.Location = new System.Drawing.Point(439, 14);
+            this.label2.Location = new System.Drawing.Point(658, 22);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(227, 32);
+            this.label2.Size = new System.Drawing.Size(336, 47);
             this.label2.TabIndex = 54;
             this.label2.Text = "Manage Authors";
             // 
@@ -238,9 +255,10 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(196, 94);
+            this.label1.Location = new System.Drawing.Point(294, 145);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 19);
+            this.label1.Size = new System.Drawing.Size(135, 29);
             this.label1.TabIndex = 50;
             this.label1.Text = "Full Name:";
             // 
@@ -248,14 +266,15 @@ namespace QuanLyBanSach_new.MyUserControl
             // 
             this.textBoxPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxPhone.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPhone.Location = new System.Drawing.Point(299, 229);
+            this.textBoxPhone.Location = new System.Drawing.Point(448, 352);
+            this.textBoxPhone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(465, 26);
+            this.textBoxPhone.Size = new System.Drawing.Size(696, 35);
             this.textBoxPhone.TabIndex = 66;
             // 
             // UC_Author_Admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.textBoxPhone);
             this.Controls.Add(this.label4);
@@ -273,8 +292,9 @@ namespace QuanLyBanSach_new.MyUserControl
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UC_Author_Admin";
-            this.Size = new System.Drawing.Size(1009, 547);
+            this.Size = new System.Drawing.Size(1514, 842);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAuthor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -45,6 +45,7 @@ namespace QuanLyBanSach_new.MyUserControl
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBook)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,6 +55,7 @@ namespace QuanLyBanSach_new.MyUserControl
             // 
             this.dataGridViewBook.AllowUserToResizeRows = false;
             this.dataGridViewBook.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewBook.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -72,12 +74,15 @@ namespace QuanLyBanSach_new.MyUserControl
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewBook.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewBook.Location = new System.Drawing.Point(93, 133);
+            this.dataGridViewBook.Location = new System.Drawing.Point(117, 205);
+            this.dataGridViewBook.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridViewBook.Name = "dataGridViewBook";
+            this.dataGridViewBook.RowHeadersVisible = false;
             this.dataGridViewBook.RowHeadersWidth = 62;
             this.dataGridViewBook.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewBook.Size = new System.Drawing.Size(872, 354);
+            this.dataGridViewBook.Size = new System.Drawing.Size(1308, 545);
             this.dataGridViewBook.TabIndex = 78;
+            this.dataGridViewBook.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBook_CellContentClick);
             this.dataGridViewBook.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBook_CellContentClick);
             // 
             // button3
@@ -88,9 +93,10 @@ namespace QuanLyBanSach_new.MyUserControl
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(886, 493);
+            this.button3.Location = new System.Drawing.Point(1306, 758);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 38);
+            this.button3.Size = new System.Drawing.Size(112, 58);
             this.button3.TabIndex = 75;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = false;
@@ -104,9 +110,10 @@ namespace QuanLyBanSach_new.MyUserControl
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(695, 493);
+            this.button2.Location = new System.Drawing.Point(1019, 758);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 38);
+            this.button2.Size = new System.Drawing.Size(144, 58);
             this.button2.TabIndex = 77;
             this.button2.Text = "Add new";
             this.button2.UseVisualStyleBackColor = false;
@@ -120,9 +127,10 @@ namespace QuanLyBanSach_new.MyUserControl
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(797, 493);
+            this.button1.Location = new System.Drawing.Point(1173, 758);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 38);
+            this.button1.Size = new System.Drawing.Size(124, 58);
             this.button1.TabIndex = 76;
             this.button1.Text = "Edit";
             this.button1.UseVisualStyleBackColor = false;
@@ -134,23 +142,26 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label2.Location = new System.Drawing.Point(414, 23);
+            this.label2.Location = new System.Drawing.Point(598, 35);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(207, 32);
+            this.label2.Size = new System.Drawing.Size(309, 47);
             this.label2.TabIndex = 71;
             this.label2.Text = "Manage Books";
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel5.Controls.Add(this.button5);
             this.panel5.Controls.Add(this.button4);
             this.panel5.Controls.Add(this.textBoxSearch);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.comboBoxSearchBy);
             this.panel5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel5.Location = new System.Drawing.Point(80, 58);
+            this.panel5.Location = new System.Drawing.Point(98, 87);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(877, 77);
+            this.panel5.Size = new System.Drawing.Size(1320, 118);
             this.panel5.TabIndex = 79;
             // 
             // button4
@@ -163,9 +174,10 @@ namespace QuanLyBanSach_new.MyUserControl
             this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = global::QuanLyBanSach_new.Properties.Resources.search_30px;
-            this.button4.Location = new System.Drawing.Point(837, 21);
+            this.button4.Location = new System.Drawing.Point(1235, 32);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(37, 38);
+            this.button4.Size = new System.Drawing.Size(56, 58);
             this.button4.TabIndex = 33;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -174,9 +186,10 @@ namespace QuanLyBanSach_new.MyUserControl
             // 
             this.textBoxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxSearch.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSearch.Location = new System.Drawing.Point(660, 28);
+            this.textBoxSearch.Location = new System.Drawing.Point(971, 43);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(179, 26);
+            this.textBoxSearch.Size = new System.Drawing.Size(266, 35);
             this.textBoxSearch.TabIndex = 5;
             // 
             // label5
@@ -185,9 +198,10 @@ namespace QuanLyBanSach_new.MyUserControl
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(423, 32);
+            this.label5.Location = new System.Drawing.Point(615, 49);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 19);
+            this.label5.Size = new System.Drawing.Size(136, 29);
             this.label5.TabIndex = 4;
             this.label5.Text = "Search By:";
             // 
@@ -203,18 +217,18 @@ namespace QuanLyBanSach_new.MyUserControl
             "Publisher",
             "Category",
             "Qty = 0"});
-            this.comboBoxSearchBy.Location = new System.Drawing.Point(516, 29);
+            this.comboBoxSearchBy.Location = new System.Drawing.Point(755, 45);
+            this.comboBoxSearchBy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxSearchBy.Name = "comboBoxSearchBy";
-            this.comboBoxSearchBy.Size = new System.Drawing.Size(138, 26);
+            this.comboBoxSearchBy.Size = new System.Drawing.Size(205, 35);
             this.comboBoxSearchBy.TabIndex = 3;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::QuanLyBanSach_new.Properties.Resources.print_50px1;
-            this.pictureBox1.Location = new System.Drawing.Point(962, 77);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(1425, 119);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 38);
+            this.pictureBox1.Size = new System.Drawing.Size(51, 58);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 80;
             this.pictureBox1.TabStop = false;
@@ -231,9 +245,28 @@ namespace QuanLyBanSach_new.MyUserControl
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // button5
+            // 
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(0, 0);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(210, 118);
+            this.button5.TabIndex = 34;
+            this.button5.Text = "   Refresh";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // UC_Book_Admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel5);
@@ -242,8 +275,9 @@ namespace QuanLyBanSach_new.MyUserControl
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UC_Book_Admin";
-            this.Size = new System.Drawing.Size(1009, 547);
+            this.Size = new System.Drawing.Size(1514, 842);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBook)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -267,5 +301,6 @@ namespace QuanLyBanSach_new.MyUserControl
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.Button button5;
     }
 }

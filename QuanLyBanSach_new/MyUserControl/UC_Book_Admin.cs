@@ -52,20 +52,36 @@ namespace QuanLyBanSach_new.MyUserControl
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (Form_EditBook_Admin f = new Form_EditBook_Admin(tensach, giaban, soluongton, hotentg, tencd, tennxb))
+            if(tensach == null)
             {
-                f.ShowDialog();
+                MessageBox.Show("Hãy chọn 1 cuốn sách để sửa !");
+            }
+            else
+            {
+                using (Form_EditBook_Admin f = new Form_EditBook_Admin(tensach, giaban, soluongton, hotentg, tencd, tennxb))
+                {
+                    f.ShowDialog();
+                }
+
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Xóa Sách ??", "Xóa Sách", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (tensach == null)
             {
-                SachDao dao = new SachDao();
-                dao.deleteBook(idSachSelected);
-                MessageBox.Show("Xóa thành công !");
-                populateGrid();
+                MessageBox.Show("Hãy chọn 1 cuốn sách để xóa !");
+            }
+            else
+            {
+                if (MessageBox.Show("Xóa Sách ??", "Xóa Sách", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    SachDao dao = new SachDao();
+                    dao.deleteBook(idSachSelected);
+                    MessageBox.Show("Xóa thành công !");
+                    populateGrid();
+                }
+
             }
 
         }
@@ -140,6 +156,13 @@ namespace QuanLyBanSach_new.MyUserControl
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SachDao dao = new SachDao();
+            dao.displayAllBook(dataGridViewBook);
 
         }
     }

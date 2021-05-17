@@ -67,32 +67,41 @@ namespace QuanLyBanSach_new.Forms
         // them sach moi
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            SachDao dao = new SachDao();
-            var book = new Sach()
+
+            if (textBoxBookTitle.Text == "" || comboBoxAuthor.Text == "" || comboBoxPublisher.Text == "" || comboBoxCategory.Text == "" || textBoxPrice.Text == "")
             {
-                TenSach = textBoxBookTitle.Text,
-                GiaBan = int.Parse(textBoxPrice.Text),
-                //SoLuongTon = int.Parse(textBoxQuantity.Text),
-                SoLuongTon = 0,
-                MaNXB = int.Parse(textBoxPublisherID.Text),
-                MaCD = int.Parse(textBoxCategoryID.Text)
-            };
-            var res = dao.insertBook(book.TenSach, book.GiaBan, book.SoLuongTon, book.MaNXB, book.MaCD);
-
-            textBoxBookID.Text = dao.getIdBookByName(book.TenSach).ToString();
-            // return về cái BookID and AuthorID de tao ThamGia
-            ThamGiaDao tgd = new ThamGiaDao();
-            var ress = tgd.insertThamGia(int.Parse(textBoxBookID.Text), int.Parse(textBoxAuthorID.Text));
-
-
-            if (res > 0 && ress > 0)
-            {
-                MessageBox.Show("Thêm thành công !");
-                clearAll();
+                MessageBox.Show("Hãy nhập đầy đủ các thông tin !");
             }
             else
             {
-                MessageBox.Show("Chưa thêm được !");
+                SachDao dao = new SachDao();
+                var book = new Sach()
+                {
+                    TenSach = textBoxBookTitle.Text,
+                    GiaBan = int.Parse(textBoxPrice.Text),
+                    //SoLuongTon = int.Parse(textBoxQuantity.Text),
+                    SoLuongTon = 0,
+                    MaNXB = int.Parse(textBoxPublisherID.Text),
+                    MaCD = int.Parse(textBoxCategoryID.Text)
+                };
+                var res = dao.insertBook(book.TenSach, book.GiaBan, book.SoLuongTon, book.MaNXB, book.MaCD);
+
+                textBoxBookID.Text = dao.getIdBookByName(book.TenSach).ToString();
+                // return về cái BookID and AuthorID de tao ThamGia
+                ThamGiaDao tgd = new ThamGiaDao();
+                var ress = tgd.insertThamGia(int.Parse(textBoxBookID.Text), int.Parse(textBoxAuthorID.Text));
+
+
+                if (res > 0 && ress > 0)
+                {
+                    MessageBox.Show("Thêm thành công !");
+                    clearAll();
+                }
+                else
+                {
+                    MessageBox.Show("Chưa thêm được !");
+                }
+
             }
 
         }

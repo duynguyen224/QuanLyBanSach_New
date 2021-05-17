@@ -103,6 +103,7 @@ namespace QuanLyBanSach_new.MyUserControl
             // 
             // dataGridViewChiTietDH
             // 
+            this.dataGridViewChiTietDH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewChiTietDH.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -124,12 +125,14 @@ namespace QuanLyBanSach_new.MyUserControl
             this.dataGridViewChiTietDH.Location = new System.Drawing.Point(908, 152);
             this.dataGridViewChiTietDH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridViewChiTietDH.Name = "dataGridViewChiTietDH";
+            this.dataGridViewChiTietDH.RowHeadersVisible = false;
             this.dataGridViewChiTietDH.RowHeadersWidth = 62;
             this.dataGridViewChiTietDH.Size = new System.Drawing.Size(552, 685);
             this.dataGridViewChiTietDH.TabIndex = 21;
             // 
             // dataGridViewDonHang
             // 
+            this.dataGridViewDonHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewDonHang.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -151,10 +154,12 @@ namespace QuanLyBanSach_new.MyUserControl
             this.dataGridViewDonHang.Location = new System.Drawing.Point(4, 152);
             this.dataGridViewDonHang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridViewDonHang.Name = "dataGridViewDonHang";
+            this.dataGridViewDonHang.RowHeadersVisible = false;
             this.dataGridViewDonHang.RowHeadersWidth = 62;
             this.dataGridViewDonHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewDonHang.Size = new System.Drawing.Size(902, 685);
             this.dataGridViewDonHang.TabIndex = 20;
+            this.dataGridViewDonHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDonHang_CellContentClick);
             this.dataGridViewDonHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDonHang_CellContentClick);
             // 
             // UC_ViewSale_Admin

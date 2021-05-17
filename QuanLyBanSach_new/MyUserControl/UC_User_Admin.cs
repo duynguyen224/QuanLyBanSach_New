@@ -86,30 +86,54 @@ namespace QuanLyBanSach_new.MyUserControl
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Xóa User ??", "Xóa User", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            var fullname = textBoxFullname.Text;
+            var username = textBoxUsername.Text;
+            var pass = textBoxPassword.Text;
+
+            if (fullname == "" || username == "" || pass == "")
             {
-                UserDao dao = new UserDao();
-                int id = int.Parse(textBoxID.Text);
-                var check = dao.deleteUser(id);
-                if (check > 0)
+                MessageBox.Show("Hãy chọn 1 user để xóa !");
+            }
+            else
+            {
+                if (MessageBox.Show("Xóa User ??", "Xóa User", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    MessageBox.Show("Xóa thành công !");
-                    dao.populateUser(dataGridViewUser);
-                    clearAll();
+                    UserDao dao = new UserDao();
+                    int id = int.Parse(textBoxID.Text);
+                    var check = dao.deleteUser(id);
+                    if (check > 0)
+                    {
+                        MessageBox.Show("Xóa thành công !");
+                        dao.populateUser(dataGridViewUser);
+                        clearAll();
+                    }
                 }
+
             }
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            UserDao dao = new UserDao();
-            var check = dao.updateUser(int.Parse(textBoxID.Text), textBoxFullname.Text, textBoxUsername.Text, textBoxPassword.Text, comboBoxRole.SelectedItem.ToString().Trim().ToLower());
-            if (check > 0)
+            var fullname = textBoxFullname.Text;
+            var username = textBoxUsername.Text;
+            var pass = textBoxPassword.Text;
+
+
+            if (fullname == "" || username == "" || pass == "")
             {
-                MessageBox.Show("Sửa thành công !");
-                dao.populateUser(dataGridViewUser);
-                clearAll();
+                MessageBox.Show("Hãy chọn 1 user để sửa !");
+            }
+            else
+            {
+                UserDao dao = new UserDao();
+                var check = dao.updateUser(int.Parse(textBoxID.Text), textBoxFullname.Text, textBoxUsername.Text, textBoxPassword.Text, comboBoxRole.SelectedItem.ToString().Trim().ToLower());
+                if (check > 0)
+                {
+                    MessageBox.Show("Sửa thành công !");
+                    dao.populateUser(dataGridViewUser);
+                    clearAll();
+                }
             }
         }
 
