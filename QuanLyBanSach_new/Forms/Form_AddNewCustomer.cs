@@ -40,23 +40,30 @@ namespace QuanLyBanSach_new.Forms
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            KhachHang kh = new KhachHang();
-            kh.HoTen = textBoxCustomerName.Text;
-            kh.DiaChi = textBoxCustomerAddress.Text;
-            kh.DienThoai = textBoxCustomerPhone.Text;
-            KhachHangDao dao = new KhachHangDao();
-            var res = dao.insertCustomer(kh);
-            if(res > 0)
+            if(textBoxCustomerName.Text == "")
             {
-                MessageBox.Show("Thêm mới khách hàng thành công, ID: " + res);
-                clearAll();
-                
+                MessageBox.Show("Hãy nhập tên khách hàng !");
             }
             else
             {
-                MessageBox.Show("Thêm không thành công");
+                KhachHang kh = new KhachHang();
+                kh.HoTen = textBoxCustomerName.Text;
+                kh.DiaChi = textBoxCustomerAddress.Text;
+                kh.DienThoai = textBoxCustomerPhone.Text;
+                KhachHangDao dao = new KhachHangDao();
+                var res = dao.insertCustomer(kh);
+                if (res > 0)
+                {
+                    MessageBox.Show("Thêm mới khách hàng thành công, ID: " + res);
+                    clearAll();
+
+                }
+                else
+                {
+                    MessageBox.Show("Thêm không thành công");
+                }
+
             }
-            
         }
     }
 }

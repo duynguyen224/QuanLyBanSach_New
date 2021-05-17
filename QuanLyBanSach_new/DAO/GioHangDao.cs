@@ -88,5 +88,15 @@ namespace QuanLyBanSach_new.DAO
             return res;
         }
         
+        public int totalAmount()
+        {
+            int sum = 0;
+            var res = db.GioHangs.ToList();
+            foreach(var item in res)
+            {
+                sum += item.Amount;
+            }
+            return sum;
+        }
     }
 }

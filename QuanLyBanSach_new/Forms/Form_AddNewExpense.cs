@@ -32,9 +32,14 @@ namespace QuanLyBanSach_new.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(textBoxTitle.Text == "" || textBoxAmount.Text == "")
+            var numericAmount = int.TryParse(textBoxAmount.Text, out _);
+            if (textBoxTitle.Text == "" || textBoxAmount.Text == "")
             {
                 MessageBox.Show("Hãy điền đầy đủ thông tin !");
+            }
+            else if (numericAmount == false)
+            {
+                MessageBox.Show("Hãy kiểm tra lại Amount !");
             }
             else
             {

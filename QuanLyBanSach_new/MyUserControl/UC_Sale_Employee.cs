@@ -42,6 +42,7 @@ namespace QuanLyBanSach_new.MyUserControl
             textBoxStock.Text = "";
             textBoxPrice.Text = "";
             textBoxQuantity.Text = "";
+            labelTotalAmount.Text = "";
 
         }
         private void buttonSearch_Click(object sender, EventArgs e)
@@ -98,7 +99,8 @@ namespace QuanLyBanSach_new.MyUserControl
 
                     //
                     clearAll();
-
+                    // total amount
+                    labelTotalAmount.Text = dao.totalAmount().ToString();
                 }
 
             }
@@ -147,6 +149,7 @@ namespace QuanLyBanSach_new.MyUserControl
                 }
                 dataGridViewCart.DataSource = dao.bindDataToGridCart();
 
+                labelTotalAmount.Text = dao.totalAmount().ToString();
 
             }
         }
@@ -154,6 +157,13 @@ namespace QuanLyBanSach_new.MyUserControl
         private void comboBoxBookTitle_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void UC_Sale_Employee_Load(object sender, EventArgs e)
+        {
+            GioHangDao dao = new GioHangDao();
+            dataGridViewCart.DataSource = dao.bindDataToGridCart();
+            labelTotalAmount.Text = dao.totalAmount().ToString();
         }
 
 

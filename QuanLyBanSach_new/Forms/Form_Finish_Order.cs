@@ -44,6 +44,7 @@ namespace QuanLyBanSach_new.Forms
             using (Form_AddNewCustomer f = new Form_AddNewCustomer())
             {
                 f.ShowDialog();
+                buttonSearchCustomer_Click(null, null);
             }
         }
 
