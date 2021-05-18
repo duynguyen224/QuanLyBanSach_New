@@ -48,20 +48,11 @@ namespace QuanLyBanSach_new.DAO
             gridview.DataSource = db.Users.ToList();
         }
 
-        public string login(string username, string password)
-        {
-            var u = db.Users.Where(x => x.Username == username && x.Password == password).FirstOrDefault();
-            if(u == null)
-            {
-                return "abc";
-            }
-            else
-            {
-                return u.Role.Trim().ToLower();
-            }
-        }
 
         // login theo Proc
+
+
+        // login cua Kien:
 
 
     }
