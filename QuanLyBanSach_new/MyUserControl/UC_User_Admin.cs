@@ -41,7 +41,7 @@ namespace QuanLyBanSach_new.MyUserControl
             var username = textBoxUsername.Text;
             var pass = textBoxPassword.Text;
 
-            if (fullname == "" || username == "" || pass == "")
+            if (fullname == "" || username == "" || pass == "" || comboBoxRole.Text == "" )
             {
                 MessageBox.Show("Hãy nhập đủ thông tin !");
             }
