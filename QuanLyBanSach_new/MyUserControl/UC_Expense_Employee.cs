@@ -17,19 +17,37 @@ namespace QuanLyBanSach_new.MyUserControl
 {
     public partial class UC_Expense_Employee : UserControl
     {
+        public int idPhieuNhap ;
         public UC_Expense_Employee()
         {
             InitializeComponent();
 
             // bind data to gridview
-            populateGridView();
+            populateGridViewLeft();
+            populateGridViewRight();
         }
 
-        public void populateGridView()
+        public void populateGridViewLeft()
         {
             ChiTietPhieuNhapDao dao = new ChiTietPhieuNhapDao();
-            var res = dao.PhieuNhap_ChiTiet();
+            var res = dao.allExpense();
             dataGridViewExpense.DataSource = res;
+        }
+
+        public void populateGridViewRight(int id = 0)
+        {
+            if(id == 0)
+            {
+                dataGridViewDetails.DataSource = null;
+
+            }
+            else
+            {
+                ChiTietPhieuNhapDao dao = new ChiTietPhieuNhapDao();
+                var res = dao.ExpenseDetails(id);
+                dataGridViewDetails.DataSource = res;
+
+            }
         }
 
         private void btnAddNewBooks_Click(object sender, EventArgs e)
@@ -47,8 +65,16 @@ namespace QuanLyBanSach_new.MyUserControl
 
         private void button1_Click(object sender, EventArgs e)
         {
-            populateGridView();
+            populateGridViewLeft();
+            populateGridViewRight();
+        }
 
+        private void dataGridViewExpense_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string a;
+            a = dataGridViewExpense.SelectedRows[0].Cells[0].Value.ToString();
+            idPhieuNhap = int.Parse(a);
+            populateGridViewRight(idPhieuNhap);
         }
     }
 }

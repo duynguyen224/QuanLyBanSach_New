@@ -24,8 +24,8 @@ namespace QuanLyBanSach_new.MyUserControl
             dao.populateUser(dataGridViewUser);
 
         }
-       //fix by Huy
-       private void clearAll()
+        //fix by Huy
+        private void clearAll()
         {
             textBoxID.Text = "";
             textBoxUsername.Text = "";
@@ -41,9 +41,9 @@ namespace QuanLyBanSach_new.MyUserControl
             var username = textBoxUsername.Text;
             var pass = textBoxPassword.Text;
 
-            if (fullname == "" || username == "" || pass == "" )
+            if (fullname == "" || username == "" || pass == "")
             {
-                MessageBox.Show("Hãy nhập đủ thông tin !"); 
+                MessageBox.Show("Hãy nhập đủ thông tin !");
             }
             else
             {
@@ -112,7 +112,7 @@ namespace QuanLyBanSach_new.MyUserControl
             }
 
         }
-private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             var fullname = textBoxFullname.Text;
             var username = textBoxUsername.Text;

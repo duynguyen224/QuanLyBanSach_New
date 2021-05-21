@@ -29,10 +29,17 @@ namespace QuanLyBanSach_new.DAO
             return res;
         }
 
-        public List<PhieuNhap_ChiTiet> PhieuNhap_ChiTiet()
+        public List<Expense> allExpense()
         {
-            var res = db.Database.SqlQuery<PhieuNhap_ChiTiet>("proc_gridExpense").ToList();
+            var res = db.Database.SqlQuery<Expense>("proc_expense").ToList();
             return res;
+        }
+
+        public List<ExpenseDetails> ExpenseDetails(int id)
+        {
+            var i = new SqlParameter("@maphieunhap", id);
+            var res = db.Database.SqlQuery<ExpenseDetails>("proc_expenseDetails @maphieunhap", i);
+            return res.ToList();
         }
 
         public int purchasedBook()
@@ -47,5 +54,7 @@ namespace QuanLyBanSach_new.DAO
             return sl;
 
         }
+
+
     }
 }

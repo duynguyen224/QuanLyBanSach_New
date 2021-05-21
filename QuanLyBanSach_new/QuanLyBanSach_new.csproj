@@ -227,6 +227,8 @@
     <Compile Include="SupportClass\CustomerNameOnly.cs" />
     <Compile Include="SupportClass\DGVPrinter.cs" />
     <Compile Include="SupportClass\DonHang_KhachHang.cs" />
+    <Compile Include="SupportClass\Expense.cs" />
+    <Compile Include="SupportClass\ExpenseDetails.cs" />
     <Compile Include="SupportClass\IdOnly.cs" />
     <Compile Include="SupportClass\PhieuNhap_ChiTiet.cs" />
     <Compile Include="SupportClass\PublisherNameOnly.cs" />

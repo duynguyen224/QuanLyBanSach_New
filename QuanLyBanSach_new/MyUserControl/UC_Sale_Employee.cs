@@ -75,13 +75,14 @@ namespace QuanLyBanSach_new.MyUserControl
             {
                 MessageBox.Show("Hãy chọn sách trước khi Add to cart !");
             }
+            if (int.Parse(textBoxQuantity.Text) < 0)
+            {
+                MessageBox.Show("Số lượng cần lớn hơn 0 !");
+                textBoxQuantity.Text = "";
+            }
+
             else
             {
-                if(int.Parse(textBoxQuantity.Text) < 0)
-                {
-                    MessageBox.Show("Số lượng cần lớn hơn 0 !");
-                    textBoxQuantity.Text = "";
-                }
                 if (int.Parse(textBoxStock.Text) < int.Parse(textBoxQuantity.Text) )
                 {
                     MessageBox.Show("Không đủ sách, chọn số lượng ít hơn !");

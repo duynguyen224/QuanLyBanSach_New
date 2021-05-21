@@ -71,6 +71,10 @@ namespace QuanLyBanSach_new.Forms
             if (textBoxBookTitle.Text == "" || comboBoxAuthor.Text == "" || comboBoxPublisher.Text == "" || comboBoxCategory.Text == "" || textBoxPrice.Text == "")
             {
                 MessageBox.Show("Hãy nhập đầy đủ các thông tin !");
+            }else if (int.TryParse(textBoxPrice.Text, out _) == false)
+            {
+                MessageBox.Show("Dữ liệu giá bán phải là số !");
+                textBoxPrice.Text = "";
             }
             else
             {

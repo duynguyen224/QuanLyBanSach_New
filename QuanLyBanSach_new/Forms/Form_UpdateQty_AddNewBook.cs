@@ -148,44 +148,63 @@ namespace QuanLyBanSach_new.Forms
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            SachDao dao = new SachDao();
-            var book = new Sach()
+
+            if (textBoxBookTitle.Text == "" || comboBoxAuthor.Text == "" || comboBoxCategory.Text == "" || comboBoxPublisher.Text == "" || textBoxPrice.Text == "" || textBoxQuantity.Text == "")
             {
-                TenSach = textBoxBookTitle.Text,
-                GiaBan = int.Parse(textBoxPrice.Text),
-                SoLuongTon = int.Parse(textBoxQuantity.Text),
-                MaNXB = int.Parse(textBoxPublisherID.Text),
-                MaCD = int.Parse(textBoxCategoryID.Text)
-            };
-            var res = dao.insertBook(book.TenSach, book.GiaBan, book.SoLuongTon, book.MaNXB, book.MaCD);
-
-            textBoxBookID.Text = dao.getIdBookByName(book.TenSach).ToString();
-            // return về cái BookID and AuthorID de tao ThamGia
-            ThamGiaDao tgd = new ThamGiaDao();
-            var ress = tgd.insertThamGia(int.Parse(textBoxBookID.Text), int.Parse(textBoxAuthorID.Text));
+                MessageBox.Show("Hãy nhập đủ thông tin !");
+            }
+            else if (int.TryParse(textBoxPrice.Text, out _) == false)
 
 
-            // Bây giờ tạo thêm ChiTietPhieuNhap
-            ChiTietPhieuNhapDao ctpnDao = new ChiTietPhieuNhapDao();
-            ChiTietPhieuNhap ctpn = new ChiTietPhieuNhap()
             {
-                MaPhieuNhap = idPhieuNhap,
-                MaSach = int.Parse(textBoxBookID.Text),
-                SoLuong = int.Parse(textBoxQuantity.Text)
-            };
-            var resss = ctpnDao.insertChiTietPhieuNhap(ctpn.MaPhieuNhap, ctpn.MaSach, ctpn.SoLuong);
-
-
-            if (res > 0 && ress > 0 && resss > 0)
+                MessageBox.Show("Dữ liệu cho Price cần là số ! !");
+                textBoxPrice.Text = "";
+            }else if(int.TryParse(textBoxQuantity.Text, out _) == false)
             {
-                MessageBox.Show("Thêm thành công !");
-                clearAllNewBook();
+                MessageBox.Show("Dữ liệu cho Quantity cần là số !");
+                textBoxQuantity.Text = "";
             }
             else
             {
-                MessageBox.Show("Chưa thêm được !");
-            }
+                SachDao dao = new SachDao();
+                var book = new Sach()
+                {
+                    TenSach = textBoxBookTitle.Text,
+                    GiaBan = int.Parse(textBoxPrice.Text),
+                    SoLuongTon = int.Parse(textBoxQuantity.Text),
+                    MaNXB = int.Parse(textBoxPublisherID.Text),
+                    MaCD = int.Parse(textBoxCategoryID.Text)
+                };
+                var res = dao.insertBook(book.TenSach, book.GiaBan, book.SoLuongTon, book.MaNXB, book.MaCD);
 
+                textBoxBookID.Text = dao.getIdBookByName(book.TenSach).ToString();
+                // return về cái BookID and AuthorID de tao ThamGia
+                ThamGiaDao tgd = new ThamGiaDao();
+                var ress = tgd.insertThamGia(int.Parse(textBoxBookID.Text), int.Parse(textBoxAuthorID.Text));
+
+
+                // Bây giờ tạo thêm ChiTietPhieuNhap
+                ChiTietPhieuNhapDao ctpnDao = new ChiTietPhieuNhapDao();
+                ChiTietPhieuNhap ctpn = new ChiTietPhieuNhap()
+                {
+                    MaPhieuNhap = idPhieuNhap,
+                    MaSach = int.Parse(textBoxBookID.Text),
+                    SoLuong = int.Parse(textBoxQuantity.Text)
+                };
+                var resss = ctpnDao.insertChiTietPhieuNhap(ctpn.MaPhieuNhap, ctpn.MaSach, ctpn.SoLuong);
+
+
+                if (res > 0 && ress > 0 && resss > 0)
+                {
+                    MessageBox.Show("Thêm thành công !");
+                    clearAllNewBook();
+                }
+                else
+                {
+                    MessageBox.Show("Chưa thêm được !");
+                }
+
+            }
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
@@ -219,9 +238,14 @@ namespace QuanLyBanSach_new.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(comboBoxBookTitleuq.Text == "" || textBoxQuantityuq.Text == "")
+            if (comboBoxBookTitleuq.Text == "" || textBoxQuantityuq.Text == "")
             {
                 MessageBox.Show("Hãy nhập đủ thông tin !");
+            }
+            var qty = int.TryParse(textBoxQuantityuq.Text, out _);
+            if (qty == false)
+            {
+                MessageBox.Show("Kiểm tra số lượng nhập !");
             }
             else
             {
