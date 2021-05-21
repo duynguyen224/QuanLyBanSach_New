@@ -216,11 +216,5 @@ namespace QuanLyBanSach_new.MyUserControl
 
         }
 
-
-
-
-
-        // Bấm Finish : hiện ra Form Finish Order 
-
     }
 }
