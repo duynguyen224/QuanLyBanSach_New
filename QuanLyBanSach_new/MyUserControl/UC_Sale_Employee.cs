@@ -77,22 +77,34 @@ namespace QuanLyBanSach_new.MyUserControl
             }
             else
             {
-                if (int.Parse(textBoxStock.Text) < int.Parse(textBoxQuantity.Text))
+                if(int.Parse(textBoxQuantity.Text) < 0)
+                {
+                    MessageBox.Show("Số lượng cần lớn hơn 0 !");
+                    textBoxQuantity.Text = "";
+                }
+                if (int.Parse(textBoxStock.Text) < int.Parse(textBoxQuantity.Text) )
                 {
                     MessageBox.Show("Không đủ sách, chọn số lượng ít hơn !");
                     textBoxQuantity.Text = "";
                 }
                 else
                 {
-
+                    SachDao sDao = new SachDao();
                     // 1. insert to cart
                     GioHangDao dao = new GioHangDao();
-                    var booktitle = comboBoxBookTitle.Text;
-                    var qty = Int32.Parse(textBoxQuantity.Text);
-                    var price = Int32.Parse(textBoxPrice.Text);
-                    var amount = qty * price;
-                    var stock = Int32.Parse(textBoxStock.Text);
-                    dao.insertToCart(booktitle, qty, amount, price, stock);
+                    if(dao.findBook(comboBoxBookTitle.Text) == 0)
+                    {
+                        var booktitle = comboBoxBookTitle.Text;
+                        var qty = Int32.Parse(textBoxQuantity.Text);
+                        var price = Int32.Parse(textBoxPrice.Text);
+                        var amount = qty * price;
+                        var stock = Int32.Parse(textBoxStock.Text);
+                        dao.insertToCart(booktitle, qty, amount, price, stock);
+                    }
+                    else
+                    {
+                        dao.updateQuantity(comboBoxBookTitle.Text, int.Parse(textBoxQuantity.Text));
+                    }
 
                     // bind data to GridView
                     dataGridViewCart.DataSource = dao.bindDataToGridCart();
@@ -164,6 +176,44 @@ namespace QuanLyBanSach_new.MyUserControl
             GioHangDao dao = new GioHangDao();
             dataGridViewCart.DataSource = dao.bindDataToGridCart();
             labelTotalAmount.Text = dao.totalAmount().ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e) // tru
+        {
+            if (c.BookTitle == null || c.BookTitle == "" || c == null)
+            {
+                MessageBox.Show("Hãy chọn 1 sản phẩm !");
+            }
+            else
+            {
+                GioHangDao dao = new GioHangDao();
+                dao.reduceQuantity(c.BookTitle, 1);
+
+                dataGridViewCart.DataSource = dao.bindDataToGridCart();
+
+                labelTotalAmount.Text = dao.totalAmount().ToString();
+
+            }
+
+        }
+
+        private void button3_Click(object sender, EventArgs e) // cong
+        {
+            if (c.BookTitle == null || c.BookTitle == "" || c == null)
+            {
+                MessageBox.Show("Hãy chọn 1 sản phẩm !");
+            }
+            else
+            {
+                GioHangDao dao = new GioHangDao();
+                dao.updateQuantity(c.BookTitle, 1);
+
+                dataGridViewCart.DataSource = dao.bindDataToGridCart();
+
+                labelTotalAmount.Text = dao.totalAmount().ToString();
+
+            }
+
         }
 
 

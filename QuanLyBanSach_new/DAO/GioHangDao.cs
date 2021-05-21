@@ -43,8 +43,8 @@ namespace QuanLyBanSach_new.DAO
 
         public int deleteOneRecord(string booktitle, int qty)
         {
-            var g = db.GioHangs.Where(x => x.BookTitle.Trim().ToLower() == booktitle.Trim().ToLower() && x.Qty == qty).FirstOrDefault() ;
-            if(g == null)
+            var g = db.GioHangs.Where(x => x.BookTitle.Trim().ToLower() == booktitle.Trim().ToLower() && x.Qty == qty).FirstOrDefault();
+            if (g == null)
             {
                 return 0;
             }
@@ -58,7 +58,7 @@ namespace QuanLyBanSach_new.DAO
 
         public void addIdCustomerToAllRecord(int id)
         {
-            foreach(var item in db.GioHangs)
+            foreach (var item in db.GioHangs)
             {
                 item.CustomerID = id;
             }
@@ -69,13 +69,13 @@ namespace QuanLyBanSach_new.DAO
         {
             var myTable = db.GioHangs.ToList();
             int netAmount_ = 0;
-            foreach(var myRow in myTable)
+            foreach (var myRow in myTable)
             {
                 netAmount_ += (int)myRow.Amount;
             }
             return netAmount_;
         }
-        
+
         public string getIdCustomer()
         {
             var res = db.GioHangs.Select(x => x.CustomerID).FirstOrDefault();
@@ -87,16 +87,64 @@ namespace QuanLyBanSach_new.DAO
             var res = db.GioHangs.ToList();
             return res;
         }
-        
+
         public int totalAmount()
         {
             int sum = 0;
             var res = db.GioHangs.ToList();
-            foreach(var item in res)
+            foreach (var item in res)
             {
                 sum += item.Amount;
             }
             return sum;
         }
+
+        public int findBook(string tenSach)
+        {
+            var res = db.GioHangs.Where(x => x.BookTitle == tenSach).FirstOrDefault();
+            if (res != null)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public void updateQuantity(string name, int qty) // + them so luong
+        {
+            var res = db.GioHangs.Where(x => x.BookTitle == name).FirstOrDefault();
+            if (res != null)
+            {
+                res.Qty += qty;
+                res.Amount = res.Price * res.Qty;
+                db.SaveChanges();
+            }
+        }
+
+        public void reduceQuantity(string name, int qty) // giam so luong
+        {
+            var res = db.GioHangs.Where(x => x.BookTitle == name).FirstOrDefault();
+            if (res != null)
+            {
+                res.Qty -= qty;
+                if (res.Qty > 0)
+                {
+                    res.Amount = res.Price * res.Qty;
+                    db.SaveChanges();
+                }
+                else if (res.Qty == 0)
+                {
+                    GioHangDao dao = new GioHangDao();
+                    dao.deleteOneRecord(name, 0);
+                }
+                else
+                {
+
+                }
+            }
+        }
+
     }
 }

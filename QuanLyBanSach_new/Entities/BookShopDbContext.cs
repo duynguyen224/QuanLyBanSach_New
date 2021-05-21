@@ -16,6 +16,7 @@ namespace QuanLyBanSach_new.Entities
         public virtual DbSet<ChiTietPhieuNhap> ChiTietPhieuNhaps { get; set; }
         public virtual DbSet<ChuDe> ChuDes { get; set; }
         public virtual DbSet<DonHang> DonHangs { get; set; }
+        public virtual DbSet<GioHang> GioHangs { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
         public virtual DbSet<NhaXuatBan> NhaXuatBans { get; set; }
         public virtual DbSet<PhieuNhap> PhieuNhaps { get; set; }
@@ -23,7 +24,6 @@ namespace QuanLyBanSach_new.Entities
         public virtual DbSet<TacGia> TacGias { get; set; }
         public virtual DbSet<ThamGia> ThamGias { get; set; }
         public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<GioHang> GioHangs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
