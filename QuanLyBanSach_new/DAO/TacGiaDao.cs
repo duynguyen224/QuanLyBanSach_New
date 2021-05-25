@@ -20,7 +20,7 @@ namespace QuanLyBanSach_new.DAO
             db = new BookShopDbContext();
         }
         //fix by HHuy
- public void populateAuthor(ComboBox c)
+        public void populateAuthor(ComboBox c)
         {
             c.DataSource = db.TacGias.Select(x => x.HoTenTG).ToList();
         }
@@ -28,7 +28,7 @@ namespace QuanLyBanSach_new.DAO
         public string getIdAuthor(string authorName)
         {
             var u = db.TacGias.Where(x => x.HoTenTG == authorName).FirstOrDefault();
-            if(u == null)
+            if (u == null)
             {
                 return "abc";
             }
