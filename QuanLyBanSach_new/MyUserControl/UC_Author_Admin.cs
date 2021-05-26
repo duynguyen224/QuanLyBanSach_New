@@ -21,8 +21,8 @@ namespace QuanLyBanSach_new.MyUserControl
             InitializeComponent();
             bindDataToGrid();
         }
-//fix by Huy
-private void bindDataToGrid()
+        //fix by Huy
+        private void bindDataToGrid()
         {
             TacGiaDao dao = new TacGiaDao();
             dataGridViewAuthor.DataSource = dao.listAuthor();
@@ -61,7 +61,7 @@ private void bindDataToGrid()
         private void button2_Click(object sender, EventArgs e)
         {
             var fullname = textBoxFullname.Text;
-            if(fullname == "")
+            if (fullname == "")
             {
                 MessageBox.Show("Hãy nhập họ tên để thêm !");
             }
@@ -92,7 +92,7 @@ private void bindDataToGrid()
             var dc = textBoxAddress.Text;
             var ts = textBoxBackground.Text;
             var dt = textBoxPhone.Text;
-            if(ht == "")
+            if (ht == "")
             {
                 MessageBox.Show("Hãy chọn 1 tác giả để sửa !");
             }
@@ -101,7 +101,7 @@ private void bindDataToGrid()
                 var id = int.Parse(textBoxID.Text);
 
                 TacGiaDao dao = new TacGiaDao();
-var res = dao.updateAuthor(ht, dc, ts, dt, id);
+                var res = dao.updateAuthor(ht, dc, ts, dt, id);
                 if (res > 0)
                 {
                     MessageBox.Show("Sửa thông tin thành công !");

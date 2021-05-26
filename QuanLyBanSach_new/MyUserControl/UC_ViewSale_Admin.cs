@@ -18,9 +18,10 @@ namespace QuanLyBanSach_new.MyUserControl
     public partial class UC_ViewSale_Admin : UserControl
     {
         public int idDonHang;
-    }
-    //view sales by Huy
-    public UC_ViewSale_Admin()
+
+
+        //view sales by Huy
+        public UC_ViewSale_Admin()
         {
             InitializeComponent();
             populateGridInfo();
@@ -36,7 +37,7 @@ namespace QuanLyBanSach_new.MyUserControl
 
         public void populateGridDetails(int idDonHang = 1)
         {
-            if(idDonHang == 0)
+            if (idDonHang == 0)
             {
                 dataGridViewChiTietDH.DataSource = null;
 
@@ -65,4 +66,7 @@ namespace QuanLyBanSach_new.MyUserControl
             populateGridDetails(idDonHang);
 
         }
+
+    }
+    
 }
