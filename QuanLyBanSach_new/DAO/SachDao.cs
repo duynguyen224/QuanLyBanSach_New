@@ -137,5 +137,9 @@ namespace QuanLyBanSach_new.DAO
             db.Database.ExecuteSqlCommand("proc_deleteSach @id", i);
         }
 
+        public int getPriceById(int id){
+            return db.Saches.Where(x => x.ID == id).FirstOrDefault().GiaBan.GetValueOrDefault();
+        }
+
     }
 }

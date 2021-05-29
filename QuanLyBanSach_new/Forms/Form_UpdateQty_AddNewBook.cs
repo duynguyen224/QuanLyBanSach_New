@@ -18,14 +18,27 @@ namespace QuanLyBanSach_new.Forms
     {
         public int idPhieuNhap;
 
-        public Form_UpdateQty_AddNewBook(int _idPhieuNhap)
+        public Form_UpdateQty_AddNewBook(int _idPhieuNhap, string title, int tongtien)
         {
             InitializeComponent();
             idPhieuNhap = _idPhieuNhap;
             fillCombobox();
             clearAllNewBook();
+            bindDataToGrid(dataGridView1, dataGridView2);
+            labelnhaphang.Text = title;
+            labelnhaphang1.Text = title;
+            labelAmount1.Text = tongtien.ToString() ;
+            labelAmount2.Text = tongtien.ToString() ;
         }
 
+
+        private void bindDataToGrid(DataGridView d1, DataGridView d2)
+        {
+            ChiTietPhieuNhapDao dao = new ChiTietPhieuNhapDao();
+            var res = dao.ExpenseDetails(idPhieuNhap);
+            d1.DataSource = res;
+            d2.DataSource = res;
+        }
         public void fillCombobox()
         {
             TacGiaDao daotacgia = new TacGiaDao();
@@ -194,15 +207,18 @@ namespace QuanLyBanSach_new.Forms
                 var resss = ctpnDao.insertChiTietPhieuNhap(ctpn.MaPhieuNhap, ctpn.MaSach, ctpn.SoLuong);
 
 
-                if (res > 0 && ress > 0 && resss > 0)
-                {
-                    MessageBox.Show("Thêm thành công !");
-                    clearAllNewBook();
-                }
-                else
-                {
-                    MessageBox.Show("Chưa thêm được !");
-                }
+                bindDataToGrid(dataGridView1, dataGridView2);
+
+                // update tong tien
+                SachDao sDao = new SachDao();
+                var bookPrice1 = sDao.getPriceById(ctpn.MaSach);
+                var soluong1 = ctpn.SoLuong;
+                PhieuNhapDao pnDao = new PhieuNhapDao();
+                pnDao.updateAmount(idPhieuNhap, (bookPrice1 * soluong1).GetValueOrDefault());
+
+
+                labelAmount1.Text = pnDao.getAmountById(idPhieuNhap).ToString();
+                labelAmount2.Text = pnDao.getAmountById(idPhieuNhap).ToString();
 
             }
         }
@@ -268,18 +284,36 @@ namespace QuanLyBanSach_new.Forms
 
 
 
-                if (resss > 0)
-                {
-                    MessageBox.Show("Update số lượng thành công !");
-                    clearAllUpdateQuantity();
-                }
-                else
-                {
-                    MessageBox.Show("Chưa update được !");
-                }
 
+                bindDataToGrid(dataGridView1, dataGridView2);
+
+                // update tong tien
+                var bookPrice = sDao.getPriceById(ctpn.MaSach);
+                var soluong = ctpn.SoLuong;
+                PhieuNhapDao pnDao = new PhieuNhapDao();
+                pnDao.updateAmount(idPhieuNhap, (bookPrice * soluong).GetValueOrDefault());
+
+                labelAmount1.Text = pnDao.getAmountById(idPhieuNhap).ToString();
+                labelAmount2.Text = pnDao.getAmountById(idPhieuNhap).ToString();
+
+                clearAllUpdateQuantity();
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            if (MessageBox.Show("Đã hoàn thành việc nhập và thoát phiên làm việc ? ", "Exit ", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
 
             }
+
         }
     }
 }

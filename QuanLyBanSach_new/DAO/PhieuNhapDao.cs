@@ -42,5 +42,17 @@ namespace QuanLyBanSach_new.DAO
             var res = list.Max(x => x.ID);
             return res;
         }
+
+        public void updateAmount(int id, int soTien)
+        {
+            var res = db.PhieuNhaps.Where(x => x.ID == id).FirstOrDefault();
+            res.TongTien += soTien;
+            db.SaveChanges();
+        }
+
+        public int getAmountById(int id)
+        {
+            return db.PhieuNhaps.Where(x => x.ID == id).FirstOrDefault().TongTien.GetValueOrDefault();
+        }
     }
 }

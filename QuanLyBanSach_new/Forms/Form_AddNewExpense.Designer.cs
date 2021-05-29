@@ -34,10 +34,8 @@ namespace QuanLyBanSach_new.Forms
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxAmount = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label4
@@ -55,7 +53,7 @@ namespace QuanLyBanSach_new.Forms
             // richTextBoxDes
             // 
             this.richTextBoxDes.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxDes.Location = new System.Drawing.Point(162, 197);
+            this.richTextBoxDes.Location = new System.Drawing.Point(162, 181);
             this.richTextBoxDes.Name = "richTextBoxDes";
             this.richTextBoxDes.Size = new System.Drawing.Size(403, 96);
             this.richTextBoxDes.TabIndex = 42;
@@ -97,26 +95,16 @@ namespace QuanLyBanSach_new.Forms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(53, 197);
+            this.label3.Location = new System.Drawing.Point(53, 181);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 19);
             this.label3.TabIndex = 35;
             this.label3.Text = "Description:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(81, 156);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 19);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "Amount:";
-            // 
             // textBoxTitle
             // 
             this.textBoxTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTitle.Location = new System.Drawing.Point(162, 107);
+            this.textBoxTitle.Location = new System.Drawing.Point(162, 128);
             this.textBoxTitle.Name = "textBoxTitle";
             this.textBoxTitle.Size = new System.Drawing.Size(403, 26);
             this.textBoxTitle.TabIndex = 39;
@@ -125,32 +113,22 @@ namespace QuanLyBanSach_new.Forms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(38, 111);
+            this.label2.Location = new System.Drawing.Point(38, 132);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 19);
             this.label2.TabIndex = 37;
             this.label2.Text = "Expense Title:";
-            // 
-            // textBoxAmount
-            // 
-            this.textBoxAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAmount.Location = new System.Drawing.Point(162, 152);
-            this.textBoxAmount.Name = "textBoxAmount";
-            this.textBoxAmount.Size = new System.Drawing.Size(201, 26);
-            this.textBoxAmount.TabIndex = 44;
             // 
             // Form_AddNewExpense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(656, 419);
-            this.Controls.Add(this.textBoxAmount);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.richTextBoxDes);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxTitle);
             this.Controls.Add(this.label2);
             this.Name = "Form_AddNewExpense";
@@ -168,9 +146,7 @@ namespace QuanLyBanSach_new.Forms
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxTitle;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxAmount;
     }
 }

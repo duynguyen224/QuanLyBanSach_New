@@ -103,9 +103,29 @@ namespace QuanLyBanSach_new.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap building_30px {
+            get {
+                object obj = ResourceManager.GetObject("building_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calculator_50px {
             get {
                 object obj = ResourceManager.GetObject("calculator_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap category_30px {
+            get {
+                object obj = ResourceManager.GetObject("category_30px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -206,6 +226,16 @@ namespace QuanLyBanSach_new.Properties {
         internal static System.Drawing.Bitmap print_white_50px {
             get {
                 object obj = ResourceManager.GetObject("print_white_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap refresh_30px {
+            get {
+                object obj = ResourceManager.GetObject("refresh_30px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

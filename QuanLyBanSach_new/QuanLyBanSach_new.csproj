@@ -165,6 +165,12 @@
     <Compile Include="Forms\Form_UpdateQty_AddNewBook.Designer.cs">
       <DependentUpon>Form_UpdateQty_AddNewBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Form_Update_AddNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_Update_AddNew.Designer.cs">
+      <DependentUpon>Form_Update_AddNew.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202104150737122_InitialModel.cs" />
     <Compile Include="Migrations\202104150737122_InitialModel.designer.cs">
       <DependentUpon>202104150737122_InitialModel.cs</DependentUpon>
@@ -181,6 +187,12 @@
     </Compile>
     <Compile Include="MyUserControl\UC_Book_Admin.Designer.cs">
       <DependentUpon>UC_Book_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControl\UC_Category_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControl\UC_Category_Admin.Designer.cs">
+      <DependentUpon>UC_Category_Admin.cs</DependentUpon>
     </Compile>
     <Compile Include="MyUserControl\UC_Expense_Employee.cs">
       <SubType>UserControl</SubType>
@@ -199,6 +211,12 @@
     </Compile>
     <Compile Include="MyUserControl\UC_Book_Employee.Designer.cs">
       <DependentUpon>UC_Book_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControl\UC_Publisher_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControl\UC_Publisher_Admin.Designer.cs">
+      <DependentUpon>UC_Publisher_Admin.cs</DependentUpon>
     </Compile>
     <Compile Include="MyUserControl\UC_Sale_Employee.cs">
       <SubType>UserControl</SubType>
@@ -224,12 +242,14 @@
     <Compile Include="SupportClass\AuthorNameOnly.cs" />
     <Compile Include="SupportClass\Book.cs" />
     <Compile Include="SupportClass\Cart.cs" />
+    <Compile Include="SupportClass\Cate.cs" />
     <Compile Include="SupportClass\CustomerNameOnly.cs" />
     <Compile Include="SupportClass\DGVPrinter.cs" />
     <Compile Include="SupportClass\DonHang_KhachHang.cs" />
     <Compile Include="SupportClass\Expense.cs" />
     <Compile Include="SupportClass\ExpenseDetails.cs" />
     <Compile Include="SupportClass\IdOnly.cs" />
+    <Compile Include="SupportClass\NXB.cs" />
     <Compile Include="SupportClass\PhieuNhap_ChiTiet.cs" />
     <Compile Include="SupportClass\PublisherNameOnly.cs" />
     <Compile Include="SupportClass\Sach_ChiTietDH.cs" />
@@ -273,6 +293,9 @@
     <EmbeddedResource Include="Forms\Form_UpdateQty_AddNewBook.resx">
       <DependentUpon>Form_UpdateQty_AddNewBook.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_Update_AddNew.resx">
+      <DependentUpon>Form_Update_AddNew.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104150737122_InitialModel.resx">
       <DependentUpon>202104150737122_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
@@ -282,6 +305,9 @@
     <EmbeddedResource Include="MyUserControl\UC_Book_Admin.resx">
       <DependentUpon>UC_Book_Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl\UC_Category_Admin.resx">
+      <DependentUpon>UC_Category_Admin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyUserControl\UC_Expense_Employee.resx">
       <DependentUpon>UC_Expense_Employee.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,6 +316,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyUserControl\UC_Book_Employee.resx">
       <DependentUpon>UC_Book_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl\UC_Publisher_Admin.resx">
+      <DependentUpon>UC_Publisher_Admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyUserControl\UC_Sale_Employee.resx">
       <DependentUpon>UC_Sale_Employee.cs</DependentUpon>
@@ -383,6 +412,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\calculator_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\building_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\category_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_30px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

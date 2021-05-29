@@ -22,11 +22,30 @@ namespace QuanLyBanSach_new.DAO
 
         public int insertChiTietPhieuNhap(int idPhieuNhap, int idSach, int? soLuong)
         {
+            try
+            {
+                var idPhieu = new SqlParameter("@idphieunhap", idPhieuNhap);
+                var idsach = new SqlParameter("@idsach", idSach);
+                var sl = new SqlParameter("@soluong", soLuong);
+                int res = db.Database.ExecuteSqlCommand("proc_insertChiTietPhieuNhap @idphieunhap, @idsach, @soluong", idPhieu, idsach, sl);
+                return res;
+            }
+            catch
+            {
+                var res1 = updateChiTietPhieuNhap(idPhieuNhap, idSach, soLuong.GetValueOrDefault());
+                return res1;
+            }
+        }
+
+        public int updateChiTietPhieuNhap(int idPhieuNhap, int idSach, int soLuong)
+        {
+
             var idPhieu = new SqlParameter("@idphieunhap", idPhieuNhap);
             var idsach = new SqlParameter("@idsach", idSach);
             var sl = new SqlParameter("@soluong", soLuong);
-            int res = db.Database.ExecuteSqlCommand("proc_insertChiTietPhieuNhap @idphieunhap, @idsach, @soluong", idPhieu, idsach, sl);
+            int res = db.Database.ExecuteSqlCommand("proc_updateChiTietPhieuNhap @idphieunhap, @idsach, @soluong", idPhieu, idsach, sl);
             return res;
+            
         }
 
         public List<Expense> allExpense()

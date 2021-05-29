@@ -10,6 +10,7 @@ using QuanLyBanSach_new.Entities;
 
 using QuanLyBanSach_new.SupportClass;
 
+
 namespace QuanLyBanSach_new.DAO
 {
     public class NhaXuatBanDao
@@ -24,6 +25,11 @@ namespace QuanLyBanSach_new.DAO
         public void populatePublisher(ComboBox c)
         {
             c.DataSource = db.NhaXuatBans.Select(x => x.TenNXB).ToList();
+        }
+
+        public List<NXB> listPublishher()
+        {
+            return db.Database.SqlQuery<NXB>("proc_listNXB").ToList();
         }
 
         public string getIdPublisher(string publisherName)
@@ -61,6 +67,24 @@ namespace QuanLyBanSach_new.DAO
             var res = db.NhaXuatBans.Where(x => x.ID == id).FirstOrDefault();
             res.TenNXB = newname;
             db.SaveChanges();
+        }
+
+        public int updatePublisher(int id, string name, string diachi, string dienthoai)
+        {
+            var res = db.NhaXuatBans.Where(x => x.ID == id).FirstOrDefault();
+            res.TenNXB = name;
+            res.DiaChi = diachi;
+            res.DienThoai = dienthoai;
+            db.SaveChanges();
+            return res.ID;
+        }
+
+        public int deletePublisher(int id)
+        {
+            var res = db.NhaXuatBans.Where(x => x.ID == id).FirstOrDefault();
+            db.NhaXuatBans.Remove(res);
+            db.SaveChanges();
+            return res.ID;
         }
     }
 }

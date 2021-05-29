@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using QuanLyBanSach_new.Entities;
+using QuanLyBanSach_new.SupportClass;
 
 
 namespace QuanLyBanSach_new.DAO
@@ -23,6 +24,11 @@ namespace QuanLyBanSach_new.DAO
         public void populateCategory(ComboBox c)
         {
             c.DataSource = db.ChuDes.Select(x => x.TenCD).ToList();
+        }
+
+        public List<Cate> listCategory()
+        {
+            return db.Database.SqlQuery<Cate>("proc_listCategory").ToList();
         }
 
         public string getIdCategory(string categoryName)
@@ -47,11 +53,22 @@ namespace QuanLyBanSach_new.DAO
             return res;
         }
 
-        public void updateCategoryName(int id, string newname)
+        public int updateCategoryName(int id, string newname)
         {
             var res = db.ChuDes.Where(x => x.ID == id).FirstOrDefault();
             res.TenCD = newname;
             db.SaveChanges();
+            return res.ID;
         }
+
+        public int deleteCategory(int id)
+        {
+            var res = db.ChuDes.Where(x => x.ID == id).FirstOrDefault();
+            db.ChuDes.Remove(res);
+            db.SaveChanges();
+            return res.ID;
+        }
+
+
     }
 }

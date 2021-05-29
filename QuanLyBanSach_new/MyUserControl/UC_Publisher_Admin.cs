@@ -14,43 +14,35 @@ using QuanLyBanSach_new.SupportClass;
 
 namespace QuanLyBanSach_new.MyUserControl
 {
-    public partial class UC_Author_Admin : UserControl
+    public partial class UC_Publisher_Admin : UserControl
     {
-        public UC_Author_Admin()
+        public UC_Publisher_Admin()
         {
             InitializeComponent();
             bindDataToGrid();
+
         }
-        //fix by Huy
         private void bindDataToGrid()
         {
-            TacGiaDao dao = new TacGiaDao();
-            dataGridViewAuthor.DataSource = dao.listAuthor();
+            NhaXuatBanDao dao = new NhaXuatBanDao();
+            dataGridViewPublisher.DataSource = dao.listPublishher();
         }
-        //private void UC_Author_Admin_Load(object sender, EventArgs e)
-        //{
-        //    bindDataToGrid();
-        //}
 
         private void clearAll()
         {
-            textBoxID.Text = "";
-            textBoxFullname.Text = "";
+            textBoxPubName.Text = "";
             textBoxAddress.Text = "";
-            textBoxBackground.Text = "";
+            textBoxID.Text = "";
             textBoxPhone.Text = "";
         }
 
         private void dataGridViewAuthor_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //var add = dataGridViewAuthor.SelectedRows[0].Cells[2].Value.ToString();
-            //var backgr = dataGridViewAuthor.SelectedRows[0].Cells[3].Value.ToString();
-            //var phone = dataGridViewAuthor.SelectedRows[0].Cells[4].Value.ToString();
-            textBoxID.Text = dataGridViewAuthor.SelectedRows[0].Cells[0].Value.ToString();
-            textBoxFullname.Text = dataGridViewAuthor.SelectedRows[0].Cells[1].Value.ToString();
-            textBoxAddress.Text = dataGridViewAuthor.SelectedRows[0].Cells[2].Value?.ToString();
-            textBoxBackground.Text = dataGridViewAuthor.SelectedRows[0].Cells[3].Value?.ToString();
-            textBoxPhone.Text = dataGridViewAuthor.SelectedRows[0].Cells[4].Value?.ToString();
+            textBoxID.Text = dataGridViewPublisher.SelectedRows[0].Cells[0].Value.ToString();
+            textBoxPubName.Text = dataGridViewPublisher.SelectedRows[0].Cells[1].Value.ToString();
+            textBoxAddress.Text = dataGridViewPublisher.SelectedRows[0].Cells[2].Value?.ToString();
+            textBoxPhone.Text = dataGridViewPublisher.SelectedRows[0].Cells[3].Value?.ToString();
+
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -60,48 +52,47 @@ namespace QuanLyBanSach_new.MyUserControl
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var fullname = textBoxFullname.Text;
-            if (fullname == "")
+            var name = textBoxPubName.Text;
+            if (name == "")
             {
-                MessageBox.Show("Hãy nhập họ tên để thêm !");
+                MessageBox.Show("Hãy nhập tên nhầ xuất bản !");
             }
             else
             {
-                TacGia tg = new TacGia()
+                NhaXuatBan nxb = new NhaXuatBan()
                 {
-                    HoTenTG = textBoxFullname.Text,
+                    TenNXB = textBoxPubName.Text,
                     DiaChi = textBoxAddress.Text,
-                    TieuSu = textBoxBackground.Text,
                     DienThoai = textBoxPhone.Text,
                 };
-                TacGiaDao tgDao = new TacGiaDao();
-                var res = tgDao.insertAuthor(tg.HoTenTG, tg.DiaChi, tg.TieuSu, tg.DienThoai);
+                NhaXuatBanDao nxbDao = new NhaXuatBanDao();
+                var res = nxbDao.insertPublisher(nxb.TenNXB, nxb.DiaChi, nxb.DienThoai);
                 if (res > 0)
                 {
-                    MessageBox.Show("Thêm tác giả thành công !");
+                    MessageBox.Show("Thêm nhầ xuất bản thành công !");
                 }
                 bindDataToGrid();
                 clearAll();
 
             }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var ht = textBoxFullname.Text;
+            var ten = textBoxPubName.Text;
             var dc = textBoxAddress.Text;
-            var ts = textBoxBackground.Text;
             var dt = textBoxPhone.Text;
-            if (ht == "")
+            if (ten == "")
             {
-                MessageBox.Show("Hãy chọn 1 tác giả để sửa !");
+                MessageBox.Show("Hãy chọn 1 nhà xuất bản để sửa !");
             }
             else
             {
                 var id = int.Parse(textBoxID.Text);
 
-                TacGiaDao dao = new TacGiaDao();
-                var res = dao.updateAuthor(ht, dc, ts, dt, id);
+                NhaXuatBanDao dao = new NhaXuatBanDao();
+                var res = dao.updatePublisher(id, ten, dc, dt);
                 if (res > 0)
                 {
                     MessageBox.Show("Sửa thông tin thành công !");
@@ -110,6 +101,7 @@ namespace QuanLyBanSach_new.MyUserControl
                 clearAll();
 
             }
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -118,15 +110,15 @@ namespace QuanLyBanSach_new.MyUserControl
 
             if (textId == "")
             {
-                MessageBox.Show("Hãy chọn 1 tác giả để XÓA !");
+                MessageBox.Show("Hãy chọn 1 nhà xuất bản để XÓA !");
             }
             else
             {
-                if (MessageBox.Show("Xóa Author ??", "Xóa Author", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Xóa nhà xuất bản ??", "Xóa nhà xuất bản", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    TacGiaDao dao = new TacGiaDao();
+                    NhaXuatBanDao dao = new NhaXuatBanDao();
                     int id = int.Parse(textBoxID.Text);
-                    var check = dao.deleteAuthor(id);
+                    var check = dao.deletePublisher(id);
                     if (check > 0)
                     {
                         MessageBox.Show("Xóa thành công !");
@@ -136,7 +128,8 @@ namespace QuanLyBanSach_new.MyUserControl
                 }
 
             }
-        }
 
+        }
     }
+
 }

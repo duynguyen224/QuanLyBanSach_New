@@ -124,14 +124,23 @@
   <data name="home_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="building_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\building_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="list_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\list_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sale_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sale_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="search_30px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search_30px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="book_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\book_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="calculator_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calculator_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bookk_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bookk_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,9 +169,6 @@
   <data name="search_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search_30px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search_30px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="home_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -172,10 +178,13 @@
   <data name="home_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="category_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\category_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="books_emoji_80px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\books_emoji_80px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="calculator_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\calculator_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="refresh_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

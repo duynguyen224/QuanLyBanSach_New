@@ -41,6 +41,8 @@ namespace QuanLyBanSach_new.Forms
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonCategory = new System.Windows.Forms.Button();
+            this.buttonPublisher = new System.Windows.Forms.Button();
             this.buttonBook = new System.Windows.Forms.Button();
             this.buttonAuthor = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
@@ -71,6 +73,8 @@ namespace QuanLyBanSach_new.Forms
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panelLeft.Controls.Add(this.buttonCategory);
+            this.panelLeft.Controls.Add(this.buttonPublisher);
             this.panelLeft.Controls.Add(this.buttonBook);
             this.panelLeft.Controls.Add(this.buttonAuthor);
             this.panelLeft.Controls.Add(this.panelSide);
@@ -160,6 +164,40 @@ namespace QuanLyBanSach_new.Forms
             this.panel2.Size = new System.Drawing.Size(991, 122);
             this.panel2.TabIndex = 5;
             // 
+            // buttonCategory
+            // 
+            this.buttonCategory.FlatAppearance.BorderSize = 0;
+            this.buttonCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCategory.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCategory.ForeColor = System.Drawing.Color.White;
+            this.buttonCategory.Image = global::QuanLyBanSach_new.Properties.Resources.category_30px;
+            this.buttonCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCategory.Location = new System.Drawing.Point(12, 400);
+            this.buttonCategory.Name = "buttonCategory";
+            this.buttonCategory.Size = new System.Drawing.Size(203, 60);
+            this.buttonCategory.TabIndex = 6;
+            this.buttonCategory.Text = "     Categories";
+            this.buttonCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCategory.UseVisualStyleBackColor = true;
+            this.buttonCategory.Click += new System.EventHandler(this.buttonCategory_Click);
+            // 
+            // buttonPublisher
+            // 
+            this.buttonPublisher.FlatAppearance.BorderSize = 0;
+            this.buttonPublisher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPublisher.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPublisher.ForeColor = System.Drawing.Color.White;
+            this.buttonPublisher.Image = global::QuanLyBanSach_new.Properties.Resources.building_30px;
+            this.buttonPublisher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPublisher.Location = new System.Drawing.Point(11, 338);
+            this.buttonPublisher.Name = "buttonPublisher";
+            this.buttonPublisher.Size = new System.Drawing.Size(203, 60);
+            this.buttonPublisher.TabIndex = 5;
+            this.buttonPublisher.Text = "     Publishers";
+            this.buttonPublisher.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonPublisher.UseVisualStyleBackColor = true;
+            this.buttonPublisher.Click += new System.EventHandler(this.buttonPublisher_Click);
+            // 
             // buttonBook
             // 
             this.buttonBook.FlatAppearance.BorderSize = 0;
@@ -168,7 +206,7 @@ namespace QuanLyBanSach_new.Forms
             this.buttonBook.ForeColor = System.Drawing.Color.White;
             this.buttonBook.Image = global::QuanLyBanSach_new.Properties.Resources.bookk_30px;
             this.buttonBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBook.Location = new System.Drawing.Point(11, 335);
+            this.buttonBook.Location = new System.Drawing.Point(12, 462);
             this.buttonBook.Name = "buttonBook";
             this.buttonBook.Size = new System.Drawing.Size(203, 60);
             this.buttonBook.TabIndex = 4;
@@ -196,14 +234,13 @@ namespace QuanLyBanSach_new.Forms
             // 
             // btnSettings
             // 
-            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnSettings.FlatAppearance.BorderSize = 0;
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSettings.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.White;
             this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
             this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSettings.Location = new System.Drawing.Point(0, 604);
+            this.btnSettings.Location = new System.Drawing.Point(12, 630);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(187, 60);
             this.btnSettings.TabIndex = 2;
@@ -220,7 +257,7 @@ namespace QuanLyBanSach_new.Forms
             this.btnViewSales.ForeColor = System.Drawing.Color.White;
             this.btnViewSales.Image = ((System.Drawing.Image)(resources.GetObject("btnViewSales.Image")));
             this.btnViewSales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnViewSales.Location = new System.Drawing.Point(12, 401);
+            this.btnViewSales.Location = new System.Drawing.Point(12, 524);
             this.btnViewSales.Name = "btnViewSales";
             this.btnViewSales.Size = new System.Drawing.Size(203, 60);
             this.btnViewSales.TabIndex = 2;
@@ -331,5 +368,7 @@ namespace QuanLyBanSach_new.Forms
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button buttonBook;
         private System.Windows.Forms.Button buttonAuthor;
+        private System.Windows.Forms.Button buttonCategory;
+        private System.Windows.Forms.Button buttonPublisher;
     }
 }

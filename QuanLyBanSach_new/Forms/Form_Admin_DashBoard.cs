@@ -129,5 +129,21 @@ namespace QuanLyBanSach_new.Forms
             AddControlsToPanel(ucBook);
 
         }
+
+        private void buttonPublisher_Click(object sender, EventArgs e)
+        {
+            moveSidePanel(buttonPublisher);
+            UC_Publisher_Admin ucBook = new UC_Publisher_Admin();
+            AddControlsToPanel(ucBook);
+
+        }
+
+        private void buttonCategory_Click(object sender, EventArgs e)
+        {
+            moveSidePanel(buttonCategory);
+            UC_Category_Admin ucBook = new UC_Category_Admin();
+            AddControlsToPanel(ucBook);
+
+        }
     }
 }
