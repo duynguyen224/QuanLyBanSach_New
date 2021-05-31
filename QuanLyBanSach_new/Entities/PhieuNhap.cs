@@ -28,6 +28,8 @@ namespace QuanLyBanSach_new.Entities
         [StringLength(200)]
         public string MoTa { get; set; }
 
+        public bool? TrangThai { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietPhieuNhap> ChiTietPhieuNhaps { get; set; }
     }

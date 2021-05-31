@@ -54,6 +54,12 @@ namespace QuanLyBanSach_new.DAO
             return res;
         }
 
+        public List<Expense1> allExpenseWithStatus()
+        {
+            var res = db.Database.SqlQuery<Expense1>("proc_expense1").ToList();
+            return res;
+        }
+
         public List<ExpenseDetails> ExpenseDetails(int id)
         {
             var i = new SqlParameter("@maphieunhap", id);

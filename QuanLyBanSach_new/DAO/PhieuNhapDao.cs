@@ -26,7 +26,20 @@ namespace QuanLyBanSach_new.DAO
             var tongtien = new SqlParameter("@tongtien", pn.TongTien);
             var tieude = new SqlParameter("@tieude", pn.TieuDe);
             var mota = new SqlParameter("@mota", pn.MoTa);
-            db.Database.ExecuteSqlCommand("proc_insertPhieuNhap @tongtien, @tieude, @mota", tongtien, tieude, mota);
+            var trangthai = new SqlParameter("@trangthai", pn.TrangThai);
+            db.Database.ExecuteSqlCommand("proc_insertPhieuNhap @tongtien, @tieude, @mota, @trangthai", tongtien, tieude, mota, trangthai);
+        }
+
+        public int deletePhieuNhap(int id)
+        {
+            var res = db.PhieuNhaps.Where(x => x.ID == id).FirstOrDefault();
+            if (res != null)
+            {
+                db.PhieuNhaps.Remove(res);
+                db.SaveChanges();
+                return 1;
+            }
+            else return 0;
         }
 
         public int getIdPhieuNhap_fromName(string name)
@@ -53,6 +66,13 @@ namespace QuanLyBanSach_new.DAO
         public int getAmountById(int id)
         {
             return db.PhieuNhaps.Where(x => x.ID == id).FirstOrDefault().TongTien.GetValueOrDefault();
+        }
+
+        public void updateStatusTrue(int id)
+        {
+            var res = db.PhieuNhaps.Where(x => x.ID == id).FirstOrDefault();
+            res.TrangThai = true;
+            db.SaveChanges();
         }
     }
 }

@@ -41,6 +41,7 @@ namespace QuanLyBanSach_new.Forms
             tenPhieuNhap = pn.TieuDe;
             pn.MoTa = richTextBoxDes.Text;
             pn.TongTien = 0;
+            pn.TrangThai = false;
             dao.insertPhieuNhap(pn);
             //var idPhieuNhap = dao.getIdPhieuNhap_fromName(tenPhieuNhap);
             var idPhieuNhap = dao.getNewestId();

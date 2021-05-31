@@ -165,12 +165,6 @@
     <Compile Include="Forms\Form_UpdateQty_AddNewBook.Designer.cs">
       <DependentUpon>Form_UpdateQty_AddNewBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Update_AddNew.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Form_Update_AddNew.Designer.cs">
-      <DependentUpon>Form_Update_AddNew.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202104150737122_InitialModel.cs" />
     <Compile Include="Migrations\202104150737122_InitialModel.designer.cs">
       <DependentUpon>202104150737122_InitialModel.cs</DependentUpon>
@@ -247,6 +241,7 @@
     <Compile Include="SupportClass\DGVPrinter.cs" />
     <Compile Include="SupportClass\DonHang_KhachHang.cs" />
     <Compile Include="SupportClass\Expense.cs" />
+    <Compile Include="SupportClass\Expense1.cs" />
     <Compile Include="SupportClass\ExpenseDetails.cs" />
     <Compile Include="SupportClass\IdOnly.cs" />
     <Compile Include="SupportClass\NXB.cs" />
@@ -292,9 +287,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_UpdateQty_AddNewBook.resx">
       <DependentUpon>Form_UpdateQty_AddNewBook.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Update_AddNew.resx">
-      <DependentUpon>Form_Update_AddNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104150737122_InitialModel.resx">
       <DependentUpon>202104150737122_InitialModel.cs</DependentUpon>
